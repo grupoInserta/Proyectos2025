@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 #if UNITY_EDITOR
     using UnityEditor;
@@ -17,6 +18,8 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
+    private PlayerControls controls;
+    public bool pulsadoAbrir { get; set; }
 
     #region Camera Movement Variables
 
@@ -134,7 +137,6 @@ public class FirstPersonController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
         crosshairObject = GetComponentInChildren<Image>();
 
         // Set internal variables
@@ -147,6 +149,26 @@ public class FirstPersonController : MonoBehaviour
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
         }
+        // para abrir puertas:
+        controls = new PlayerControls();
+        // Suscribimos el evento de interacción
+        controls.Player.Interact.performed += ctx => IntentarAbrirPuerta();
+        pulsadoAbrir = false;
+    }
+
+    private void IntentarAbrirPuerta()
+    {
+        pulsadoAbrir = true;
+    }
+
+    private void OnEnable()
+    {
+        controls.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Player.Disable();
     }
 
     void Start()
