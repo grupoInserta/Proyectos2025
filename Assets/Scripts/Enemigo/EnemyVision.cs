@@ -25,8 +25,9 @@ public class EnemyVision : MonoBehaviour
     private float velocidadRotacion = 0.6f;
     private bool ActualizandoEnemyAI = true;
     private bool mirandoPlayer = false;
-  
 
+    // quitar
+    int contador = 0;
     private void Start()
     {
         player = gameObject.GetComponent<EnemyAI>().player;
@@ -65,20 +66,30 @@ public class EnemyVision : MonoBehaviour
         {            
             Door puerta = other.GetComponent<Door>();           
             if (puerta == null) return;
-            if (puerta.TOC == false)
+            int numPosicionesDentro = puerta.numPosicionesDentro;
+            if (puerta.TOC == false) 
             {
+                contador++;
                 puerta.TOC = true;
                 Debug.Log("TOC, nivel: " + GameCore.Instance.obtenerNivel("enemigo"));
-                int numPosicionesDentro = puerta.numPosicionesDentro;
-                // Evitar múltiples activaciones
-                // other.enabled = false;// si lo dejo, la puerta tiene cillider desactivado
-                // y no sirve tampoco para evitar una segunda colisión..
-                StartCoroutine(ActualizarPatrullaConDelay(numPosicionesDentro));
+                string nivel = GameCore.Instance.obtenerNivel("enemigo");
+                if (numPosicionesDentro == 1000 && nivel == "1")
+                {
+                    Debug.Log("TOC, nivel UNO: " + nivel);
+                    miEnemyAI.ReiniciarNivel(numPosicionesDentro);
+                    StartCoroutine(ActualizarPatrullaConDelay(0));
+                }
+                else
+                {
+                    // Evitar múltiples activaciones
+                    // other.enabled = false;// si lo dejo, la puerta tiene collider desactivado
+                    // y no sirve tampoco para evitar una segunda colisión..
+                    StartCoroutine(ActualizarPatrullaConDelay(numPosicionesDentro));
+                }               
             }
             else if (puerta.TOC == true) // ha completado una patrulla en el nivel ya y ha intentado pasar por la puerta..
             {
-                //*****************************
-                miEnemyAI.ReiniciarNivel();
+                miEnemyAI.ReiniciarNivel(numPosicionesDentro);
                 puerta.TOC = false;
                 // implementar que vuelva al punto de inicio del nivel...
                 // hay que designar en cada nivel un punto de reinicio si no puede pasar de nivel por la escalera...

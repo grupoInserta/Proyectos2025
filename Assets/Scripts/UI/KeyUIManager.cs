@@ -14,9 +14,11 @@ public class KeyUIManager : MonoBehaviour
     [SerializeField] private Image fondo;
     private float iconSize = 60f;
     private float incrPosXIcon = 0.1f;
-    private float incrPosYIcon = 0.3f;
+    private float incrPosYIcon = 0.18f;
+    private float posTotYIncr = 0.18f;
     private float posTotXIcon = 0.25f;
-    private float posTotYIcon = 0.25f;
+    private float posTotYIconIni = 0.25f;
+    private float posTotYIcon;
     private int contadorFilasIconos = 0;
     private List<string> filasColores = new List<string>();
     // lo siguiente deberia ir en KeyInventory (componente del player)
@@ -92,7 +94,8 @@ public class KeyUIManager : MonoBehaviour
             filasColores.Add(_elColor);
         }
         int posicionColor = filasColores.IndexOf(_elColor);
-        posTotYIcon = posTotYIcon - incrPosYIcon * posicionColor;
+        Debug.Log("POSICION COLORRR: " + posicionColor);
+        posTotYIcon = posTotYIconIni - posTotYIncr * posicionColor;
         // posicionamiento:
         PosicionarSprite(nuevoIcono, posTotXIcon, posTotYIcon);
     }

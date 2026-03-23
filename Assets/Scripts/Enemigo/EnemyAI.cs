@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -49,7 +49,8 @@ public class EnemyAI : MonoBehaviour
         // Evitar conflicto con física
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
-
+        //POSIBLE ERROR EN LINEA INF
+        Debug.Log("CURRENT PATROL INDEX: " + currentPatrolIndex);
         agent.SetDestination(patrolPoints[currentPatrolIndex].position);
         agent.isStopped = false;
     }
@@ -71,7 +72,8 @@ public class EnemyAI : MonoBehaviour
                 {
                     currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;// lo ultimo es para el bucle
                     agent.SetDestination(patrolPoints[currentPatrolIndex].position);
-                }
+                Debug.Log("proximo punto: " + currentPatrolIndex);
+            }
             yield return new WaitForSeconds(updateRate);
         }
     }
@@ -89,25 +91,41 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void ReiniciarNivel()
-    {
+    
+
+    public void ReiniciarNivel(int numPtosDentro)
+    {  
+        //**************************************************************
+        /* hago que si se trata del nivel 2 y son las puertas de estrada (porque miro el numero de puntos internos)
+        con lo que reinicio arriba
+         */ 
         string nivel  = GameCore.Instance.obtenerNivel("enemigo");
         int puntoReinicio = 0;
         if(nivel == "1")
-        {
+        {           
             puntoReinicio = 0;
         } else if(nivel == "2")
         {
-            puntoReinicio = 1;
+            if (numPtosDentro == 17 || numPtosDentro == 19)
+            {
+                puntoReinicio = 0;
+            }
+            else
+            {
+                puntoReinicio = 1;
+            }
+            
         }
          else if(nivel == "3")
         {
-            puntoReinicio = 2;
+           
+            puntoReinicio = 0;
+            //puntoReinicio = 2; que se reinicie en el mismo nivel o en otros dependiendo dep azar u otro criterio
         }
         Transform objCompartido = patrolPointsReinicio[puntoReinicio];
         agent.SetDestination(objCompartido.position);        
         currentPatrolIndex = System.Array.IndexOf(patrolPoints, objCompartido);
-        Debug.Log("REINICIO NIVEL: " + nivel);
+        
     }
 
     void OnDrawGizmosSelected()

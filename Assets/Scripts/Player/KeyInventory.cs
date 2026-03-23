@@ -9,10 +9,14 @@ public class KeyInventory : MonoBehaviour
     public KeyUIManager uiManager; // Asignar desde el inspector
 
     // no comprueba si existe la llave antes de añadirla pues al inicio del proyecto no sabia si una llave se podia repetir y ser desechable o no..
-    public void AddKey(string keyName)
+    public bool AddKey(string keyName)
     {
+        if (keys.Contains(keyName))
+            return false;
         keys.Add(keyName);
+        Debug.Log("Llave añadida: " + keyName);
         uiManager?.UpdateKeyList(GetKeysArray(), keyName);
+        return true;      
     }
 
     public void RemoveKey(string keyName)

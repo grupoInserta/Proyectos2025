@@ -54,13 +54,17 @@ public class GameCore : MonoBehaviour
 
         foreach (var p in securePointList)
         {
-            Debug.Log("punto seguro");
+            Debug.Log("punto seguro"+ p.id);
             if (!pointLookup.ContainsKey(p.id))
                 pointLookup.Add(p.id, p.point);
         }
+       
     }
     public Transform GetPoint(string id)
     {
+        if (string.IsNullOrWhiteSpace(id))
+            return null;
+        id = id.Trim();
         return pointLookup.TryGetValue(id, out Transform result)
             ? result
             : null;
@@ -70,7 +74,6 @@ public class GameCore : MonoBehaviour
     {
         pointLookup[id] = tf;
     }
-
 
     // ------------------------------------------------------------
     // ESTADOS DEL JUEGO
@@ -95,7 +98,6 @@ public class GameCore : MonoBehaviour
         Debug.Log($"[GameCore] Estado cambiado a: {newState}");
         OnGameStateChanged?.Invoke(newState);
     }
-
 
     // ------------------------------------------------------------
     // PROGRESO DEL JUGADOR (llaves, puertas, puzzles)
@@ -166,7 +168,6 @@ public class GameCore : MonoBehaviour
 
     public bool HasItem(string itemID) => inventoryItems.Contains(itemID);
 
-
     // ------------------------------------------------------------
     // SISTEMA DE SALUD JUGADOR (se conecta externamente)
     // ------------------------------------------------------------
@@ -176,7 +177,6 @@ public class GameCore : MonoBehaviour
     {
         if (playerHealth == null)  return;
         Jugador = playerHealth.gameObject;
-
         playerHealth.OnPlayerDamaged += OnPlayerDamage;
         playerHealth.OnPlayerDeath += OnPlayerDied;
     }
@@ -206,15 +206,15 @@ public class GameCore : MonoBehaviour
             objeto = Enemigo;
         }
         string Nivel = "0";
-        if (Jugador.transform.position.y > 8f && Jugador.transform.position.y < 12f)
+        if (objeto.transform.position.y > 8f && objeto.transform.position.y < 13f)
         {
             Nivel = "1";
         }
-        else if (Jugador.transform.position.y > 7f && Jugador.transform.position.y <= 8f)
+        else if (objeto.transform.position.y > 6.5f && objeto.transform.position.y <= 8f)
         {
             Nivel = "2";
         }
-        else if ( Jugador.transform.position.y <= 7f)
+        else if (objeto.transform.position.y < 7f)
         {
             Nivel = "3";
         }
@@ -223,6 +223,7 @@ public class GameCore : MonoBehaviour
 
     private void mandarZonaSegura() {
         string elNivel = obtenerNivel("jugador");
+        Debug.Log("EL NIVEL: " + elNivel);
         Jugador.transform.position = GetPoint(elNivel).position;        
     }
 
