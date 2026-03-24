@@ -2158,7 +2158,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 46185903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1411307992}
+        m_TargetAssemblyTypeName: CambioEscena, Assembly-CSharp
+        m_MethodName: CargaEscena
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MenuPrincipal
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &46185903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65605,6 +65617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411307991}
   - component: {fileID: 1411307990}
+  - component: {fileID: 1411307992}
   m_Layer: 0
   m_Name: HUDGame
   m_TagString: Untagged
@@ -65644,6 +65657,18 @@ Transform:
   - {fileID: 1257213421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411307992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411307989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c4279379a132d48b7d6ee4ae475f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1412024682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
