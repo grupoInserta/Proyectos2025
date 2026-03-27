@@ -69,4 +69,16 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         Debug.Log("salud actual: "+ currentHealth);
     }
+
+
+    //Sistema de guardado
+    public void GuardarPartida()
+    {
+        SistemadeGuardado.GuardarPartida(this);
+    }
+
+    public void CargarPartida()
+    {
+        SistemadeGuardado.CargarPartida(this);
+    }
 }
