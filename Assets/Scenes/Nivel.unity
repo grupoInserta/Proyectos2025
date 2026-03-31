@@ -5,11 +5,11 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
+    smallestOccluder: 1
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 71ef1aad64af281448083f4e2eacc287
+  m_OcclusionCullingData: {fileID: 36300000, guid: b7b27cf3592540c4d9a601abe4392bd5, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -56874,10 +56874,10 @@ MonoBehaviour:
   visionAngle: 90
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!54 &1215092322
 Rigidbody:
   m_ObjectHideFlags: 0
