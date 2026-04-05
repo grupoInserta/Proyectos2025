@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameCore : MonoBehaviour
 {
@@ -30,13 +32,17 @@ public class GameCore : MonoBehaviour
     public List<PointData> securePointList = new List<PointData>();
     private Dictionary<string, Transform> pointLookup;
 
-    private GameObject Jugador;
-    [SerializeField]
-    private GameObject Enemigo;
+    public GameObject Jugador;
+    public GameObject Enemigo;
+    //
+    public Button botonGuardar;
+    public Button botonCargar;
+    //
+    private GameObject PanelInicio;
 
     private void Awake()
-    {
-        if (Instance != null)
+    {// importnate e lo sigiente porque al volver a la escena se crea otra instancia...
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -44,9 +50,71 @@ public class GameCore : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
         BuildLookupTable();
         InitializeCoreSystems();
     }
+
+    private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
+    {
+        Debug.Log("SCENE LOADED");
+        // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
+        if (escena.name == "Nivel")
+        {
+            BuscarReferencias();
+            //
+            Button[] botones = Resources.FindObjectsOfTypeAll<Button>();
+
+            foreach (Button b in botones)
+            {
+                if (b.name == "botonGuardar")
+                    botonGuardar = b;
+
+                if (b.name == "botonCargar")
+                    botonCargar = b;
+            }
+
+            // Reconectar eventos
+            if (botonGuardar != null)
+            {
+                if (!SistemadeGuardado.comprobarHayGuardado())
+                {
+                    botonGuardar.gameObject.SetActive(false);
+                }
+                botonGuardar.onClick.RemoveAllListeners();
+                botonGuardar.onClick.AddListener(GuardarPartida);
+            }
+
+            if (botonCargar != null)
+            {
+                botonCargar.onClick.RemoveAllListeners();
+                botonCargar.onClick.AddListener(CargarPartida);
+              
+            }
+        }
+        
+    }
+
+    void BuscarReferencias()
+    {
+        // Solo los busca si no los tiene
+        if (Jugador == null)
+        {
+            Jugador = GameObject.FindWithTag("Player");
+            playerHealth = Jugador.GetComponent<PlayerHealth>();
+        }
+
+        if (Enemigo == null)
+        {
+            Enemigo = GameObject.FindWithTag("Enemy");
+        }
+        if(PanelInicio == null)
+        {
+            PanelInicio = GameObject.FindWithTag("PanelInicio");
+        }
+    }
+    /// //////
+    /// </summary>
 
     private void BuildLookupTable()
     {
@@ -57,8 +125,7 @@ public class GameCore : MonoBehaviour
             Debug.Log("punto seguro"+ p.id);
             if (!pointLookup.ContainsKey(p.id))
                 pointLookup.Add(p.id, p.point);
-        }
-       
+        }       
     }
     public Transform GetPoint(string id)
     {
@@ -103,19 +170,18 @@ public class GameCore : MonoBehaviour
     // PROGRESO DEL JUGADOR (llaves, puertas, puzzles)
     // ------------------------------------------------------------
 
-    private HashSet<string> keysCollected = new HashSet<string>();
+    //private HashSet<string> keysCollected = new HashSet<string>();
     private HashSet<string> doorsOpened = new HashSet<string>();
     // se guarda el nivel y la posicion
     public Dictionary<string, Transform> zonasSeguras = new Dictionary<string, Transform>();
+    private string nombresPuertas = "";
 
-    public void RegisterKey(string keyID)
-    {
-        if (keysCollected.Add(keyID))
-            Debug.Log($"[GameCore] Llave recogida: {keyID}");
-    }
+    
+    /*****************************************************
+    Cada vez que se abra una puerta hay que registrarla en GameCore.
+    Hay que implementar una coleccion de puertas...
 
-    public bool HasKey(string keyID) => keysCollected.Contains(keyID);
-
+     ***********************************************/
     public void RegisterDoorOpen(string doorID)
     {
         if (doorsOpened.Add(doorID))
@@ -126,7 +192,7 @@ public class GameCore : MonoBehaviour
 
 
     // ------------------------------------------------------------
-    // CHECKPOINTS
+    // CHECKPOINTS NO UTILIZADOS POR AHORA, SON COMO CONTROLES DEL JUEGO
     // ------------------------------------------------------------
     public Vector3 lastCheckpointPosition = Vector3.zero;
 
@@ -175,8 +241,10 @@ public class GameCore : MonoBehaviour
 
     private void ConnectPlayerHealth()
     {
+        Debug.Log("ConnectPlayerHealth Player Health");
+        playerHealth = Jugador.GetComponent<PlayerHealth>();
         if (playerHealth == null)  return;
-        Jugador = playerHealth.gameObject;
+        //Jugador = playerHealth.gameObject;
         playerHealth.OnPlayerDamaged += OnPlayerDamage;
         playerHealth.OnPlayerDeath += OnPlayerDied;
     }
@@ -223,18 +291,27 @@ public class GameCore : MonoBehaviour
 
     private void mandarZonaSegura() {
         string elNivel = obtenerNivel("jugador");
-        Debug.Log("EL NIVEL: " + elNivel);
         Jugador.transform.position = GetPoint(elNivel).position;        
     }
-
 
     // ------------------------------------------------------------
     // GUARDADO / CARGA (placeholder)
     // ------------------------------------------------------------
-    public void SaveGame()
-    {
-        Debug.Log("[GameCore] Guardado ejecutado.");
+    public void GuardarPartida()
+    {        
+        foreach (string nombre in doorsOpened)
+        {
+            nombresPuertas += nombre;            
+        }
+        SistemadeGuardado.GuardarPartida(playerHealth, Enemigo, nombresPuertas);
     }
+
+    public void CargarPartida()
+    {
+        SistemadeGuardado.CargarPartida(playerHealth, Enemigo);
+        PanelInicio.SetActive(false);
+    }
+
 
     public void LoadGame()
     {
@@ -248,19 +325,17 @@ public class GameCore : MonoBehaviour
     private void InitializeCoreSystems()
     {
         Debug.Log("[GameCore] Sistemas centrales inicializados.");
-
         // Inicia en Loading y pasa a Gameplay al segundo
         SetGameState(GameState.Loading);
-
         Invoke(nameof(StartGame), 1f);
     }
 
     private void StartGame()
     {
+        Debug.Log("START GAME");
         SetGameState(GameState.Gameplay);
-        ConnectPlayerHealth();     
+        ConnectPlayerHealth();        
     }
-
 
     // ------------------------------------------------------------
     // MÉTODOS DE CONTROL EXTERNOS (pausa, inventario, etc.)
@@ -279,9 +354,4 @@ public class GameCore : MonoBehaviour
             SetGameState(GameState.Inventory);
     }
 
-    public void CloseInventory()
-    {
-        if (CurrentState == GameState.Inventory)
-            SetGameState(GameState.Gameplay);
-    }
 }

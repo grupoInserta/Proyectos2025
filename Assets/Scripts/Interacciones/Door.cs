@@ -7,9 +7,11 @@ public class Door : MonoBehaviour
     private bool isOpening = false;
     private bool tieneLaLlave = false;
     private bool playerCercano = false;
-    private bool puertaAbierta = false;
+    public bool puertaAbierta = false;
+    private Quaternion PosicionInicial;
     // apertura puerta por rotacion:
     public float openAngle;//slot
+    private Quaternion posicAbierta;
     private float currentAngle = 0f;
     private FirstPersonController PlayerScript;
     private KeyInventory inventory;
@@ -22,7 +24,20 @@ public class Door : MonoBehaviour
 
     private void Awake()
     {
-       
+        PosicionInicial = transform.rotation;
+    }
+
+    public void ReiniciarPuerta()
+    {
+        if (puertaAbierta)
+        {
+            transform.rotation = PosicionInicial;
+        }        
+    }
+
+    public void CargarPosicionPuerta()
+    {
+        transform.rotation = posicAbierta;
     }
 
     private void OnTriggerStay(Collider other)
@@ -53,8 +68,7 @@ public class Door : MonoBehaviour
                 if (!puertaAbierta && currentAngle < 0.1f)                  
                 {
                     inventory.MostrarAviso("Pulsa E para abrir");
-                }
-                              
+                }                              
             }            
         }
     }
@@ -94,6 +108,8 @@ public class Door : MonoBehaviour
             Debug.Log("DESACTIVO");
             isOpening = false;
             puertaAbierta = true;
+            posicAbierta = transform.rotation;
+            GameCore.Instance.RegisterDoorOpen(gameObject.name);
             myCollider = gameObject.GetComponent<Collider>();
             myCollider.enabled = false;
             if (!yaDesactivado)

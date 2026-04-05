@@ -12,6 +12,8 @@ public class GameCoreUI : MonoBehaviour
     private Button botonPausa;
     [SerializeField]
     private Button botonInicio;
+    [SerializeField]
+    private Canvas PanelInicio;
     public bool JuegoPausado { get; set; }
     private InputAction pause;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,6 +22,7 @@ public class GameCoreUI : MonoBehaviour
 
     void OnEnable()
     {
+        
         JuegoPausado = false;
         pause = new InputAction("Pause", InputActionType.Button);
         pause.AddBinding("<Gamepad>/start");
@@ -31,6 +34,12 @@ public class GameCoreUI : MonoBehaviour
         botonInicio.onClick.AddListener(() => IrAInicio());
     }
 
+    public void CerrarPanelInicio()
+    {
+        PanelInicio.enabled = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     private void MostrarPanel()
     {

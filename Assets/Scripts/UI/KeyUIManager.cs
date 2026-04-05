@@ -110,7 +110,6 @@ public class KeyUIManager : MonoBehaviour
             // Eliminarlo de la lista
 
             lista.RemoveAt(lista.Count - 1);
-            Debug.Log("NUM ELENTOS EN LISTA: "+lista.Count);
             // Destruirlo en la escena
             if (ultimo != null)
                 Destroy(ultimo); 
@@ -131,10 +130,21 @@ public class KeyUIManager : MonoBehaviour
     }
 
 
-    public void OcultarTodos()
+    
+
+    public void EliminarTodosLosIconos()
     {
-        foreach (Transform child in iconContainer)
-        Destroy(child.gameObject);
+        // Copia para evitar modificar el diccionario mientras lo recorres
+        var claves = new List<string>(llavesInventario.Keys);
+
+        foreach (var color in claves)
+        {
+            // Mientras existan iconos en esa lista, elimínalos
+            while (llavesInventario.ContainsKey(color))
+            {
+                EliminarIcono(color);
+            }
+        }
     }
 
 

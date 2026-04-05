@@ -29,16 +29,14 @@ public class PlayerHealth : MonoBehaviour
 
     // Llamar cuando recibe daño
     public void TakeDamage(int amount)
-    {   
+    {
         if (isDead) return;
 
         currentHealth -= amount;
 
         if (currentHealth < 0)
             currentHealth = 0;
-
         // Avisar a GameCore o a la UI
-
         OnPlayerDamaged?.Invoke(currentHealth);//???
         miPlayerHUD.UpdateHealthUI(currentHealth, maxHealth);
         if (currentHealth <= 0)
@@ -64,21 +62,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Jugador ha muerto.");
     }
 
-    private void NotifyHealthChange()
+    public void NotifyHealthChange()
     {
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
-        Debug.Log("salud actual: "+ currentHealth);
+        Debug.Log("salud actual: " + currentHealth);
     }
 
-
-    //Sistema de guardado
-    public void GuardarPartida()
-    {
-        SistemadeGuardado.GuardarPartida(this);
-    }
-
-    public void CargarPartida()
-    {
-        SistemadeGuardado.CargarPartida(this);
-    }
 }

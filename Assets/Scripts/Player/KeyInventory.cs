@@ -5,18 +5,40 @@ public class KeyInventory : MonoBehaviour
 {   /*las claves, keys, estan tambien en KeyUIManager pero las necesito tambien
      en este script para que se compruebe desde las llaves y puertas hasta aqui si existe esa clave
    */
-    private HashSet<string> keys = new HashSet<string>();
+    public HashSet<string> keys = new HashSet<string>();// son las llaves recogidas, no las totales
     public KeyUIManager uiManager; // Asignar desde el inspector
+    public GameObject[] Llaves; // todas
 
-    // no comprueba si existe la llave antes de añadirla pues al inicio del proyecto no sabia si una llave se podia repetir y ser desechable o no..
-    public bool AddKey(string keyName)
+    private void Start()
     {
-        if (keys.Contains(keyName))
+        Llaves = GameObject.FindGameObjectsWithTag("Key");
+    }
+    // no comprueba si existe la llave antes de añadirla pues al inicio del proyecto no sabia si una llave se podia repetir y ser desechable o no..
+    public bool AddKey(string _keyName) //AÑADIR UNA LLAVE AL INVENTARIO
+    {
+        if (keys.Contains(_keyName))
             return false;
-        keys.Add(keyName);
-        Debug.Log("Llave añadida: " + keyName);
-        uiManager?.UpdateKeyList(GetKeysArray(), keyName);
+        keys.Add(_keyName);
+        Debug.Log("Llave añadida: " + _keyName);
+        // elimino todas lasllaves de ese color que esten en la escena:
+        foreach (GameObject llave in Llaves)
+        {
+            
+            if(llave != null)
+            {
+                if(llave.GetComponent<KeyPickup>().keyName == _keyName) 
+                    Destroy(llave);
+            }               
+        }
+        //
+        uiManager?.UpdateKeyList(GetKeysArray(), _keyName);
         return true;      
+    }
+
+    public void vaciarInventario()
+    {
+        uiManager.EliminarTodosLosIconos();
+        keys.Clear();
     }
 
     public void RemoveKey(string keyName)
