@@ -21,5 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Derrota.unity
     guid: f1eeaa09e59930e418f764db442e3160
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6c6e717281dab6c4eb06962da1827ec5, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d103335527831a443ad1ca72d2ad1a77, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
