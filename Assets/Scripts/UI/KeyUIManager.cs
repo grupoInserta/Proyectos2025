@@ -163,14 +163,14 @@ public class KeyUIManager : MonoBehaviour
         foreach (string key in keys)
         {            
             string[] arrNombre = key.Split('-');
-            string elColor = arrNombre[0];            
-            //string elColor = key;
-            // keyListText.text += "• " + key + "\n";
+            string elColor = arrNombre[0];
+            
             if(arrNombre[0] == clave)
             {
+                if(elColor != "")
                 MostrarIcono(iconosLlaves[elColor], elColor);
             }            
-            //keyListText.text += "• " + elColor + "\n";
+            
         }
     }
 }
