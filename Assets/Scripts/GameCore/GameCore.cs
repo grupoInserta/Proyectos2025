@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.Universal;
 
 public class GameCore : MonoBehaviour
 {
@@ -13,15 +16,6 @@ public class GameCore : MonoBehaviour
     /*  utilización de métodos desde el resto del componentes:
      Cambiar estado:
     GameCore.Instance.SetGameState(GameCore.GameState.Inventory);
-
-    Registrar llave:
-    GameCore.Instance.RegisterKey("KeyRoja");
-
-    Registrar puerta abierta:
-    GameCore.Instance.RegisterDoorOpen("PuertaPrincipal");
-
-    Añadir item al inventario:
-    GameCore.Instance.AddItem("MunicionEscopeta");
 
     Registrar enemigo:
     GameCore.Instance.RegisterEnemy(this.gameObject); 
@@ -39,9 +33,15 @@ public class GameCore : MonoBehaviour
     public Button botonCargar;
     //
     private GameObject PanelInicio;
+    // controles de ajuste de color pantalla
+    public Volume globalVolume;
+    private ColorAdjustments colorAdjustments;
+    public float valorSaturacion;
+    public float valorContraste;
+
 
     private void Awake()
-    {// importnate e lo sigiente porque al volver a la escena se crea otra instancia...
+    {// importante e lo sigiente porque al volver a la escena se crea otra instancia...
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -51,7 +51,7 @@ public class GameCore : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
-        BuildLookupTable();
+        BuildLookupTable();// es para hacer una tabla de puntos seguros en el editor Unity
         InitializeCoreSystems();
     }
 
@@ -92,7 +92,17 @@ public class GameCore : MonoBehaviour
               
             }
         }
-        
+        if (escena.name != "MenuPrincipal")
+        {            
+            if (globalVolume != null)
+            {
+                    globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
+                    colorAdjustments.saturation.value = valorSaturacion;
+                    colorAdjustments.contrast.value = valorContraste;
+            }                     
+              
+        }
+
     }
 
     void BuscarReferencias()
@@ -112,9 +122,30 @@ public class GameCore : MonoBehaviour
         {
             PanelInicio = GameObject.FindWithTag("PanelInicio");
         }
+        globalVolume = BuscarGlobalVolume();
+
+        if (globalVolume != null)
+            Debug.Log($"Global Volume encontrado");
+        else
+            Debug.LogWarning("No se encontró Global Volume en esta escena");
     }
     /// //////
-    /// </summary>
+    Volume BuscarGlobalVolume()
+    {
+        // 1. Buscar objetos activos normalmente
+        var vol = GameObject.FindObjectOfType<Volume>();
+        if (vol != null) return vol;
+
+        // 2. Si no lo encuentra, buscar objetos desactivados
+        var todos = Resources.FindObjectsOfTypeAll<Volume>();
+        foreach (var v in todos)
+        {
+            if (v.gameObject.hideFlags == HideFlags.None)
+                return v; // primer Volume válido encontrado
+        }
+
+        return null; // no existe en esta escena
+    }
 
     private void BuildLookupTable()
     {
