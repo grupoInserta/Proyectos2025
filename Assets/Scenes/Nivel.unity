@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   agent: {fileID: 0}
-  visionRadius: 10
+  visionRadius: 9
   visionAngle: 90
   obstacleMask:
     serializedVersion: 2
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cd0b65f4c3b4f4b88ab9056b4b9f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 806375056}
+  player: {fileID: 559128954}
   patrolPoints:
   - {fileID: 375294137}
   - {fileID: 613636420}
@@ -28547,6 +28547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &559128954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 559128929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &560383256
 PrefabInstance:
   m_ObjectHideFlags: 0
