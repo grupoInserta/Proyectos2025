@@ -13,9 +13,12 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
     private int currentPatrolIndex;
     public bool chasingPlayerAI;// significa persiguiendo al jugador
+    public bool pierdoVistaJugador;
 
     void Awake()
     {
+        chasingPlayerAI = false;
+        pierdoVistaJugador = false;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false; // Desactivar rotación automática
     }
@@ -34,7 +37,8 @@ public class EnemyAI : MonoBehaviour
 
 
     public void actPosicPatrulla(int numPtsEliminar)
-    {        
+    {
+        
         currentPatrolIndex += numPtsEliminar;
        // currentPatrolIndex %= patrolPoints.Length;
         //Debug.Log("currentPatrolIndex: " + currentPatrolIndex);
@@ -56,13 +60,14 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    IEnumerator UpdateAI()
+    IEnumerator UpdateAI() // es repetitivo pero con unos segundos de intervalo personalizables al final del metodo
     {      
         while (true)
         {            
-            if (chasingPlayerAI)
+            if (pierdoVistaJugador)
             {
                 // El jugador escapó, volver a patrullar
+                pierdoVistaJugador = false;
                 chasingPlayerAI = false;
                 agent.SetDestination(patrolPoints[currentPatrolIndex].position);
             }
@@ -80,17 +85,16 @@ public class EnemyAI : MonoBehaviour
 
     public void Actualizar()
     {
+        Debug.Log("ACTUALIZANDO: ");
         // Rotación manual suave según dirección real de movimiento
         Vector3 moveDir = agent.desiredVelocity;
         moveDir.y = 0f;
-
         if (moveDir.sqrMagnitude > 0.001f)
         {
             Quaternion lookRot = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, rotationSpeed * Time.deltaTime);
         }
     }
-
     
 
     public void ReiniciarNivel(int numPtosDentro)
@@ -113,19 +117,16 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 puntoReinicio = 1;
-            }
-            
+            }            
         }
          else if(nivel == "3")
-        {
-           
+        {           
             puntoReinicio = 0;
             //puntoReinicio = 2; que se reinicie en el mismo nivel o en otros dependiendo dep azar u otro criterio
         }
         Transform objCompartido = patrolPointsReinicio[puntoReinicio];
         agent.SetDestination(objCompartido.position);        
-        currentPatrolIndex = System.Array.IndexOf(patrolPoints, objCompartido);
-        
+        currentPatrolIndex = System.Array.IndexOf(patrolPoints, objCompartido);        
     }
 
     void OnDrawGizmosSelected()

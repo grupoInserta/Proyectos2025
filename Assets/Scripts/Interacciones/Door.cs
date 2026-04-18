@@ -43,7 +43,7 @@ public class Door : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
+        {            
             playerCercano = true;
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
             {

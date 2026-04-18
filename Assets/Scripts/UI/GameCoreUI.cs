@@ -22,8 +22,7 @@ public class GameCoreUI : MonoBehaviour
 
     void OnEnable()
     {
-        
-        JuegoPausado = false;
+        pararJuego();
         pause = new InputAction("Pause", InputActionType.Button);
         pause.AddBinding("<Gamepad>/start");
         pause.AddBinding("<Keyboard>/escape");
@@ -36,6 +35,8 @@ public class GameCoreUI : MonoBehaviour
 
     public void CerrarPanelInicio()
     {
+        Reanudar();
+        JuegoPausado = false;
         PanelInicio.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -43,6 +44,7 @@ public class GameCoreUI : MonoBehaviour
 
     private void MostrarPanel()
     {
+        if (PanelInicio.enabled == true) return;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);

@@ -22,10 +22,6 @@ public class GameCore : MonoBehaviour
      */
     public static GameCore Instance { get; private set; }
 
-    [Header("Registrador de puntos Zonas Seguras")]
-    public List<PointData> securePointList = new List<PointData>();
-    private Dictionary<string, Transform> pointLookup;
-
     public GameObject Jugador;
     public GameObject Enemigo;
     //
@@ -36,8 +32,9 @@ public class GameCore : MonoBehaviour
     // controles de ajuste de color pantalla
     public Volume globalVolume;
     private ColorAdjustments colorAdjustments;
-    public float valorSaturacion;
-    public float valorContraste;
+    public float valorSaturacion = 0;
+    public float valorContraste = 0;
+    private ControladorNivel controladorNivel;
 
 
     private void Awake()
@@ -49,17 +46,15 @@ public class GameCore : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);        
         SceneManager.sceneLoaded += OnSceneLoaded;
-        BuildLookupTable();// es para hacer una tabla de puntos seguros en el editor Unity
-        InitializeCoreSystems();
+        
     }
 
     private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
-        Debug.Log("SCENE LOADED");
         // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
-        if (escena.name == "Nivel")
+        if (escena.name != "MenuPrincipal")
         {
             BuscarReferencias();
             //
@@ -91,18 +86,18 @@ public class GameCore : MonoBehaviour
                 botonCargar.onClick.AddListener(CargarPartida);
               
             }
+            InitializeCoreSystems();
         }
-        if (escena.name != "MenuPrincipal")
-        {            
+       if (escena.name != "MenuPrincipal")
+       {            
             if (globalVolume != null)
             {
                     globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
                     colorAdjustments.saturation.value = valorSaturacion;
                     colorAdjustments.contrast.value = valorContraste;
-            }                     
-              
-        }
-
+            }               
+       }
+       
     }
 
     void BuscarReferencias()
@@ -123,7 +118,12 @@ public class GameCore : MonoBehaviour
             PanelInicio = GameObject.FindWithTag("PanelInicio");
         }
         globalVolume = BuscarGlobalVolume();
+       
 
+        if (controladorNivel == null)
+        {
+            controladorNivel = GameObject.FindWithTag("Controlador").GetComponent<ControladorNivel>();
+        }
         if (globalVolume != null)
             Debug.Log($"Global Volume encontrado");
         else
@@ -147,30 +147,20 @@ public class GameCore : MonoBehaviour
         return null; // no existe en esta escena
     }
 
-    private void BuildLookupTable()
-    {
-        pointLookup = new Dictionary<string, Transform>();
-
-        foreach (var p in securePointList)
-        {
-            Debug.Log("punto seguro"+ p.id);
-            if (!pointLookup.ContainsKey(p.id))
-                pointLookup.Add(p.id, p.point);
-        }       
-    }
-    public Transform GetPoint(string id)
+    
+    private Transform GetPoint(string id)
     {
         if (string.IsNullOrWhiteSpace(id))
             return null;
         id = id.Trim();
-        return pointLookup.TryGetValue(id, out Transform result)
+        return controladorNivel.pointLookup.TryGetValue(id, out Transform result)
             ? result
             : null;
     }
 
     public void RegisterPoint(string id, Transform tf)
     {
-        pointLookup[id] = tf;
+        controladorNivel.pointLookup[id] = tf;
     }
 
     // ------------------------------------------------------------

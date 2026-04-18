@@ -26,17 +26,23 @@ public class AjustesPantalla : MonoBehaviour
         {
             sliderContraste.minValue = -100f;
             sliderContraste.maxValue = 100f;
-            sliderContraste.value = colorAdjustments.contrast.value;
+            sliderContraste.value = GameCore.Instance.valorContraste;           
+           
+            // sliderContraste.value = colorAdjustments.contrast.value;
             // Suscribirse al cambio de valor
             sliderContraste.onValueChanged.AddListener(CambiarContraste);
+            sliderContraste.onValueChanged.Invoke(GameCore.Instance.valorContraste);
         }
         if (sliderSaturacion != null)
         {
             sliderSaturacion.minValue = -100f;
             sliderSaturacion.maxValue = 100f;
-            sliderSaturacion.value = colorAdjustments.contrast.value;
+            sliderSaturacion.value = GameCore.Instance.valorSaturacion;
+            
+            //sliderSaturacion.value = colorAdjustments.contrast.value;
             // Suscribirse al cambio de valor
             sliderSaturacion.onValueChanged.AddListener(CambiarSaturacion);
+            sliderSaturacion.onValueChanged.Invoke(GameCore.Instance.valorSaturacion);
         }
     }
 
@@ -49,8 +55,7 @@ public class AjustesPantalla : MonoBehaviour
         else
         {
             PanelOpciones.active = false;
-        }
-        
+        }        
     }
 
     

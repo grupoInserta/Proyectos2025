@@ -9,14 +9,14 @@ public class EnemyVision : MonoBehaviour
     public NavMeshAgent agent;
 
     [Header("Parámetros de visión")]
-    public float visionRadius = 15f;// distancia máxima de visión
-    private float RadiusminPersec = 5f;//cuando esta persiguiendo y pierde de vista estando cerca
+    public float visionRadius;// distancia máxima de visión
+    private float RadiusminPersec = 15f;//cuando esta persiguiendo y pierde de vista estando cerca
     public float visionAngle = 90f;          // campo de visión en grados
     public LayerMask obstacleMask;           // capas que bloquean la vista
     public LayerMask playerMask;             // capa del jugador
 
     //private bool chasingPlayer = false;
-    private bool chasingPlayerAI; // lo persiguen viendolo
+    //private bool chasingPlayerAI; // lo persiguen viendolo
     private float distanceToPlayer;
     //
     private float tiempoMemoria = 3f;
@@ -33,7 +33,7 @@ public class EnemyVision : MonoBehaviour
         player = gameObject.GetComponent<EnemyAI>().player;
         agent = gameObject.GetComponent<EnemyAI>().agent;
         miEnemyAI = gameObject.GetComponent<EnemyAI>();
-        chasingPlayerAI = miEnemyAI.chasingPlayerAI;
+       // chasingPlayerAI = miEnemyAI.chasingPlayerAI;
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class EnemyVision : MonoBehaviour
         {
             Debug.Log("PERSIGUIENDO AL JUGADOR y ActualizandoEnemyAI: "+ ActualizandoEnemyAI);
             // chasingPlayer = true;
-            chasingPlayerAI = true;
+            miEnemyAI.chasingPlayerAI = true;
             agent.SetDestination(player.position);
             tiempoUltimaVista = Time.time;
         }
@@ -51,10 +51,11 @@ public class EnemyVision : MonoBehaviour
             // Sigue buscando en la última posición vista
             agent.SetDestination(player.position);
             //tiempoUltimaVista = 0;?
-        }
+        }       
         else
         {
-            chasingPlayerAI = false;
+            miEnemyAI.pierdoVistaJugador = true;
+           // miEnemyAI.chasingPlayerAI = false;
         }
         if(ActualizandoEnemyAI)
             miEnemyAI.Actualizar();
@@ -114,8 +115,8 @@ public class EnemyVision : MonoBehaviour
         Vector3 dirToPlayer = player.position - transform.position;        
         distanceToPlayer = dirToPlayer.magnitude;
         if (distanceToPlayer > visionRadius)
-            return false;   
-
+            return false;
+        
         // 2️ Ángulo      
         float angleToPlayer = Vector3.Angle(transform.forward, dirToPlayer.normalized);
 
@@ -123,12 +124,12 @@ public class EnemyVision : MonoBehaviour
         {
             return false;
         } else {
-            ActualizandoEnemyAI = false; //Esto hace que intente mirar hacia el player..
+            //ActualizandoEnemyAI = false; //Esto hace que intente mirar hacia el player..
             //.. y para ello paramos patrulla con ActualizandoEnemyAI = false
             dirToPlayer.y = 0; // Evita inclinaciones en el eje vertical
-            Debug.Log("INTENTANDO MIRAR AL JUGADOR");
+           
             if (dirToPlayer != Vector3.zero)
-            { // MIRAR
+            { // MIRAR                
                 Quaternion rotacionObjetivo = Quaternion.LookRotation(dirToPlayer);
                 transform.rotation = Quaternion.Slerp(
                     transform.rotation,
@@ -137,14 +138,17 @@ public class EnemyVision : MonoBehaviour
                 );
                 // cuando ya mira en direccion al player aunque este detrás de un obstaculo:
                 float diferencia = Quaternion.Angle(transform.rotation, rotacionObjetivo);
-                if (diferencia < 1f)
+                
+                if (diferencia < 40f)
                 {
                     //una mirada hacia el jugador..
                     mirandoPlayer = true;
+                    Debug.Log("LO MIRO BIEN si ignoro los obstaculos");
                 }
                 else
                 {
                     mirandoPlayer = false;
+                    Debug.Log("LO MIRO PERO NO PUEDO verlo");
                 }
             }
         }  // angulo zona vision         
