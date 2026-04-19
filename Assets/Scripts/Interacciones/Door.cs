@@ -2,13 +2,14 @@ using UnityEngine;
 using System.Collections;
 public class Door : MonoBehaviour
 {
-    public string requiredKey;
+    public string requiredKey; // el color en el Inventario
     public float openSpeed = 2f;
     private bool isOpening = false;
     private bool tieneLaLlave = false;
     private bool playerCercano = false;
     public bool puertaAbierta = false;
     private Quaternion PosicionInicial;
+    private Vector3 AlturaInicial;
     // apertura puerta por rotacion:
     public float openAngle;//slot
     private Quaternion posicAbierta;
@@ -25,6 +26,7 @@ public class Door : MonoBehaviour
     private void Awake()
     {
         PosicionInicial = transform.rotation;
+        AlturaInicial = transform.position;
     }
 
     public void ReiniciarPuerta()
@@ -43,11 +45,22 @@ public class Door : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        {            
+        {  
+            if(requiredKey == "Martillo" )
+            {
+                if (tieneLaLlave)
+                {
+                    Destroy(gameObject);
+                } else
+                {
+                    inventory.MostrarAviso("Necesitas el martillo!!!");
+                }                
+                return;
+            } 
             playerCercano = true;
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
             {
-                isOpening = true;
+                isOpening = true; // esto abre la  puerta
                // PlayerScript.pulsadoAbrir = false;                
             }
         }
@@ -65,9 +78,11 @@ public class Door : MonoBehaviour
                 tieneLaLlave = true;
                 // por ahora no quitamos la llave
                 // inventory.RemoveKey(requiredKey);
-                if (!puertaAbierta && currentAngle < 0.1f)                  
+                if (!puertaAbierta && currentAngle < 0.1f && requiredKey != "Martillo")                  
                 {
-                    inventory.MostrarAviso("Pulsa E para abrir");
+                   
+                   inventory.MostrarAviso("Pulsa E para abrir");                
+                    
                 }                              
             }            
         }

@@ -22,8 +22,7 @@ public class KeyInventory : MonoBehaviour
         Debug.Log("Llave añadida: " + _keyName);
         // elimino todas lasllaves de ese color que esten en la escena:
         foreach (GameObject llave in Llaves)
-        {
-            
+        {            
             if(llave != null)
             {
                 if(llave.GetComponent<KeyPickup>().keyName == _keyName) 

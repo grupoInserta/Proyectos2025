@@ -34,7 +34,6 @@ public class KeyUIManager : MonoBehaviour
     {
         RectTransform fondoRect = fondo.GetComponent<RectTransform>();
         RectTransform iconRect = _nuevoIcono.GetComponent<RectTransform>();
-
         // Obtener dimensiones actuales del fondo
         float ancho = fondoRect.rect.width;
         float alto = fondoRect.rect.height;
@@ -94,7 +93,6 @@ public class KeyUIManager : MonoBehaviour
             filasColores.Add(_elColor);
         }
         int posicionColor = filasColores.IndexOf(_elColor);
-        Debug.Log("POSICION COLORRR: " + posicionColor);
         posTotYIcon = posTotYIconIni - posTotYIncr * posicionColor;
         // posicionamiento:
         PosicionarSprite(nuevoIcono, posTotXIcon, posTotYIcon);
@@ -153,13 +151,13 @@ public class KeyUIManager : MonoBehaviour
         keyListText.text = "Llaves:\n";        
         iconosLlaves.Add("verde", "circle-button-green");
         iconosLlaves.Add("roja", "circle-button-red");
-        iconosLlaves.Add("azul", "circle-button-blue");        
+        iconosLlaves.Add("azul", "circle-button-blue");
+        iconosLlaves.Add("Martillo", "circle-button-black");
     }
 
     public void UpdateKeyList(string[] keys, string clave)
     {
         keyListText.text = "Llaves:\n";
-
         foreach (string key in keys)
         {            
             string[] arrNombre = key.Split('-');

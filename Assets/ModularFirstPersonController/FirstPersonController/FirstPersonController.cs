@@ -17,9 +17,11 @@ using UnityEngine.InputSystem;
 
 public class FirstPersonController : MonoBehaviour
 {
+
     private Rigidbody rb;
     private PlayerControls controls;
     public bool pulsadoAbrir { get; set; }
+    private GameObject Cajas { get; set; }
 
     #region Camera Movement Variables
 
@@ -30,6 +32,8 @@ public class FirstPersonController : MonoBehaviour
     public bool cameraCanMove = true;
     public float mouseSensitivity = 2f;
     public float maxLookAngle = 50f;
+    //
+    
 
     // Crosshair
     public bool lockCursor = true;
@@ -136,6 +140,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void Awake()
     {
+        Cajas = GameObject.FindWithTag("Cajas");
         rb = GetComponent<Rigidbody>();
         crosshairObject = GetComponentInChildren<Image>();
 
@@ -497,12 +502,35 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private void activarCollidersCajas(bool activar)
+    {
+        Collider[] colliders = Cajas.GetComponentsInChildren<Collider>(true);
+
+        foreach (Collider col in colliders)
+        {
+            if (col.gameObject != gameObject)
+            {
+                if (activar)
+                {
+                    col.gameObject.GetComponent<BoxCollider>().enabled = true;
+                }
+                else
+                {
+                   col.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+                Debug.Log("Collider hijo: " + col.gameObject.name);
+            }
+        }
+    }
+
     private void Crouch()
     {
+        /* se agacha o sube de agacharse al pulsar tecla ctrol izq */
         // Stands player up to full height
         // Brings walkSpeed back up to original speed
         if(isCrouched)
         {
+            activarCollidersCajas(false);
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
             walkSpeed /= speedReduction;
 
@@ -512,6 +540,7 @@ public class FirstPersonController : MonoBehaviour
         // Reduces walkSpeed
         else
         {
+            activarCollidersCajas(true);
             transform.localScale = new Vector3(originalScale.x, crouchHeight, originalScale.z);
             walkSpeed *= speedReduction;
 
