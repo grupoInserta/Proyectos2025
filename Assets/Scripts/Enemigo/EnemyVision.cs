@@ -98,7 +98,7 @@ public class EnemyVision : MonoBehaviour
         }        
         else if(other.CompareTag("Player")){
             PlayerHealth saludJugador = other.GetComponent<PlayerHealth>();
-            saludJugador.TakeDamage(20);
+            saludJugador.TakeDamage(20); // 
         }
     }
 
@@ -107,7 +107,6 @@ public class EnemyVision : MonoBehaviour
         yield return null; // esperar 1 frame
         miEnemyAI.actPosicPatrulla(numPtsEliminar);
     }
-
 
     bool PuedeVerAlJugador()
     {
@@ -154,7 +153,9 @@ public class EnemyVision : MonoBehaviour
         }  // angulo zona vision         
 
         // 3️ Línea de visión (raycast)
-        if (mirandoPlayer && Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer.normalized, out RaycastHit hit, visionRadius, obstacleMask | playerMask))
+        int mask = obstacleMask | playerMask;
+        mask &= ~LayerMask.GetMask("Transparente"); // excluir capa
+        if (mirandoPlayer && Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask))
         {
             Debug.Log("NOMBRE: " + hit.collider.gameObject.name);
             if (hit.transform == player)

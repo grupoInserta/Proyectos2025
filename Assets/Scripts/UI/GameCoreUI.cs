@@ -80,7 +80,7 @@ public class GameCoreUI : MonoBehaviour
         Time.timeScale = 0f;// Pausa todo el juego
         PlayerScript.enabled = false;
         JuegoPausado = true;
-        botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Continuar";
+        //botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Continuar";
     }
 
     private void PausarReanudar()
@@ -92,7 +92,7 @@ public class GameCoreUI : MonoBehaviour
         else
         {
             Debug.Log("reanudar");
-            botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Parar";
+           // botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Parar";
             Reanudar();
         }
     }

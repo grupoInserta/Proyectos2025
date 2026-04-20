@@ -14,12 +14,15 @@ public class PlayerHealth : MonoBehaviour
     public event Action OnPlayerDeath;
     public event Action<int> OnPlayerDamaged;
 
+    private CambioEscena cambioEscena;
+
 
     private bool isDead = false;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        cambioEscena = GetComponent<CambioEscena>();
     }
 
     private void Start()
@@ -33,7 +36,6 @@ public class PlayerHealth : MonoBehaviour
         if (isDead) return;
 
         currentHealth -= amount;
-
         if (currentHealth < 0)
             currentHealth = 0;
         // Avisar a GameCore o a la UI
@@ -59,6 +61,7 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         OnPlayerDeath?.Invoke();
+        cambioEscena.CargaEscena("Derrota");
         Debug.Log("Jugador ha muerto.");
     }
 

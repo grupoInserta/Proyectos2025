@@ -47,16 +47,15 @@ public class GameCore : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);        
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;        
     }
 
     private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
-        // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
-        if (escena.name != "MenuPrincipal")
+           // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
+        if (escena.name != "MenuPrincipal" && escena.name != "Derrota" && escena.name != "Victoria")
         {
-            BuscarReferencias();
+            BuscarReferencias(escena.name);            
             //
             Button[] botones = Resources.FindObjectsOfTypeAll<Button>();
 
@@ -100,30 +99,33 @@ public class GameCore : MonoBehaviour
        
     }
 
-    void BuscarReferencias()
+    void BuscarReferencias(string nombreEscena)
     {
-        // Solo los busca si no los tiene
-        if (Jugador == null)
+        if ( nombreEscena == "Nivel")
         {
-            Jugador = GameObject.FindWithTag("Player");
-            playerHealth = Jugador.GetComponent<PlayerHealth>();
-        }
+            // Solo los busca si no los tiene
+            if (Jugador == null)
+            {
+                Jugador = GameObject.FindWithTag("Player");
+                playerHealth = Jugador.GetComponent<PlayerHealth>();
+            }
 
-        if (Enemigo == null)
-        {
-            Enemigo = GameObject.FindWithTag("Enemy");
+            if (Enemigo == null)
+            {
+                Enemigo = GameObject.FindWithTag("Enemy");
+            }
+            if (controladorNivel == null)
+            {
+                controladorNivel = GameObject.FindWithTag("Controlador").GetComponent<ControladorNivel>();
+            }
+            if (PanelInicio == null)
+            {
+                PanelInicio = GameObject.FindWithTag("PanelInicio");
+            }
         }
-        if(PanelInicio == null)
-        {
-            PanelInicio = GameObject.FindWithTag("PanelInicio");
-        }
+        
         globalVolume = BuscarGlobalVolume();
-       
-
-        if (controladorNivel == null)
-        {
-            controladorNivel = GameObject.FindWithTag("Controlador").GetComponent<ControladorNivel>();
-        }
+ 
         if (globalVolume != null)
             Debug.Log($"Global Volume encontrado");
         else
@@ -273,7 +275,6 @@ public class GameCore : MonoBehaviour
     private void OnPlayerDamage(int newHealth)
     {
         Debug.Log($"[GameCore] Salud del jugador actualizada: {newHealth}");
-        // comunicar a HUD ++++++++++++++++++++++++++++++++++++++++++++++++++++
         mandarZonaSegura();
     }
 

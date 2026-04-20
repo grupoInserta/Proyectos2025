@@ -31,6 +31,11 @@ public class Door : MonoBehaviour
 
     public void ReiniciarPuerta()
     {
+        if(requiredKey == "Martillo")
+        {
+            transform.position = AlturaInicial;
+        }
+        
         if (puertaAbierta)
         {
             transform.rotation = PosicionInicial;
@@ -50,7 +55,8 @@ public class Door : MonoBehaviour
             {
                 if (tieneLaLlave)
                 {
-                    Destroy(gameObject);
+                    transform.Translate(0f, 1000f, 0f);
+                    //Destroy(gameObject);
                 } else
                 {
                     inventory.MostrarAviso("Necesitas el martillo!!!");

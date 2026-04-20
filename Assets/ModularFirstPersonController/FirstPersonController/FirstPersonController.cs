@@ -17,7 +17,6 @@ using UnityEngine.InputSystem;
 
 public class FirstPersonController : MonoBehaviour
 {
-
     private Rigidbody rb;
     private PlayerControls controls;
     public bool pulsadoAbrir { get; set; }
@@ -502,25 +501,25 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void activarCollidersCajas(bool activar)
+    
+    private void activarLayersCajas(bool activar)
     {
-        Collider[] colliders = Cajas.GetComponentsInChildren<Collider>(true);
+        // gameObject.layer = LayerMask.NameToLayer("MiLayer");
 
-        foreach (Collider col in colliders)
+        foreach (Transform caja in Cajas.transform)
         {
-            if (col.gameObject != gameObject)
+            GameObject Hijo = caja.gameObject;
+            if (!activar)
             {
-                if (activar)
-                {
-                    col.gameObject.GetComponent<BoxCollider>().enabled = true;
-                }
-                else
-                {
-                   col.gameObject.GetComponent<BoxCollider>().enabled = false;
-                }
-                Debug.Log("Collider hijo: " + col.gameObject.name);
+                Hijo.layer = LayerMask.NameToLayer("Transparente");
             }
+            else
+            {
+                Hijo.layer = LayerMask.NameToLayer("Default");
+            }
+            
         }
+     
     }
 
     private void Crouch()
@@ -530,7 +529,7 @@ public class FirstPersonController : MonoBehaviour
         // Brings walkSpeed back up to original speed
         if(isCrouched)
         {
-            activarCollidersCajas(false);
+            activarLayersCajas(false);
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
             walkSpeed /= speedReduction;
 
@@ -540,7 +539,7 @@ public class FirstPersonController : MonoBehaviour
         // Reduces walkSpeed
         else
         {
-            activarCollidersCajas(true);
+            activarLayersCajas(true);
             transform.localScale = new Vector3(originalScale.x, crouchHeight, originalScale.z);
             walkSpeed *= speedReduction;
 
