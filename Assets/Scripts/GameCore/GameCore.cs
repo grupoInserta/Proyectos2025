@@ -87,6 +87,7 @@ public class GameCore : MonoBehaviour
             }
             InitializeCoreSystems();
         }
+
        if (escena.name != "MenuPrincipal")
        {            
             if (globalVolume != null)
@@ -94,8 +95,14 @@ public class GameCore : MonoBehaviour
                     globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
                     colorAdjustments.saturation.value = valorSaturacion;
                     colorAdjustments.contrast.value = valorContraste;
-            }               
-       }
+            }
+            if (escena.name == "Derrota" || escena.name == "Victoria")
+            {
+                Debug.Log("ARRREGLAR CURSOR");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+       } 
        
     }
 
@@ -370,10 +377,6 @@ public class GameCore : MonoBehaviour
             SetGameState(GameState.Gameplay);
     }
 
-    public void OpenInventory()
-    {
-        if (CurrentState == GameState.Gameplay)
-            SetGameState(GameState.Inventory);
-    }
+
 
 }
