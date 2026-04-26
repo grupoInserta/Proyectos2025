@@ -21,11 +21,11 @@ public class AjustesPantalla : MonoBehaviour
         if (volumen != null)
             volumen.profile.TryGet<ColorAdjustments>(out colorAdjustments);
      
-        // Configurar slider (por ejemplo, entre -100 y +100)
+        // Configurar slider (por ejemplo, entre -80 y +80)
         if (sliderContraste != null)
         {
-            sliderContraste.minValue = -100f;
-            sliderContraste.maxValue = 100f;
+            sliderContraste.minValue = -80f;
+            sliderContraste.maxValue = 80f;
             sliderContraste.value = GameCore.Instance.valorContraste;           
            
             // sliderContraste.value = colorAdjustments.contrast.value;
@@ -35,8 +35,8 @@ public class AjustesPantalla : MonoBehaviour
         }
         if (sliderSaturacion != null)
         {
-            sliderSaturacion.minValue = -100f;
-            sliderSaturacion.maxValue = 100f;
+            sliderSaturacion.minValue = -80f;
+            sliderSaturacion.maxValue = 80f;
             sliderSaturacion.value = GameCore.Instance.valorSaturacion;
             
             //sliderSaturacion.value = colorAdjustments.contrast.value;
