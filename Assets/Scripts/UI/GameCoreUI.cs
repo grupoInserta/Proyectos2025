@@ -70,7 +70,6 @@ public class GameCoreUI : MonoBehaviour
         Cursor.visible = false;
         JuegoPausado = false;
         Time.timeScale = 1f;  // Reanuda el juego
-                              // botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Pausar";
         CanvasGameManager.SetActive(false);
         PlayerScript.enabled = true;
     }

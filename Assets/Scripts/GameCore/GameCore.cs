@@ -35,6 +35,7 @@ public class GameCore : MonoBehaviour
     public float valorSaturacion = 0;
     public float valorContraste = 0;
     private ControladorNivel controladorNivel;
+    private GameCoreUI gameCoreUI;
 
 
     private void Awake()
@@ -129,6 +130,12 @@ public class GameCore : MonoBehaviour
             {
                 PanelInicio = GameObject.FindWithTag("PanelInicio");
             }
+            
+            if (gameCoreUI == null)
+            {
+                gameCoreUI = GameObject.FindWithTag("HUDGame").GetComponent<GameCoreUI>();
+            }
+            
         }
         
         globalVolume = BuscarGlobalVolume();
@@ -336,9 +343,10 @@ public class GameCore : MonoBehaviour
     }
 
     public void CargarPartida()
-    {
+    {        
         SistemadeGuardado.CargarPartida(playerHealth, Enemigo);
         PanelInicio.SetActive(false);
+        gameCoreUI.CerrarPanelInicio();
     }
 
 

@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     private Vector3 AlturaInicial;
     // apertura puerta por rotacion:
     public float openAngle;//slot
-    private Quaternion posicAbierta;
+  
     private float currentAngle = 0f;
     private FirstPersonController PlayerScript;
     private KeyInventory inventory;
@@ -43,8 +43,8 @@ public class Door : MonoBehaviour
     }
 
     public void CargarPosicionPuerta()
-    {
-        transform.rotation = posicAbierta;
+    {   
+        transform.Rotate(0,openAngle,0);
     }
 
     private void OnTriggerStay(Collider other)
@@ -115,6 +115,7 @@ public class Door : MonoBehaviour
         }
     }
 
+   
     private void Update()
     {        
         if (isOpening && currentAngle < openAngle )
@@ -126,10 +127,9 @@ public class Door : MonoBehaviour
 
         } else if (isOpening && currentAngle >= openAngle)
         {
-            Debug.Log("DESACTIVO");
+            
             isOpening = false;
             puertaAbierta = true;
-            posicAbierta = transform.rotation;
             GameCore.Instance.RegisterDoorOpen(gameObject.name);
             myCollider = gameObject.GetComponent<Collider>();
             myCollider.enabled = false;

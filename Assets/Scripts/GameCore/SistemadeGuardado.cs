@@ -17,6 +17,7 @@ public class SistemadeGuardado
     }
     public static void GuardarPartida(PlayerHealth jugador, GameObject enemigo, string PuertasAbiertas)  //, KeyInventory llaves)
     {
+        Debug.Log("PUERTAS ABIERTAS: " + PuertasAbiertas);
         string ubicacion = Application.persistentDataPath + "archivoGuardado";// carpeta y nombre archivo
         var archivo = File.Open(ubicacion, FileMode.Create);
         var escribir = new BinaryWriter(archivo, Encoding.Default, false);// false para que el archivo no se mantenga abierto
@@ -50,7 +51,7 @@ public class SistemadeGuardado
     }
 
     public static void CargarPartida(PlayerHealth jugador, GameObject enemigo) //, keyinventory llaves) 
-    {       
+    {
         KeyInventory Inventariollaves = jugador.GetComponent<KeyInventory>();
 
         string ubicacion = Application.persistentDataPath + "archivoGuardado";
@@ -61,7 +62,7 @@ public class SistemadeGuardado
             var lectura = new BinaryReader(archivo, Encoding.Default, false); // codificación
             jugador.currentHealth = lectura.ReadInt32();
             jugador.NotifyHealthChange();
-            Debug.Log("salud guardada:"+jugador.currentHealth);           
+            Debug.Log("salud guardada:"+jugador.currentHealth);  //OK         
            
             Vector3 pos;
 
@@ -81,6 +82,7 @@ public class SistemadeGuardado
             //puertas:
             //obtenerlas
             string puertasAbiertas = lectura.ReadString();
+            Debug.Log("PUERTAS ABIERTAS: " + puertasAbiertas);
             char[] puertas = puertasAbiertas.ToCharArray();
             foreach (char puerta in puertas)
             {
@@ -114,7 +116,7 @@ public class SistemadeGuardado
         }
         else
         {
-
+            Debug.Log("No se encuentra el archivo de guardaddo");
         }
     }
 }
