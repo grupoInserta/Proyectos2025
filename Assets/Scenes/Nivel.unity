@@ -5922,7 +5922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.55
+      value: -22.617
       objectReference: {fileID: 0}
     - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9764,8 +9764,12 @@ PrefabInstance:
       value: Puerta
       objectReference: {fileID: 0}
     - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0136
+      objectReference: {fileID: 0}
+    - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.88
+      value: 0.745
       objectReference: {fileID: 0}
     - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9803,6 +9807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9828,7 +9836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc5399b871151d4287c26749d357d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKey: verde
+  requiredKey: 
   openSpeed: 15
   puertaAbierta: 0
   openAngle: 80
@@ -21525,6 +21533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21550,7 +21562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc5399b871151d4287c26749d357d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKey: verde
+  requiredKey: 
   openSpeed: 15
   puertaAbierta: 0
   openAngle: 80
@@ -70296,7 +70308,7 @@ PrefabInstance:
     - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c3a2c705bf0b735418d11ca3732ad7ce, type: 2}
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70322,7 +70334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc5399b871151d4287c26749d357d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKey: azul
+  requiredKey: 
   openSpeed: 15
   puertaAbierta: 0
   openAngle: 80
@@ -70397,6 +70409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -117119,6 +117135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -117144,7 +117164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc5399b871151d4287c26749d357d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredKey: verde
+  requiredKey: 
   openSpeed: 15
   puertaAbierta: 0
   openAngle: 80
@@ -120103,6 +120123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356436, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6e4d118910ffd6428ccb8a64e10745a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
