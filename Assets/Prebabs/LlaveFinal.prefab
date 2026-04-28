@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4306990295637872489}
   - component: {fileID: 3623957019378164223}
+  - component: {fileID: 2652715237110202410}
   m_Layer: 0
   m_Name: LlaveFinal
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +46,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171f8c259418548489cf39bf66268032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyName: 
+  keyName: final
+--- !u!135 &2652715237110202410
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506624407588190289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0.84, z: 0.13}
 --- !u!1001 &803204325929109058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,6 +76,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4306990295637872489}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.002476169
@@ -93,6 +127,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9017c2664affc81468254e10b9318869, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9017c2664affc81468254e10b9318869, type: 3}
       propertyPath: m_Name
