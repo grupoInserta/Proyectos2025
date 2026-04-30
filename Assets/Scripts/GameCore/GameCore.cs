@@ -36,6 +36,10 @@ public class GameCore : MonoBehaviour
     public float valorContraste = 0;
     private ControladorNivel controladorNivel;
     private GameCoreUI gameCoreUI;
+    //
+    private AudioSource audioSource;
+    public AudioClip ClicSound;
+    private  BackgroundMusic BGM;
 
 
     private void Awake()
@@ -48,12 +52,14 @@ public class GameCore : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);        
-        SceneManager.sceneLoaded += OnSceneLoaded;        
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        BGM = GetComponent<BackgroundMusic>();
     }
 
     private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
-           // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
+        audioSource = transform.GetChild(0).GetComponent<AudioSource>();
+        // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
         if (escena.name != "MenuPrincipal" && escena.name != "Derrota" && escena.name != "Victoria")
         {
             BuscarReferencias(escena.name);            
@@ -103,8 +109,8 @@ public class GameCore : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-       } 
-       
+       }
+        BGM.Reproducir(escena.name);
     }
 
     void BuscarReferencias(string nombreEscena)
@@ -334,7 +340,8 @@ public class GameCore : MonoBehaviour
     // GUARDADO / CARGA (placeholder)
     // ------------------------------------------------------------
     public void GuardarPartida()
-    {        
+    {
+        audioSource.PlayOneShot(ClicSound);
         foreach (string nombre in doorsOpened)
         {
             nombresPuertas += nombre;            
@@ -343,7 +350,8 @@ public class GameCore : MonoBehaviour
     }
 
     public void CargarPartida()
-    {        
+    {
+        audioSource.PlayOneShot(ClicSound);
         SistemadeGuardado.CargarPartida(playerHealth, Enemigo);
         PanelInicio.SetActive(false);
         gameCoreUI.CerrarPanelInicio();

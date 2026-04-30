@@ -152,7 +152,7 @@ public class KeyUIManager : MonoBehaviour
         iconosLlaves.Add("verde", "circle-button-green");
         iconosLlaves.Add("roja", "circle-button-red");
         iconosLlaves.Add("azul", "circle-button-blue");
-        iconosLlaves.Add("Martillo", "circle-button-black");
+        iconosLlaves.Add("Martillo", "circle-button-gray");
         iconosLlaves.Add("final", "circle-button-brown");
     }
 

@@ -25,6 +25,9 @@ public class EnemyVision : MonoBehaviour
     private float velocidadRotacion = 0.6f;
     private bool ActualizandoEnemyAI = true;
     private bool mirandoPlayer = false;
+    // SONIDOS
+    public AudioClip ataqueSound;
+    public AudioSource audioSource;
 
     // quitar
     int contador = 0;
@@ -33,13 +36,15 @@ public class EnemyVision : MonoBehaviour
         player = gameObject.GetComponent<EnemyAI>().player;
         agent = gameObject.GetComponent<EnemyAI>().agent;
         miEnemyAI = gameObject.GetComponent<EnemyAI>();
-       // chasingPlayerAI = miEnemyAI.chasingPlayerAI;
+        audioSource.clip = ataqueSound;
+        audioSource.loop = true;
     }
 
     void Update()
     {
         if (PuedeVerAlJugador())
         {
+            audioSource.Play();
             Debug.Log("PERSIGUIENDO AL JUGADOR y ActualizandoEnemyAI: "+ ActualizandoEnemyAI);
             // chasingPlayer = true;
             miEnemyAI.chasingPlayerAI = true;

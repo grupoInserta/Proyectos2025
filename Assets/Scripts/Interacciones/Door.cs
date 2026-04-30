@@ -21,6 +21,10 @@ public class Door : MonoBehaviour
     public int numPosicionesDentro;
     private BoxCollider[] boxes;
     public Collider myCollider;
+    //
+    public AudioSource audioSource;
+    public AudioClip openSound;
+    public AudioClip noMartilloSound;
 
 
     private void Awake()
@@ -60,6 +64,7 @@ public class Door : MonoBehaviour
                 } else
                 {
                     inventory.MostrarAviso("Necesitas el martillo!!!");
+                    audioSource.PlayOneShot(noMartilloSound); 
                 }                
                 return;
             } 
@@ -67,7 +72,7 @@ public class Door : MonoBehaviour
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
             {
                 isOpening = true; // esto abre la  puerta
-               // PlayerScript.pulsadoAbrir = false;                
+                audioSource.PlayOneShot(openSound);              
             }
         }
     }
@@ -142,7 +147,8 @@ public class Door : MonoBehaviour
         if (PlayerScript == null) return;
         if (!tieneLaLlave && PlayerScript.pulsadoAbrir && playerCercano)
         {
-            inventory.MostrarAviso("Necesitas la llave: " + requiredKey);           
+            inventory.MostrarAviso("Necesitas la llave: " + requiredKey);
+            audioSource.PlayOneShot(noMartilloSound);
             PlayerScript.pulsadoAbrir = false;
         }
     }

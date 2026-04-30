@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public bool chasingPlayerAI;// significa persiguiendo al jugador
     public bool pierdoVistaJugador;
 
+
     void Awake()
     {
         chasingPlayerAI = false;
@@ -77,7 +78,6 @@ public class EnemyAI : MonoBehaviour
                 {
                     currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;// lo ultimo es para el bucle
                     agent.SetDestination(patrolPoints[currentPatrolIndex].position);
-                Debug.Log("proximo punto: " + currentPatrolIndex);
             }
             yield return new WaitForSeconds(updateRate);
         }
@@ -85,7 +85,6 @@ public class EnemyAI : MonoBehaviour
 
     public void Actualizar()
     {
-        Debug.Log("ACTUALIZANDO: ");
         // Rotación manual suave según dirección real de movimiento
         Vector3 moveDir = agent.desiredVelocity;
         moveDir.y = 0f;

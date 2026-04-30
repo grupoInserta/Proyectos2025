@@ -16,19 +16,27 @@ public class PlayerHealth : MonoBehaviour
 
     private CambioEscena cambioEscena;
 
-
     private bool isDead = false;
+    // sonidos
+    public AudioSource audioSource;
+    public AudioClip PasosSound;
+    public AudioClip SprintSound;
+    private AudioClip targetClip;
+    private FirstPersonController firstPersonController;
 
     private void Awake()
     {
         currentHealth = maxHealth;
         cambioEscena = GetComponent<CambioEscena>();
+        firstPersonController = gameObject.GetComponent<FirstPersonController>();
     }
 
     private void Start()
     {
         NotifyHealthChange();
+        audioSource.loop = true;
     }
+
 
     // Llamar cuando recibe daño
     public void TakeDamage(int amount)
@@ -70,5 +78,38 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         Debug.Log("salud actual: " + currentHealth);
     }
+
+    void Update()
+    {         
+        if (firstPersonController.isWalking || firstPersonController.isSprinting)
+        {
+            AudioClip targetClip;
+            if (firstPersonController.isWalking)
+            {
+                targetClip = PasosSound;
+            }
+            else
+            {
+                targetClip = SprintSound;
+            }
+
+            // Cambiar clip solo si es distinto (evita reinicios constantes)
+            if (audioSource.clip != targetClip)
+            {
+                audioSource.clip = targetClip;
+                audioSource.Play();
+            }
+
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+        }
+       
+    }
+
 
 }

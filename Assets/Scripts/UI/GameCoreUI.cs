@@ -19,6 +19,8 @@ public class GameCoreUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]
     private FirstPersonController PlayerScript;
+    private AudioSource audioSource;
+    public AudioClip ClicSound;
 
     void OnEnable()
     {
@@ -31,6 +33,8 @@ public class GameCoreUI : MonoBehaviour
         //
         botonPausa.onClick.AddListener(() => PausarReanudar());
         botonInicio.onClick.AddListener(() => IrAInicio());
+        //
+        audioSource = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
     public void CerrarPanelInicio()
@@ -40,6 +44,7 @@ public class GameCoreUI : MonoBehaviour
         PanelInicio.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        audioSource.PlayOneShot(ClicSound);
     }
 
     private void MostrarPanel()
@@ -49,6 +54,7 @@ public class GameCoreUI : MonoBehaviour
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);
         pararJuego();
+        audioSource.PlayOneShot(ClicSound);
     }
     
 
@@ -57,6 +63,7 @@ public class GameCoreUI : MonoBehaviour
         JuegoPausado = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
+        audioSource.PlayOneShot(ClicSound);
     }
 
     void OnDisable()
@@ -72,6 +79,7 @@ public class GameCoreUI : MonoBehaviour
         Time.timeScale = 1f;  // Reanuda el juego
         CanvasGameManager.SetActive(false);
         PlayerScript.enabled = true;
+        audioSource.PlayOneShot(ClicSound);
     }
 
     private void pararJuego()
@@ -79,7 +87,7 @@ public class GameCoreUI : MonoBehaviour
         Time.timeScale = 0f;// Pausa todo el juego
         PlayerScript.enabled = false;
         JuegoPausado = true;
-        //botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Continuar";
+        
     }
 
     private void PausarReanudar()
@@ -91,9 +99,9 @@ public class GameCoreUI : MonoBehaviour
         else
         {
             Debug.Log("reanudar");
-           // botonPausa.GetComponentInChildren<TextMeshProUGUI>().text = "Parar";
             Reanudar();
         }
+        audioSource.PlayOneShot(ClicSound);
     }
 
 }
