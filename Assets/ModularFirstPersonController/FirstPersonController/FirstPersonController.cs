@@ -118,7 +118,7 @@ public class FirstPersonController : MonoBehaviour
     public float speedReduction = .5f;
 
     // Internal Variables
-    private bool isCrouched = false;
+    public bool isCrouched = false;
     private Vector3 originalScale;
 
     #endregion
@@ -427,6 +427,7 @@ public class FirstPersonController : MonoBehaviour
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
                     isSprinting = true;
+                    
 
                     if (isCrouched)
                     {
@@ -437,9 +438,8 @@ public class FirstPersonController : MonoBehaviour
                     {
                         sprintBarCG.alpha += 5 * Time.deltaTime;
                     }
-                }
-
-                rb.AddForce(velocityChange, ForceMode.VelocityChange);
+                    rb.AddForce(velocityChange, ForceMode.VelocityChange);
+                }                
             }
             // All movement calculations while walking
             else

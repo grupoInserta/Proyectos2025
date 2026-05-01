@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip PasosSound;
     public AudioClip SprintSound;
+    public AudioClip CrouchSound;
     private AudioClip targetClip;
     private FirstPersonController firstPersonController;
 
@@ -83,15 +84,22 @@ public class PlayerHealth : MonoBehaviour
     {         
         if (firstPersonController.isWalking || firstPersonController.isSprinting)
         {
-            AudioClip targetClip;
+            AudioClip targetClip = null;
             if (firstPersonController.isWalking)
             {
                 targetClip = PasosSound;
+                Debug.Log("PASOS");
             }
-            else
+            if(firstPersonController.isSprinting)
             {
+                Debug.Log("CORRIENDO");
                 targetClip = SprintSound;
             }
+            if(firstPersonController.isCrouched && firstPersonController.isWalking)
+            {
+                targetClip = CrouchSound;
+            }
+           
 
             // Cambiar clip solo si es distinto (evita reinicios constantes)
             if (audioSource.clip != targetClip)

@@ -7,13 +7,11 @@ public class CambioEscena : MonoBehaviour
     public AudioClip ClicSound;
     public void CargaEscena(string nombreEscenaCarga)
     {
-        audioSource.PlayOneShot(ClicSound);
-        SceneManager.LoadScene(nombreEscenaCarga);
+        if(audioSource != null)
+        {
+            audioSource.PlayOneShot(ClicSound);
+            SceneManager.LoadScene(nombreEscenaCarga);
+        }        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

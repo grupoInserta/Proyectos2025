@@ -3,6 +3,9 @@ using UnityEngine;
 public class MuroDemo : MonoBehaviour
 {
     private CambioEscena cambioEscena;
+    [SerializeField] private bool activarDemo;
+    public AudioSource audioSource;
+    public AudioClip PasoNivel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,9 +14,13 @@ public class MuroDemo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && activarDemo)
         {
             cambioEscena.CargaEscena("Victoria");
+        }
+        else
+        {
+            audioSource.PlayOneShot(PasoNivel);
         }
     }
 }
