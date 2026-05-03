@@ -148,7 +148,7 @@ public class KeyUIManager : MonoBehaviour
 
     private void Start()
     {
-        keyListText.text = "Llaves:\n";        
+        keyListText.text = "Llaves: + ";        
         iconosLlaves.Add("verde", "circle-button-green");
         iconosLlaves.Add("roja", "circle-button-red");
         iconosLlaves.Add("azul", "circle-button-blue");
@@ -158,7 +158,7 @@ public class KeyUIManager : MonoBehaviour
 
     public void UpdateKeyList(string[] keys, string clave)
     {
-        keyListText.text = "Llaves:\n";
+        keyListText.text = "Llaves: + ";
         foreach (string key in keys)
         {            
             string[] arrNombre = key.Split('-');
