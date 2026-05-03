@@ -148,7 +148,7 @@ public class KeyUIManager : MonoBehaviour
 
     private void Start()
     {
-        keyListText.text = "Llaves: + ";        
+        keyListText.text = "Llaves: " + " ";        
         iconosLlaves.Add("verde", "circle-button-green");
         iconosLlaves.Add("roja", "circle-button-red");
         iconosLlaves.Add("azul", "circle-button-blue");
