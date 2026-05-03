@@ -48,6 +48,7 @@ public class AjustesPantalla : MonoBehaviour
 
     public void TogglePanelOpciones()
     {
+
         if(PanelOpciones.active == false)
         {
             PanelOpciones.active = true;

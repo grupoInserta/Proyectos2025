@@ -14,6 +14,12 @@ public class GameCoreUI : MonoBehaviour
     private Button botonInicio;
     [SerializeField]
     private Canvas PanelInicio;
+
+    [SerializeField]
+    private Canvas PanelCanvasGamesCore;
+    [SerializeField]
+    private GameObject CanvasAjustesManager;
+
     public bool JuegoPausado { get; set; }
     private InputAction pause;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -57,6 +63,19 @@ public class GameCoreUI : MonoBehaviour
         audioSource.PlayOneShot(ClicSound);
     }
     
+    public void MostrarPanelAjustes()
+    {
+        if (PanelCanvasGamesCore.enabled == true) return;
+        CanvasAjustesManager.SetActive(true);
+        audioSource.PlayOneShot(ClicSound);
+    }
+
+    public void CerrarPanelAjustes()
+    {
+        PanelCanvasGamesCore.enabled = true;
+        CanvasAjustesManager.SetActive(false);
+        audioSource.PlayOneShot(ClicSound);
+    }
 
     void IrAInicio()
     {
