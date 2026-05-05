@@ -14,6 +14,9 @@ public class AjustesPantalla : MonoBehaviour
     public Volume volumen;
     public GameObject PanelOpciones;  
     private ColorAdjustments colorAdjustments;
+    //
+    public AudioClip ClicSound;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -48,9 +51,9 @@ public class AjustesPantalla : MonoBehaviour
 
     public void TogglePanelOpciones()
     {
-
-        if(PanelOpciones.active == false)
-        {
+        audioSource.PlayOneShot(ClicSound);
+        if (PanelOpciones.active == false)
+        {            
             PanelOpciones.active = true;
         }
         else
@@ -58,7 +61,6 @@ public class AjustesPantalla : MonoBehaviour
             PanelOpciones.active = false;
         }        
     }
-
     
 
     public void CambiarSaturacion(float valor)

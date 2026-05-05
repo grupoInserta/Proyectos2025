@@ -13,11 +13,12 @@ public class KeyUIManager : MonoBehaviour
     public GameObject iconPrefab;
     [SerializeField] private Image fondo;
     private float iconSize = 60f;
-    private float incrPosXIcon = 0.1f;
-    private float incrPosYIcon = 0.18f;
-    private float posTotYIncr = 0.18f;
-    private float posTotXIcon = 0.25f;
+
+    private float posTotXIconIni = 0.25f;
+    private float posTotXIcon;
+    private float incrPosXIcon = 0.25f;
     private float posTotYIconIni = 0.25f;
+    private float posTotYIncr = 0.18f;
     private float posTotYIcon;
     private int contadorFilasIconos = 0;
     private List<string> filasColores = new List<string>();
@@ -93,7 +94,9 @@ public class KeyUIManager : MonoBehaviour
             filasColores.Add(_elColor);
         }
         int posicionColor = filasColores.IndexOf(_elColor);
-        posTotYIcon = posTotYIconIni - posTotYIncr * posicionColor;
+        //posTotYIcon = posTotYIconIni - posTotYIncr * posicionColor;
+        posTotYIcon = posTotYIconIni;
+        posTotXIcon = posTotXIconIni + posTotXIcon + incrPosXIcon;
         // posicionamiento:
         PosicionarSprite(nuevoIcono, posTotXIcon, posTotYIcon);
     }
@@ -126,8 +129,6 @@ public class KeyUIManager : MonoBehaviour
         }
         return resultado;
     }
-
-
     
 
     public void EliminarTodosLosIconos()

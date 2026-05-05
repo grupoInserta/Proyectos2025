@@ -18,7 +18,6 @@ public class EnemyVision : MonoBehaviour
     //private bool chasingPlayer = false;
     //private bool chasingPlayerAI; // lo persiguen viendolo
     private float distanceToPlayer;
-    //
     private float tiempoMemoria = 3f;
     private float tiempoUltimaVista;
     private EnemyAI miEnemyAI;
@@ -42,12 +41,13 @@ public class EnemyVision : MonoBehaviour
 
     void Update()
     {
+       
         if (PuedeVerAlJugador())
         {
             audioSource.Play();
             Debug.Log("PERSIGUIENDO AL JUGADOR y ActualizandoEnemyAI: "+ ActualizandoEnemyAI);
             // chasingPlayer = true;
-            miEnemyAI.chasingPlayerAI = true;
+            miEnemyAI.ChasingPlayerAI = true;
             agent.SetDestination(player.position);
             tiempoUltimaVista = Time.time;
         }
@@ -64,6 +64,7 @@ public class EnemyVision : MonoBehaviour
         }
         if(ActualizandoEnemyAI)
             miEnemyAI.Actualizar();
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,7 +82,6 @@ public class EnemyVision : MonoBehaviour
                 string nivel = GameCore.Instance.obtenerNivel("enemigo");
                 if (numPosicionesDentro == 1000 && nivel == "1")
                 {
-                    Debug.Log("TOC, nivel UNO: " + nivel);
                     miEnemyAI.ReiniciarNivel(numPosicionesDentro);
                     StartCoroutine(ActualizarPatrullaConDelay(0));
                 }
@@ -107,10 +107,12 @@ public class EnemyVision : MonoBehaviour
         }
     }
 
-    private IEnumerator ActualizarPatrullaConDelay(int numPtsEliminar)
-    {
-        yield return null; // esperar 1 frame
-        miEnemyAI.actPosicPatrulla(numPtsEliminar);
+  private IEnumerator ActualizarPatrullaConDelay(int numPtsEliminar)
+  {
+
+      yield return null; // esperar 1 frame
+      miEnemyAI.actPosicPatrulla(numPtsEliminar);
+      
     }
 
     bool PuedeVerAlJugador()

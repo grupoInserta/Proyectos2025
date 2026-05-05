@@ -563,6 +563,8 @@ MonoBehaviour:
   sliderSaturacion: {fileID: 1520982814}
   volumen: {fileID: 1021119744}
   PanelOpciones: {fileID: 366998593}
+  ClicSound: {fileID: 8300000, guid: 65c77c4447e2e52448397c7fd62b8b1b, type: 3}
+  audioSource: {fileID: 1420586057}
 --- !u!4 &310802134
 Transform:
   m_ObjectHideFlags: 0

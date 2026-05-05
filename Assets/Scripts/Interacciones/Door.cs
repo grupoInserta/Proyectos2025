@@ -5,6 +5,7 @@ public class Door : MonoBehaviour
     public string requiredKey; // el color en el Inventario
     public float openSpeed = 2f;
     private bool isOpening = false;
+    private bool activadoAbrir = false;
     private bool tieneLaLlave = false;
     private bool playerCercano = false;
     public bool puertaAbierta = false;
@@ -70,9 +71,10 @@ public class Door : MonoBehaviour
             } 
             playerCercano = true;
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
-            {
+            {                
                 isOpening = true; // esto abre la  puerta
-                audioSource.PlayOneShot(openSound);              
+                if(!activadoAbrir) audioSource.PlayOneShot(openSound);
+                activadoAbrir = true;
             }
         }
     }
@@ -131,8 +133,7 @@ public class Door : MonoBehaviour
             currentAngle += delta;
 
         } else if (isOpening && currentAngle >= openAngle)
-        {
-            
+        {            
             isOpening = false;
             puertaAbierta = true;
             GameCore.Instance.RegisterDoorOpen(gameObject.name);
