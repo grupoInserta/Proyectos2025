@@ -73,8 +73,9 @@ public class Door : MonoBehaviour
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
             {                
                 isOpening = true; // esto abre la  puerta
-                if(!activadoAbrir) audioSource.PlayOneShot(openSound);
-                activadoAbrir = true;
+                PlayerScript.pulsadoAbrir = false;
+                if (!activadoAbrir) audioSource.PlayOneShot(openSound);
+                activadoAbrir = true;// para el sonido una unica vez
             }
         }
     }
@@ -92,10 +93,8 @@ public class Door : MonoBehaviour
                 // por ahora no quitamos la llave
                 // inventory.RemoveKey(requiredKey);
                 if (!puertaAbierta && currentAngle < 0.1f && requiredKey != "Martillo")                  
-                {
-                   
-                   inventory.MostrarAviso("Pulsa E para abrir");                
-                    
+                {                   
+                   inventory.MostrarAviso("Pulsa E para abrir");                    
                 }                              
             }            
         }

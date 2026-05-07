@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyVision : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class EnemyVision : MonoBehaviour
     private bool mirandoPlayer = false;
     // SONIDOS
     public AudioClip ataqueSound;
+    public AudioClip sonidoAvistado;
     public AudioSource audioSource;
+    private bool sonidoPersecucion = false;
+    private float distanciaAtaque = 0.5f;
 
     // quitar
     int contador = 0;
@@ -35,32 +39,54 @@ public class EnemyVision : MonoBehaviour
         player = gameObject.GetComponent<EnemyAI>().player;
         agent = gameObject.GetComponent<EnemyAI>().agent;
         miEnemyAI = gameObject.GetComponent<EnemyAI>();
-        audioSource.clip = ataqueSound;
+        audioSource.clip = sonidoAvistado;
         audioSource.loop = true;
+       
+    }
+
+    private void ReproducirSonidoAtaque()
+    {
+        audioSource.clip = ataqueSound;
+        audioSource.loop = false;
     }
 
     void Update()
-    {
-       
+    {       
         if (PuedeVerAlJugador())
         {
-            audioSource.Play();
+            if (!sonidoPersecucion)
+            {
+                audioSource.clip = sonidoAvistado;
+                audioSource.loop = true;
+                audioSource.Play();
+                sonidoPersecucion = true;
+            }
+            
             Debug.Log("PERSIGUIENDO AL JUGADOR y ActualizandoEnemyAI: "+ ActualizandoEnemyAI);
             // chasingPlayer = true;
             miEnemyAI.ChasingPlayerAI = true;
             agent.SetDestination(player.position);
             tiempoUltimaVista = Time.time;
+            if (distanceToPlayer < distanciaAtaque)
+            {
+                ReproducirSonidoAtaque();
+                miEnemyAI.IsAttackingAI = true;
+            }
         }
         else if ((Time.time - tiempoUltimaVista < tiempoMemoria) && (distanceToPlayer < RadiusminPersec))
         {   //
             // Sigue buscando en la última posición vista
             agent.SetDestination(player.position);
+            sonidoPersecucion = false;
             //tiempoUltimaVista = 0;?
         }       
         else
         {
+            // PIERDE DE VISTA AL JUGADOR
+            sonidoPersecucion = false;
             miEnemyAI.pierdoVistaJugador = true;
-           // miEnemyAI.chasingPlayerAI = false;
+            audioSource.Pause();
+            // miEnemyAI.chasingPlayerAI = false;
         }
         if(ActualizandoEnemyAI)
             miEnemyAI.Actualizar();
@@ -104,6 +130,7 @@ public class EnemyVision : MonoBehaviour
         else if(other.CompareTag("Player")){
             PlayerHealth saludJugador = other.GetComponent<PlayerHealth>();
             saludJugador.TakeDamage(20); // 
+            audioSource.Pause();
         }
     }
 
@@ -118,7 +145,6 @@ public class EnemyVision : MonoBehaviour
     
     bool PuedeVerAlJugador()
     {
-
         // 1️ Distancia
         Vector3 dirToPlayer = player.position - transform.position;        
         distanceToPlayer = dirToPlayer.magnitude;
@@ -164,18 +190,13 @@ public class EnemyVision : MonoBehaviour
         // 3️ Línea de visión (raycast)
         int mask = obstacleMask | playerMask;
         mask &= ~LayerMask.GetMask("Transparente"); // excluir capa
-       
-        if (mirandoPlayer && Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask))
+
+        if (mirandoPlayer && Physics.Raycast(transform.position, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask, QueryTriggerInteraction.Ignore))
         {
-            
-            //
-            Vector3 origin = transform.position;
-            Vector3 direction = transform.forward * 6f;
-            Debug.DrawRay(origin, direction, Color.red);
-            //
-            Debug.Log("NOMBRE: " + hit.collider.gameObject.name);
-            if (hit.transform == player)
+
+            if (hit.transform.root == player)
             {
+                Debug.Log("LO VEOOOOO!!!");
                 return true; //  jugador visible
             }
             else
@@ -200,5 +221,15 @@ public class EnemyVision : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawLine(transform.position, transform.position + leftLimit * visionRadius);
         Gizmos.DrawLine(transform.position, transform.position + rightLimit * visionRadius);
+        // vision     
+
+        // Draw the line
+        Gizmos.color = Color.green;
+
+        Vector3 origin = transform.position;
+        //+ Vector3.up * 1.5f; // altura ojos
+        Vector3 direction = transform.forward * 50f;
+
+        Gizmos.DrawRay(origin, direction);
     }
 }

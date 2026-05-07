@@ -393,6 +393,4 @@ public class GameCore : MonoBehaviour
             SetGameState(GameState.Gameplay);
     }
 
-
-
 }
