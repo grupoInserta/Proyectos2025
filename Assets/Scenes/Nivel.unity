@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 8d5b735986267da45af80e88488dda61, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 05893bcc566b1a64e8887c0cfbb5fa39, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -44272,7 +44272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 181034a188e5a0148b25fe47f66daf6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c71d548106a4d77458ba4e799e586e92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47964,7 +47964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 107ef4f4e98f3af439fe26fec708350a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cddaef7af5441d4bb5b7255c76e3853, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -66249,6 +66249,7 @@ MonoBehaviour:
   ataqueSound: {fileID: 8300000, guid: 8ebab86689581704f819d82302f0fdc9, type: 3}
   sonidoAvistado: {fileID: 8300000, guid: 0d5ec71a39c14d04482fbc1501fdb1c6, type: 3}
   audioSource: {fileID: 2005463292}
+  distanciaAtaque: 4.5
 --- !u!54 &1215092322
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -114963,13 +114964,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049523528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6897266, y: 0.4362838, z: 0.39047453, w: 0.42598516}
+  m_LocalRotation: {x: 0.8077752, y: 0.2128303, z: 0.5454506, w: 0.068454936}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 165.705, y: -69.95599, z: -74.65799}
+  m_LocalEulerAnglesHint: {x: 186.984, y: -66.51199, z: -24.937988}
 --- !u!114 &2049523531
 MonoBehaviour:
   m_ObjectHideFlags: 0
