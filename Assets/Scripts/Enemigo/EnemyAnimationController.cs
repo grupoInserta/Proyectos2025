@@ -49,6 +49,7 @@ public class EnemyAnimationController : MonoBehaviour
     public void PlayAttack()
     {
         animator.SetTrigger("Attack");
+        Debug.Log("ANIMACION ATACARRRRRRRRR");
     }
 
     public void PlaySearch()

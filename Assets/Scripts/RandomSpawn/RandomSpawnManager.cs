@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RandomSpawnManager : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    public GameObject objectToPlace;
     public Transform[] spawnpoints;
 
     private void Start()
@@ -15,6 +15,6 @@ public class RandomSpawnManager : MonoBehaviour
         if (spawnpoints.Length == 0) return;
         int indiceAleatorio = Random.Range(0, spawnpoints.Length);
         Debug.Log("SPAWNPOINT: " + indiceAleatorio);
-        Instantiate(objectToSpawn, spawnpoints[indiceAleatorio].position, Quaternion.identity);
+        objectToPlace.transform.position = spawnpoints[indiceAleatorio].position;
     }
 }

@@ -335,7 +335,6 @@ public class GameCore : MonoBehaviour
         string elNivel = obtenerNivel("jugador");
         Jugador.transform.position = GetPoint(elNivel).position;        
     }
-
     // ------------------------------------------------------------
     // GUARDADO / CARGA (placeholder)
     // ------------------------------------------------------------

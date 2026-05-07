@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public ChaseState ChaseState { get; private set; }
     public AttackState AttackState { get; private set; }
     public SearchState SearchState { get; private set; }
-    //*************//
+
     public Transform player;
     public NavMeshAgent agent;
     public Transform[] patrolPoints;
@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
     public bool pierdoVistaJugador;
     public float rotationSpeed = 8f;
     private EnemyAnimationController enemyAnimationController;
-    //*************//
+
 
     private void Awake()
     {
@@ -78,10 +78,11 @@ public class EnemyAI : MonoBehaviour
         {
             enemyAnimationController.SetChasing(true);
         }
-        else if (IsAttackingAI)
+        if (IsAttackingAI)
         {
             enemyAnimationController.PlayAttack();
-        } else if (IsSearchingAI)
+        } 
+        if (IsSearchingAI)
         {
             enemyAnimationController.PlaySearch();
         }

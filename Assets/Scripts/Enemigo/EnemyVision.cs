@@ -30,7 +30,7 @@ public class EnemyVision : MonoBehaviour
     public AudioClip sonidoAvistado;
     public AudioSource audioSource;
     private bool sonidoPersecucion = false;
-    private float distanciaAtaque = 0.5f;
+    public float distanciaAtaque = 4.5f;
 
     // quitar
     int contador = 0;
@@ -45,9 +45,8 @@ public class EnemyVision : MonoBehaviour
     }
 
     private void ReproducirSonidoAtaque()
-    {
-        audioSource.clip = ataqueSound;
-        audioSource.loop = false;
+    {      
+        audioSource.PlayOneShot(ataqueSound);        
     }
 
     void Update()
@@ -67,7 +66,12 @@ public class EnemyVision : MonoBehaviour
             miEnemyAI.ChasingPlayerAI = true;
             agent.SetDestination(player.position);
             tiempoUltimaVista = Time.time;
-            if (distanceToPlayer < distanciaAtaque)
+            //
+            Vector3 dirToPlayer = player.position - transform.position;
+            distanceToPlayer = dirToPlayer.magnitude;
+            Debug.Log("distanceToPlayer: " + distanceToPlayer + "distanciaAtaque: " + distanciaAtaque);
+            //
+            if (distanceToPlayer < distanciaAtaque && miEnemyAI.IsAttackingAI == false)
             {
                 ReproducirSonidoAtaque();
                 miEnemyAI.IsAttackingAI = true;
@@ -89,8 +93,7 @@ public class EnemyVision : MonoBehaviour
             // miEnemyAI.chasingPlayerAI = false;
         }
         if(ActualizandoEnemyAI)
-            miEnemyAI.Actualizar();
-        
+            miEnemyAI.Actualizar();        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -129,14 +132,14 @@ public class EnemyVision : MonoBehaviour
         }        
         else if(other.CompareTag("Player")){
             PlayerHealth saludJugador = other.GetComponent<PlayerHealth>();
-            saludJugador.TakeDamage(20); // 
+            saludJugador.TakeDamage(20); //
+            miEnemyAI.IsAttackingAI = false;
             audioSource.Pause();
         }
     }
 
   private IEnumerator ActualizarPatrullaConDelay(int numPtsEliminar)
   {
-
       yield return null; // esperar 1 frame
       miEnemyAI.actPosicPatrulla(numPtsEliminar);
       
