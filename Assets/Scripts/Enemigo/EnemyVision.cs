@@ -115,8 +115,10 @@ public class EnemyVision : MonoBehaviour
       
     }
 
+    
     bool PuedeVerAlJugador()
     {
+
         // 1️ Distancia
         Vector3 dirToPlayer = player.position - transform.position;        
         distanceToPlayer = dirToPlayer.magnitude;
@@ -129,7 +131,7 @@ public class EnemyVision : MonoBehaviour
         if (angleToPlayer > visionAngle / 2f)
         {
             return false;
-        } else {
+        } else {           
             //ActualizandoEnemyAI = false; //Esto hace que intente mirar hacia el player..
             //.. y para ello paramos patrulla con ActualizandoEnemyAI = false
             dirToPlayer.y = 0; // Evita inclinaciones en el eje vertical
@@ -149,7 +151,7 @@ public class EnemyVision : MonoBehaviour
                 {
                     //una mirada hacia el jugador..
                     mirandoPlayer = true;
-                    Debug.Log("LO MIRO BIEN si ignoro los obstaculos");
+                    Debug.Log("LO MIRO BIEN ignorando obstaculos");
                 }
                 else
                 {
@@ -162,8 +164,15 @@ public class EnemyVision : MonoBehaviour
         // 3️ Línea de visión (raycast)
         int mask = obstacleMask | playerMask;
         mask &= ~LayerMask.GetMask("Transparente"); // excluir capa
+       
         if (mirandoPlayer && Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask))
         {
+            
+            //
+            Vector3 origin = transform.position;
+            Vector3 direction = transform.forward * 6f;
+            Debug.DrawRay(origin, direction, Color.red);
+            //
             Debug.Log("NOMBRE: " + hit.collider.gameObject.name);
             if (hit.transform == player)
             {

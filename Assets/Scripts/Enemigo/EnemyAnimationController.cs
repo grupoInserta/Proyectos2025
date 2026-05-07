@@ -7,7 +7,7 @@ public class EnemyAnimationController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
         enemy = GetComponent<EnemyAI>();
     }
 
@@ -20,7 +20,25 @@ public class EnemyAnimationController : MonoBehaviour
     {
         float speed = enemy.agent.velocity.magnitude;
         animator.SetFloat("Speed", speed);
-        Debug.Log("SPEED: " + speed);
+        //
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+        string stateName = GetStateName(stateInfo);
+
+        Debug.Log("Estado actual: " + stateName);
+    }
+
+    private string GetStateName(AnimatorStateInfo stateInfo)
+    {
+        // Sustituye estos nombres por los de tus estados reales
+        if (stateInfo.IsName("Idle")) return "Idle";
+        if (stateInfo.IsName("Patrol")) return "Walk";
+        if (stateInfo.IsName("Chase")) return "Run";
+        if (stateInfo.IsName("Attack")) return "Attack";
+        if (stateInfo.IsName("Search")) return "Search";
+     
+
+        return "Desconocido";
     }
 
     public void SetChasing(bool value)

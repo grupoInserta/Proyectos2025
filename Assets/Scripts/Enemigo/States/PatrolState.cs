@@ -27,11 +27,12 @@ public class PatrolState : EnemyState
         }
         enemy.ChasingPlayerAI = false;
         enemy.pierdoVistaJugador = false;
-        patrolRoutine = enemy.RunCoroutine(UpdateAI());        
+        patrolRoutine = enemy.RunCoroutine(UpdateAI());
+        /****enemyAnimationController.PlayAttack();***/
     }
 
     IEnumerator UpdateAI() // es repetitivo pero con unos segundos de intervalo personalizables al final del metodo
-    {
+    {       
         while (true)
         {
             if (pierdoVistaJugador)
@@ -53,7 +54,7 @@ public class PatrolState : EnemyState
     }
 
     public void actPosicPatrulla(int numPtsEliminar)
-    {
+    {       
         currentPatrolIndex += numPtsEliminar;
         // currentPatrolIndex %= patrolPoints.Length;
         //Debug.Log("currentPatrolIndex: " + currentPatrolIndex);

@@ -10,6 +10,8 @@ public class AttackState : EnemyState
 
     public override void Enter()
     {
+
+       /**** enemyAnimationController.PlayAttack();***/
         lastAttackTime = Time.time;
 
         // Opcional: detener movimiento

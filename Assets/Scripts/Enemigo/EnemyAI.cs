@@ -35,7 +35,7 @@ public class EnemyAI : MonoBehaviour
         //*******//
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false; // Desactivar rotación automática
-        enemyAnimationController = GetComponent<EnemyAnimationController>();
+        enemyAnimationController = transform.GetChild(0).GetComponent<EnemyAnimationController>();
         IsAttackingAI = false;
         ChasingPlayerAI = false;
         IsSearchingAI = false;

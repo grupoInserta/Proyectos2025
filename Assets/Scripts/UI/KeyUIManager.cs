@@ -14,7 +14,7 @@ public class KeyUIManager : MonoBehaviour
     [SerializeField] private Image fondo;
     private float iconSize = 60f;
 
-    private float posTotXIconIni = 0.25f;
+    private float posTotXIconIni = 0.05f;
     private float posTotXIcon;
     private float incrPosXIcon = 0.25f;
     private float posTotYIconIni = 0.25f;

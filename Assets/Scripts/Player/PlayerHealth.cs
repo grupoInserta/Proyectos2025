@@ -88,11 +88,9 @@ public class PlayerHealth : MonoBehaviour
             if (firstPersonController.isWalking)
             {
                 targetClip = PasosSound;
-                Debug.Log("PASOS");
             }
             if(firstPersonController.isSprinting)
             {
-                Debug.Log("CORRIENDO");
                 targetClip = SprintSound;
             }
             if(firstPersonController.isCrouched && firstPersonController.isWalking)
