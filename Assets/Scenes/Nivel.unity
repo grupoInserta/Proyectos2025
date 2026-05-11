@@ -85812,6 +85812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LLaveFinalSHADER
       objectReference: {fileID: 0}
+    - target: {fileID: 1563067468412737184, guid: bd0324de7cbd7eb4c8158f01d27572fe, type: 3}
+      propertyPath: m_TagString
+      value: Key
+      objectReference: {fileID: 0}
     - target: {fileID: 4950652530920962754, guid: bd0324de7cbd7eb4c8158f01d27572fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.478485
