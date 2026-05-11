@@ -159,7 +159,7 @@ public class KeyUIManager : MonoBehaviour
 
     public void UpdateKeyList(string[] keys, string clave)
     {
-        keyListText.text = "Llaves: + ";
+        keyListText.text = "Llaves:  ";
         foreach (string key in keys)
         {            
             string[] arrNombre = key.Split('-');

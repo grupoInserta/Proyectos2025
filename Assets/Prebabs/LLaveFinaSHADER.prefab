@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1638935120295689020, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 4851717268889761291, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
       propertyPath: m_Name
       value: LLaveFinaSHADER
@@ -63,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4851717268889761291, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1908412297421837169}
+    - targetCorrespondingSourceObject: {fileID: 4851717268889761291, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1095470193170408892}
   m_SourcePrefab: {fileID: 100100000, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
 --- !u!1 &1563067468412737184 stripped
 GameObject:
@@ -82,5 +89,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: final
-  Seleccionada: {fileID: 8300000, guid: fdc334cb74aa55e4cafe83d6f007a008, type: 3}
+  Seleccionada: {fileID: 8300000, guid: ac4467ba0f163a745912e7101b308c65, type: 3}
   audioSource: {fileID: 0}
+--- !u!135 &1095470193170408892
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563067468412737184}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.68
+  m_Center: {x: 0.04, y: 0.02, z: 0.25}

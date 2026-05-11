@@ -33794,7 +33794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: verde
-  Seleccionada: {fileID: 8300000, guid: fdc334cb74aa55e4cafe83d6f007a008, type: 3}
+  Seleccionada: {fileID: 8300000, guid: ac4467ba0f163a745912e7101b308c65, type: 3}
   audioSource: {fileID: 762661666}
 --- !u!135 &600336085
 SphereCollider:
@@ -64449,7 +64449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: azul
-  Seleccionada: {fileID: 8300000, guid: fdc334cb74aa55e4cafe83d6f007a008, type: 3}
+  Seleccionada: {fileID: 8300000, guid: ac4467ba0f163a745912e7101b308c65, type: 3}
   audioSource: {fileID: 762661666}
 --- !u!135 &1188230040
 SphereCollider:
@@ -73214,7 +73214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: roja
-  Seleccionada: {fileID: 8300000, guid: fdc334cb74aa55e4cafe83d6f007a008, type: 3}
+  Seleccionada: {fileID: 8300000, guid: ac4467ba0f163a745912e7101b308c65, type: 3}
   audioSource: {fileID: 762661666}
 --- !u!135 &1341556116
 SphereCollider:
