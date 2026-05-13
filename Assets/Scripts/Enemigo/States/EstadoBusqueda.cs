@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SearchState : EnemyState
+public class EstadoBusqueda : EnemyState
 {
     private float searchDuration = 4f;
     private float timer;
@@ -9,7 +9,7 @@ public class SearchState : EnemyState
     private float directionTimer;
     private float currentDirection = 1f;
 
-    public SearchState(EnemyAI enemy, StateMachine stateMachine)
+    public EstadoBusqueda(EnemyAI enemy, StateMachine stateMachine)
         : base(enemy, stateMachine) { }
 
     public override void Enter()
@@ -26,9 +26,9 @@ public class SearchState : EnemyState
     public override void Update()
     {
         // Si vuelve a ver al jugador → persecución
-        if (enemy.CanSeePlayer())
+        if (enemy.PuedeVerAlJugador)
         {
-            stateMachine.ChangeState(enemy.ChaseState);
+            stateMachine.ChangeState(enemy.estadoBusqueda);
             return;
         }
 
@@ -46,10 +46,8 @@ public class SearchState : EnemyState
 
         if (timer <= 0)
         {
-            stateMachine.ChangeState(enemy.PatrolState);
+            stateMachine.ChangeState(enemy.estadoPatrulla);
         }
-
     }
-
     
 }

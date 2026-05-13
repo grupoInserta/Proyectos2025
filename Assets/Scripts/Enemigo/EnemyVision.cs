@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
-using System.Collections.Generic;
+
 
 public class EnemyVision : MonoBehaviour
 {
@@ -25,23 +25,22 @@ public class EnemyVision : MonoBehaviour
     private float velocidadRotacion = 0.6f;
     private bool ActualizandoEnemyAI = true;
     private bool mirandoPlayer = false;
+    private bool sonidoAtaque = false;
     // SONIDOS
     public AudioClip ataqueSound;
     public AudioClip sonidoAvistado;
     public AudioSource audioSource;
     private bool sonidoPersecucion = false;
-    public float distanciaAtaque = 4.5f;
+    public float distanciaAtaque = 3.2f;
 
-    // quitar
-    int contador = 0;
+  
     private void Start()
     {
         player = gameObject.GetComponent<EnemyAI>().player;
         agent = gameObject.GetComponent<EnemyAI>().agent;
         miEnemyAI = gameObject.GetComponent<EnemyAI>();
         audioSource.clip = sonidoAvistado;
-        audioSource.loop = true;
-       
+        audioSource.loop = true;       
     }
 
     private void ReproducirSonidoAtaque()
@@ -53,6 +52,7 @@ public class EnemyVision : MonoBehaviour
     {       
         if (PuedeVerAlJugador())
         {
+            miEnemyAI.PuedeVerAlJugador = true;
             if (!sonidoPersecucion)
             {
                 audioSource.clip = sonidoAvistado;
@@ -62,35 +62,40 @@ public class EnemyVision : MonoBehaviour
             }
             
             Debug.Log("PERSIGUIENDO AL JUGADOR y ActualizandoEnemyAI: "+ ActualizandoEnemyAI);
-            // chasingPlayer = true;
-            miEnemyAI.ChasingPlayerAI = true;
-            agent.SetDestination(player.position);
+            miEnemyAI.Accion("Perseguir");
+
             tiempoUltimaVista = Time.time;
             //
             Vector3 dirToPlayer = player.position - transform.position;
             distanceToPlayer = dirToPlayer.magnitude;
             Debug.Log("distanceToPlayer: " + distanceToPlayer + "distanciaAtaque: " + distanciaAtaque);
             //
-            if (distanceToPlayer < distanciaAtaque && miEnemyAI.IsAttackingAI == false)
+            if (distanceToPlayer < distanciaAtaque && miEnemyAI.PuedeVerAlJugador)
             {
-                ReproducirSonidoAtaque();
-                miEnemyAI.IsAttackingAI = true;
+                if (!sonidoAtaque)
+                {
+                    ReproducirSonidoAtaque();
+                    sonidoAtaque = true;
+                }
+                miEnemyAI.Accion("Atacar");
             }
+            
         }
         else if ((Time.time - tiempoUltimaVista < tiempoMemoria) && (distanceToPlayer < RadiusminPersec))
         {   //
             // Sigue buscando en la última posición vista
             agent.SetDestination(player.position);
             sonidoPersecucion = false;
+            sonidoAtaque = false;
+            miEnemyAI.PuedeVerAlJugador = false;
             //tiempoUltimaVista = 0;?
         }       
         else
         {
             // PIERDE DE VISTA AL JUGADOR
             sonidoPersecucion = false;
-            miEnemyAI.pierdoVistaJugador = true;
+            miEnemyAI.PuedeVerAlJugador = false;
             audioSource.Pause();
-            // miEnemyAI.chasingPlayerAI = false;
         }
         if(ActualizandoEnemyAI)
             miEnemyAI.Actualizar();        
@@ -105,17 +110,17 @@ public class EnemyVision : MonoBehaviour
             int numPosicionesDentro = puerta.numPosicionesDentro;
             if (puerta.TOC == false) 
             {
-                contador++;
                 puerta.TOC = true;
                 Debug.Log("TOC, nivel: " + GameCore.Instance.obtenerNivel("enemigo"));
                 string nivel = GameCore.Instance.obtenerNivel("enemigo");
-                if (numPosicionesDentro == 1000 && nivel == "1")
+                if (numPosicionesDentro == 1000 && nivel == "1") // 1000 cuando es una puerta de paso de nivel
                 {
                     miEnemyAI.ReiniciarNivel(numPosicionesDentro);
                     StartCoroutine(ActualizarPatrullaConDelay(0));
                 }
                 else
                 {
+                    // aqui se topa con una puerta cerrada y ha de saltarse las posiciones de patrulla internas a la puerta
                     // Evitar múltiples activaciones
                     // other.enabled = false;// si lo dejo, la puerta tiene collider desactivado
                     // y no sirve tampoco para evitar una segunda colisión..
@@ -133,11 +138,10 @@ public class EnemyVision : MonoBehaviour
         else if(other.CompareTag("Player")){
             PlayerHealth saludJugador = other.GetComponent<PlayerHealth>();
             saludJugador.TakeDamage(20); //
-            miEnemyAI.IsAttackingAI = false;
             audioSource.Pause();
         }
     }
-
+   
   private IEnumerator ActualizarPatrullaConDelay(int numPtsEliminar)
   {
       yield return null; // esperar 1 frame
@@ -194,12 +198,10 @@ public class EnemyVision : MonoBehaviour
         int mask = obstacleMask | playerMask;
         mask &= ~LayerMask.GetMask("Transparente"); // excluir capa
 
-        if (mirandoPlayer && Physics.Raycast(transform.position, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask, QueryTriggerInteraction.Ignore))
-        {
-
-            if (hit.transform.root == player)
+        if (mirandoPlayer && Physics.Raycast(transform.position, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask))
+        {//if (hit.transform.root == player)
+            if (hit.transform == player)
             {
-                Debug.Log("LO VEOOOOO!!!");
                 return true; //  jugador visible
             }
             else

@@ -91,7 +91,7 @@ public class GameCoreUI : MonoBehaviour
     }
 
     private void Reanudar()
-    {
+    {   
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         JuegoPausado = false;
@@ -99,6 +99,7 @@ public class GameCoreUI : MonoBehaviour
         CanvasGameManager.SetActive(false);
         PlayerScript.enabled = true;
         audioSource.PlayOneShot(ClicSound);
+        GameCore.Instance.TogglePause();
     }
 
     private void pararJuego()
@@ -106,21 +107,20 @@ public class GameCoreUI : MonoBehaviour
         Time.timeScale = 0f;// Pausa todo el juego
         PlayerScript.enabled = false;
         JuegoPausado = true;
-        
+        GameCore.Instance.TogglePause();
     }
 
     private void PausarReanudar()
-    {
+    {       
         if (!JuegoPausado)
         {
             pararJuego();            
         }
         else
-        {
-            Debug.Log("reanudar");
-            Reanudar();
+        {           
+            Reanudar(); Debug.Log("reanudar");
         }
-        audioSource.PlayOneShot(ClicSound);
+        audioSource.PlayOneShot(ClicSound);       
     }
 
 }

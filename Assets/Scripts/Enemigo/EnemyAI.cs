@@ -5,46 +5,52 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public StateMachine StateMachine { get; private set; }
-    public IdleState IdleState { get; private set; }
-    public PatrolState PatrolState { get; private set; }
-    public ChaseState ChaseState { get; private set; }
-    public AttackState AttackState { get; private set; }
-    public SearchState SearchState { get; private set; }
-
+    public EstadoPausa estadoPausa { get; private set; }
+    public EstadoPatrulla estadoPatrulla { get; private set; }
+    public EstadoPersecucion estadoPersecucion { get; private set; }
+    public EstadoAtaque estadoAtaque { get; private set; }
+    public EstadoBusqueda estadoBusqueda { get; private set; }
+    //
     public Transform player;
     public NavMeshAgent agent;
     public Transform[] patrolPoints;
     public Transform[] patrolPointsReinicio;// puntos para reiniciar la patrulla en cada nivel
+   /*
     public bool ChasingPlayerAI;// significa persiguiendo al jugador
     public bool IsAttackingAI;
     public bool IsSearchingAI;
+    public bool IsInPatrol;
     public bool pierdoVistaJugador;
+   */
     public float rotationSpeed = 8f;
-    private EnemyAnimationController enemyAnimationController;
+    public bool PuedeVerAlJugador = false;
+    public EnemyAnimationController enemyAnimationController;
+    // para las pausas:
+    public int currentPatrolIndex = -1;
+    public float pauseDuration = 4f;
 
 
     private void Awake()
     {
         StateMachine = new StateMachine();
 
-        IdleState = new IdleState(this, StateMachine);
-        PatrolState = new PatrolState(this, StateMachine);
-        ChaseState = new ChaseState(this, StateMachine);
-        AttackState = new AttackState(this, StateMachine);
-        SearchState = new SearchState(this, StateMachine);
-        //*******//
+        estadoPausa = new EstadoPausa(this, StateMachine); // INICIAL
+        estadoPatrulla = new EstadoPatrulla(this, StateMachine);
+        estadoBusqueda = new EstadoBusqueda(this, StateMachine);
+        estadoAtaque = new EstadoAtaque(this, StateMachine);
+        estadoPersecucion = new EstadoPersecucion(this, StateMachine);
+       
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false; // Desactivar rotación automática
         enemyAnimationController = GetComponentInChildren<EnemyAnimationController>();
-        IsAttackingAI = false;
-        ChasingPlayerAI = false;
-        IsSearchingAI = false;
+        
+
     }
 
     private void Start()
     {
         // Llamar periódicamente al sistema de decisión (en lugar de hacerlo cada frame)
-        StateMachine.Initialize(IdleState);
+        StateMachine.Initialize(estadoPatrulla);
     }
     public Coroutine RunCoroutine(IEnumerator routine)
     {
@@ -53,7 +59,7 @@ public class EnemyAI : MonoBehaviour
 
     public void ReiniciarNivel(int numPtosDentro)
     {
-        PatrolState.ReiniciarNivel(numPtosDentro);
+        estadoPatrulla.ReiniciarNivel(numPtosDentro);
     }
 
     public void Actualizar()
@@ -69,24 +75,50 @@ public class EnemyAI : MonoBehaviour
     }
     public void actPosicPatrulla(int numPtsEliminar)
     {
-        PatrolState.actPosicPatrulla(numPtsEliminar);
+        estadoPatrulla.actPosicPatrulla(numPtsEliminar);
     }
-    private void Update()
+
+    // ************** UTILIZAR ChangeState para cualquier estado: StateMachine.ChangeState(EnemyState newState)
+    private void Update() // SOLO ANIMACIONES  !!!!!!!!!!!!!!!!
     {
-        StateMachine.Update();
-        if (ChasingPlayerAI)
-        {
-            enemyAnimationController.SetChasing(true);
-        }
-        if (IsAttackingAI)
-        {
-            enemyAnimationController.PlayAttack();
+        StateMachine.Update();       
+    }
+   
+
+    public void Accion(string accion)
+    {
+        if(accion == "Atacar") {
+            StateMachine.ChangeState(estadoAtaque);
         } 
-        if (IsSearchingAI)
+        else if(accion == "Patrullar")
         {
-            enemyAnimationController.PlaySearch();
+            StateMachine.ChangeState(estadoPatrulla);            
         }
-       
+        else if (accion == "Perseguir")
+        {
+            StateMachine.ChangeState(estadoPersecucion);            
+        }
+        else if (accion == "Buscar")
+        {
+            StateMachine.ChangeState(estadoBusqueda);
+        }
+        else if (accion == "Parar")
+        {
+            StateMachine.ChangeState(estadoPausa);
+        }
+
+    }
+
+    public void Buscar()
+    {
+        StateMachine.ChangeState(estadoBusqueda);
+        enemyAnimationController.Buscar();
+    }
+
+    public void Parar()
+    {
+        StateMachine.ChangeState(estadoPausa);
+        enemyAnimationController.Parar();
     }
 
     public void StopMovement()
@@ -110,7 +142,7 @@ public class EnemyAI : MonoBehaviour
 
 
     // --- Métodos que usarán los estados ---
-    public bool CanSeePlayer() { return false; }
+ 
     public bool IsInAttackRange() { return false; }
     public void MoveTowardsPlayer() { }
 }

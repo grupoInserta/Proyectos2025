@@ -248,25 +248,14 @@ public class GameCore : MonoBehaviour
     // ------------------------------------------------------------
     // ENEMIGOS REGISTRADOS GLOBALMENTE
     // ------------------------------------------------------------
-    private List<GameObject> activeEnemies = new List<GameObject>();
+  
 
-    public void RegisterEnemy(GameObject enemy)
-    {
-        if (!activeEnemies.Contains(enemy))
-            activeEnemies.Add(enemy);
-    }
-
-    public void UnregisterEnemy(GameObject enemy)
-    {
-        activeEnemies.Remove(enemy);
-    }
-
-    public IEnumerable<GameObject> GetAllEnemies() => activeEnemies;
 
 
     // ------------------------------------------------------------
     // INVENTARIO SIMPLE
     // ------------------------------------------------------------
+    /*
     private List<string> inventoryItems = new List<string>();
 
     public void AddItem(string itemID)
@@ -276,7 +265,7 @@ public class GameCore : MonoBehaviour
     }
 
     public bool HasItem(string itemID) => inventoryItems.Contains(itemID);
-
+    */
     // ------------------------------------------------------------
     // SISTEMA DE SALUD JUGADOR (se conecta externamente)
     // ------------------------------------------------------------
@@ -386,10 +375,19 @@ public class GameCore : MonoBehaviour
     // ------------------------------------------------------------
     public void TogglePause()
     {
+        Debug.Log("BLOPS " + CurrentState);
         if (CurrentState == GameState.Gameplay)
+        {
             SetGameState(GameState.Paused);
+            AudioListener.pause = true;
+        }            
         else if (CurrentState == GameState.Paused)
+        {
             SetGameState(GameState.Gameplay);
+            AudioListener.pause = false;
+        }
+            
+        
     }
 
 }

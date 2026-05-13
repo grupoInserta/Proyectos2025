@@ -14,9 +14,9 @@ public class KeyUIManager : MonoBehaviour
     [SerializeField] private Image fondo;
     private float iconSize = 60f;
 
-    private float posTotXIconIni = 0.05f;
+    private float posTotXIconIni = 0.15f;
     private float posTotXIcon;
-    private float incrPosXIcon = 0.15f;
+    private float incrPosXIcon = 0.02f;
     private float posTotYIconIni = 0.25f;
     private float posTotYIncr = 0.18f;
     private float posTotYIcon;
@@ -159,7 +159,7 @@ public class KeyUIManager : MonoBehaviour
 
     public void UpdateKeyList(string[] keys, string clave)
     {
-        keyListText.text = "Llaves:  ";
+        keyListText.text = "Llaves: ";
         foreach (string key in keys)
         {            
             string[] arrNombre = key.Split('-');

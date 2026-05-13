@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851717268889761291, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
       propertyPath: m_Name
-      value: LLaveFinaSHADER
+      value: LLaveFinalSHADER
       objectReference: {fileID: 0}
     - target: {fileID: 7563912808178282683, guid: af25bb010d8fb0c4ca1001c99bab9eaf, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

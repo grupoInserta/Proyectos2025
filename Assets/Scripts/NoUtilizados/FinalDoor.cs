@@ -11,6 +11,7 @@ public class FinalDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         var inventory = other.GetComponent<KeyInventory>();
         if (inventory && inventory.HasKey(requiredKey))
         {

@@ -2,44 +2,53 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolState : EnemyState
+public class EstadoPatrulla : EnemyState
 {
     private int currentPointIndex;
     private float waitTime = 2f;
     private float waitTimer;    
-    //public float detectionRadius = 8f; 
     public float updateRate = 0.3f; // segundos entre actualizaciones de destino
     public int currentPatrolIndex;
     public bool pierdoVistaJugador;
     private Coroutine patrolRoutine;
 
-    public PatrolState(EnemyAI enemy, StateMachine stateMachine)
+    public EstadoPatrulla(EnemyAI enemy, StateMachine stateMachine)
         : base(enemy, stateMachine) { }
 
     
     public override void Enter()
     {
+        Debug.Log("ESTOY EN PATRULLA");
         if (enemy.patrolPoints.Length > 0)
         {   // si queremos que empiece por una posición aleatoria:
             //currentPatrolIndex = Random.Range(0, patrolPoints.Length);
-            currentPatrolIndex = 0;
+            if(enemy.currentPatrolIndex == -1)
+            {
+                currentPatrolIndex = 0;
+            }
+            else
+            {
+                currentPatrolIndex = enemy.currentPatrolIndex;
+            }
+            
             enemy.agent.SetDestination(enemy.patrolPoints[currentPatrolIndex].position);
         }
+        /*
         enemy.ChasingPlayerAI = false;
         enemy.pierdoVistaJugador = false;
-        patrolRoutine = enemy.RunCoroutine(UpdateAI());
+        */
+        //
+        //enemy.Accion("Patrullar");
         /****enemyAnimationController.PlayAttack();***/
+        patrolRoutine = enemy.RunCoroutine(UpdateAI());
     }
 
     IEnumerator UpdateAI() // es repetitivo pero con unos segundos de intervalo personalizables al final del metodo
-    {       
+    {  // Y sirve para mover el enemigo de un punto a otro     
         while (true)
         {
-            if (pierdoVistaJugador)
+            if (!enemy.PuedeVerAlJugador)
             {
-                // El jugador escapó, volver a patrullar
-                pierdoVistaJugador = false;
-                enemy.ChasingPlayerAI = false;
                 enemy.agent.SetDestination(enemy.patrolPoints[currentPatrolIndex].position);
             }
 
@@ -53,16 +62,23 @@ public class PatrolState : EnemyState
         }
     }
 
-    public void actPosicPatrulla(int numPtsEliminar)
+    public void actPosicPatrulla(int numPtsEliminar) //para cuando se topa con puerta ceraada
     {       
         currentPatrolIndex += numPtsEliminar;
         // currentPatrolIndex %= patrolPoints.Length;
         //Debug.Log("currentPatrolIndex: " + currentPatrolIndex);
         enemy.agent.isStopped = true;
         enemy.agent.velocity = Vector3.zero;      // Limpia la inercia
-        enemy.agent.ResetPath();                  // Limpia ruta vieja
+        enemy.agent.ResetPath();
+
+        // Limpia ruta vieja
+        //
+        enemy.currentPatrolIndex = currentPatrolIndex;
+        enemy.Accion("Parar");
+        /*
         enemy.agent.Warp(enemy.agent.transform.position); // Reancla al NavMesh
         patrolRoutine = enemy.RunCoroutine(SetDestinoSeguro());
+        */
     }
 
     private IEnumerator SetDestinoSeguro()
@@ -74,7 +90,6 @@ public class PatrolState : EnemyState
         enemy.agent.SetDestination(enemy.patrolPoints[currentPatrolIndex].position);
         enemy.agent.isStopped = false;
     }
-
     
 
     public void ReiniciarNivel(int numPtosDentro)
@@ -113,7 +128,7 @@ public class PatrolState : EnemyState
     }
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = enemy.ChasingPlayerAI ? Color.red : Color.yellow;
+        Gizmos.color = enemy.PuedeVerAlJugador ? Color.red : Color.yellow;
     }
 
 }

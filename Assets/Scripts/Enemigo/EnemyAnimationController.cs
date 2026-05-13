@@ -23,37 +23,45 @@ public class EnemyAnimationController : MonoBehaviour
         //
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-        string stateName = GetStateName(stateInfo);
-
-        Debug.Log("Estado actual: " + stateName);
+       string stateName = GetStateName(stateInfo);
+       Debug.Log("Estado actual: " + stateName);
     }
 
+   
     private string GetStateName(AnimatorStateInfo stateInfo)
     {
         // Sustituye estos nombres por los de tus estados reales
-        if (stateInfo.IsName("Idle")) return "Idle";
-        if (stateInfo.IsName("Patrol")) return "Walk";
-        if (stateInfo.IsName("Chase")) return "Run";
-        if (stateInfo.IsName("Attack")) return "Attack";
-        if (stateInfo.IsName("Search")) return "Search";
-     
-
+        if (stateInfo.IsName("Pausa")) return "Idle";
+        if (stateInfo.IsName("Patrulla")) return "Walk";
+        if (stateInfo.IsName("Persecucion")) return "Run";
+        if (stateInfo.IsName("Ataque")) return "Attack";
+        if (stateInfo.IsName("Busqueda")) return "Search";
         return "Desconocido";
     }
+   
 
-    public void SetChasing(bool value)
+    public void Parar()
     {
-        animator.SetBool("IsChasing", value);
+        animator.SetFloat("Speed", 0);
     }
 
-    public void PlayAttack()
-    {
-        animator.SetTrigger("Attack");
-        Debug.Log("ANIMACION ATACARRRRRRRRR");
+    public void Perseguir(bool value)
+    {       
+        animator.SetBool("Persiguiendo", value);
     }
 
-    public void PlaySearch()
+    public void Atacar()
     {
-        animator.SetTrigger("Search");
-    }   
+        animator.SetTrigger("Atacar");
+    }
+
+    public void Buscar()
+    {
+        animator.SetTrigger("Busqueda");
+    } 
+    
+    public void Patrullar()
+    {
+        animator.SetTrigger("Patrulla");
+    }
 }

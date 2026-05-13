@@ -64,12 +64,10 @@ public class KeyInventory : MonoBehaviour
         uiManager?.MostrarAviso(textoAviso);
     }
 
-
     public bool HasKey(string keyName)
     {  // pasar a nombre de color !!!!!!
         return keys.Contains(keyName);
-    }
- 
+    } 
 
     public string[] GetKeysArray()
     {
