@@ -105,7 +105,6 @@ public class GameCore : MonoBehaviour
             }
             if (escena.name == "Derrota" || escena.name == "Victoria")
             {
-                Debug.Log("ARRREGLAR CURSOR");
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }

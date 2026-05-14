@@ -19,6 +19,8 @@ public class GameCoreUI : MonoBehaviour
     private Canvas PanelCanvasGamesCore;
     [SerializeField]
     private GameObject CanvasAjustesManager;
+    [SerializeField]
+    private Canvas HUDPlayer;
 
     public bool JuegoPausado { get; set; }
     private InputAction pause;
@@ -35,6 +37,7 @@ public class GameCoreUI : MonoBehaviour
         pause.AddBinding("<Gamepad>/start");
         pause.AddBinding("<Keyboard>/escape");
         pause.Enable();
+        HUDPlayer.enabled = false;
         pause.performed += ctx => MostrarPanel();
         //
         botonPausa.onClick.AddListener(() => PausarReanudar());
@@ -48,6 +51,7 @@ public class GameCoreUI : MonoBehaviour
         Reanudar();
         JuegoPausado = false;
         PanelInicio.enabled = false;
+        HUDPlayer.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         audioSource.PlayOneShot(ClicSound);

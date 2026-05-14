@@ -70,7 +70,7 @@ public class EnemyVision : MonoBehaviour
             distanceToPlayer = dirToPlayer.magnitude;
             Debug.Log("distanceToPlayer: " + distanceToPlayer + "distanciaAtaque: " + distanciaAtaque);
             //
-            if (distanceToPlayer < distanciaAtaque && miEnemyAI.PuedeVerAlJugador)
+            if (distanceToPlayer < distanciaAtaque)
             {
                 if (!sonidoAtaque)
                 {
@@ -189,7 +189,6 @@ public class EnemyVision : MonoBehaviour
                 else
                 {
                     mirandoPlayer = false;
-                    Debug.Log("LO MIRO PERO NO PUEDO verlo");
                 }
             }
         }  // angulo zona vision         
@@ -197,11 +196,13 @@ public class EnemyVision : MonoBehaviour
         // 3️ Línea de visión (raycast)
         int mask = obstacleMask | playerMask;
         mask &= ~LayerMask.GetMask("Transparente"); // excluir capa
-
+        
         if (mirandoPlayer && Physics.Raycast(transform.position, dirToPlayer.normalized, out RaycastHit hit, visionRadius, mask))
         {//if (hit.transform.root == player)
-            if (hit.transform == player)
+
+            if (hit.transform.root == player)
             {
+                Debug.Log("LO VEO");
                 return true; //  jugador visible
             }
             else

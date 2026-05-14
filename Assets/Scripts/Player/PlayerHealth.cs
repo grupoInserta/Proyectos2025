@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using UnityEngine.UI;
+using System.Collections;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -8,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public PlayerHUD miPlayerHUD;
+    public Image Rojo;
 
     // Eventos para comunicar cambios a UI, inventario, GameCore...
     public event Action<int, int> OnHealthChanged;     // (current, max)
@@ -27,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
+        Rojo.enabled = false;
         currentHealth = maxHealth;
         cambioEscena = GetComponent<CambioEscena>();
         firstPersonController = gameObject.GetComponent<FirstPersonController>();
@@ -38,12 +42,39 @@ public class PlayerHealth : MonoBehaviour
         audioSource.loop = true;
     }
 
+    private IEnumerator ActivarConDelay(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        SetPanelOpacity(0f);
+        Rojo.enabled = false;
+    }
+
+    private void SetPanelOpacity(float alpha)
+    {
+        if (Rojo != null)
+        {
+            // Asegúrate de que el alpha esté entre 0 y 1
+            alpha = Mathf.Clamp01(alpha);
+
+            // Obtén el color actual del panel
+            Color currentColor = Rojo.color;
+
+            // Ajusta el canal alpha
+            currentColor.a = alpha;
+
+            // Asigna el nuevo color al panel
+            Rojo.color = currentColor;
+        }
+        StartCoroutine(ActivarConDelay(1f));
+    }
+
 
     // Llamar cuando recibe daño
     public void TakeDamage(int amount)
     {
-        if (isDead) return;
-
+        if (isDead) return;        
+        SetPanelOpacity(0.4f);
+        Rojo.enabled = true;
         currentHealth -= amount;
         if (currentHealth < 0)
             currentHealth = 0;

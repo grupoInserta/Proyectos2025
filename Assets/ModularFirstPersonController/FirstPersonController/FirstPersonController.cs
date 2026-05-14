@@ -20,6 +20,7 @@ public class FirstPersonController : MonoBehaviour
     private Rigidbody rb;
     private PlayerControls controls;
     public bool pulsadoAbrir { get; set; }
+    public bool contactoConPuerta { get; set; }
     private GameObject Cajas { get; set; }
 
     #region Camera Movement Variables
@@ -141,6 +142,7 @@ public class FirstPersonController : MonoBehaviour
     {
         Cajas = GameObject.FindWithTag("Cajas");       
         rb = GetComponent<Rigidbody>();
+        contactoConPuerta = false;
         crosshairObject = GetComponentInChildren<Image>();
 
         // Set internal variables
@@ -162,7 +164,11 @@ public class FirstPersonController : MonoBehaviour
 
     private void IntentarAbrirPuerta()
     {
-        pulsadoAbrir = true;
+        if (contactoConPuerta)
+        {
+            pulsadoAbrir = true;
+        }
+        
     }
 
     private void OnEnable()

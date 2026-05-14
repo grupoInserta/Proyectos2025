@@ -52,11 +52,25 @@ public class Door : MonoBehaviour
         transform.Rotate(0,openAngle,0);
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerScript = other.GetComponent<FirstPersonController>();
+            PlayerScript.contactoConPuerta = false;
+            PlayerScript.pulsadoAbrir = false;
+            playerCercano = false;
+            inventory.MostrarAviso("");
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        {  
-            if(requiredKey == "Martillo" )
+        {
+            PlayerScript = other.GetComponent<FirstPersonController>();
+            PlayerScript.contactoConPuerta = true;
+            if (requiredKey == "Martillo" )
             {
                 if (tieneLaLlave)
                 {
@@ -67,7 +81,7 @@ public class Door : MonoBehaviour
                     inventory.MostrarAviso("Necesitas el martillo!!!");
                     audioSource.PlayOneShot(noMartilloSound); 
                 }                
-                return;
+                return; 
             } 
             playerCercano = true;
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
@@ -111,15 +125,7 @@ public class Door : MonoBehaviour
         this.enabled = false;  // desactiva el script después de terminar de abrir
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerCercano = false;
-            PlayerScript.pulsadoAbrir = false;
-            inventory.MostrarAviso("");
-        }
-    }
+   
 
    
     private void Update()
