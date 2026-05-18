@@ -18807,7 +18807,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -32653,7 +32653,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -36397,7 +36397,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -66873,7 +66873,7 @@ MonoBehaviour:
   currentPatrolIndex: 0
   pauseDuration: 2
   audioSource2: {fileID: 575834490}
-  PasosEnemigo: {fileID: 8300000, guid: cff1da6b450e6834da378ffaa5f7d279, type: 3}
+  PasosEnemigo: {fileID: 8300000, guid: 836a82073891e4547a230a588a5ba7d2, type: 3}
   maxDistance: 20
   maxVolume: 1
 --- !u!195 &1215092320
@@ -66916,7 +66916,7 @@ MonoBehaviour:
   visionAngle: 250
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -116581,7 +116581,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 1
   Mute: 0
