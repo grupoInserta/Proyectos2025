@@ -5,7 +5,7 @@ public class ControladorNivel : MonoBehaviour
 {
     [Header("Registrador de puntos Zonas Seguras")]
     public List<PointData> securePointList = new List<PointData>();
-    public Dictionary<string, Transform> pointLookup;
+    public Dictionary<string, Transform> pointLookup;// el que se utiliza por fuera de la clase
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

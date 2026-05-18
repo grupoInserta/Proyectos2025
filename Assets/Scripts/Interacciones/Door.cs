@@ -24,8 +24,12 @@ public class Door : MonoBehaviour
     public Collider myCollider;
     //
     public AudioSource audioSource;
+    public AudioSource audioSource3;
+    public AudioClip CerraduraUsoLLave;
+    public AudioClip PuertaBloqueada;
     public AudioClip openSound;
     public AudioClip noMartilloSound;
+    public AudioClip MartilloSound;
 
 
     private void Awake()
@@ -61,8 +65,18 @@ public class Door : MonoBehaviour
             PlayerScript.pulsadoAbrir = false;
             playerCercano = false;
             inventory.MostrarAviso("");
+            
         }
     }
+
+
+    private  IEnumerator ReproducirSonidoRetraso(float segundos)
+    {
+        yield return new WaitForSecondsRealtime(segundos);
+        audioSource3.clip = openSound;
+        audioSource3.Play();
+    }
+        
 
     private void OnTriggerStay(Collider other)
     {
@@ -74,7 +88,8 @@ public class Door : MonoBehaviour
             {
                 if (tieneLaLlave)
                 {
-                    transform.Translate(0f, 1000f, 0f);
+                    transform.Translate(0f, 1000f, 0f);                    
+                    audioSource.PlayOneShot(MartilloSound);
                     //Destroy(gameObject);
                 } else
                 {
@@ -85,10 +100,11 @@ public class Door : MonoBehaviour
             } 
             playerCercano = true;
             if(tieneLaLlave && PlayerScript.pulsadoAbrir)
-            {                
+            {
+                audioSource.PlayOneShot(CerraduraUsoLLave); 
                 isOpening = true; // esto abre la  puerta
                 PlayerScript.pulsadoAbrir = false;
-                if (!activadoAbrir) audioSource.PlayOneShot(openSound);
+                if (!activadoAbrir) StartCoroutine(ReproducirSonidoRetraso(2f));
                 activadoAbrir = true;// para el sonido una unica vez
             }
         }
@@ -98,6 +114,12 @@ public class Door : MonoBehaviour
     {   if (puertaAbierta) return;   
         if (other.CompareTag("Player"))
         {
+            if (requiredKey == null || requiredKey =="")
+            {
+                audioSource3.clip = PuertaBloqueada;
+                audioSource3.Play();
+                return;
+            }
             PlayerScript = other.GetComponent<FirstPersonController>();
             inventory = other.GetComponent<KeyInventory>();           
 
@@ -124,9 +146,6 @@ public class Door : MonoBehaviour
         }
         this.enabled = false;  // desactiva el script después de terminar de abrir
     }
-
-   
-
    
     private void Update()
     {        

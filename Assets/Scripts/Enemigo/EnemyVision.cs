@@ -33,7 +33,7 @@ public class EnemyVision : MonoBehaviour
     private bool sonidoPersecucion = false;
     public float distanciaAtaque = 3.2f;
 
-  
+
     private void Start()
     {
         player = gameObject.GetComponent<EnemyAI>().player;
@@ -46,10 +46,10 @@ public class EnemyVision : MonoBehaviour
     private void ReproducirSonidoAtaque()
     {      
         audioSource.PlayOneShot(ataqueSound);        
-    }
+    }    
 
     void Update()
-    {       
+    {      
         if (PuedeVerAlJugador())
         {
             miEnemyAI.PuedeVerAlJugador = true;
@@ -78,8 +78,7 @@ public class EnemyVision : MonoBehaviour
                     sonidoAtaque = true;
                 }
                 miEnemyAI.Accion("Atacar");
-            }
-            
+            }            
         }
         else if ((Time.time - tiempoUltimaVista < tiempoMemoria) && (distanceToPlayer < RadiusminPersec))
         {   //
@@ -137,7 +136,7 @@ public class EnemyVision : MonoBehaviour
         }        
         else if(other.CompareTag("Player")){
             PlayerHealth saludJugador = other.GetComponent<PlayerHealth>();
-            saludJugador.TakeDamage(20); //
+            saludJugador.TakeDamage(); //
             audioSource.Pause();
         }
     }

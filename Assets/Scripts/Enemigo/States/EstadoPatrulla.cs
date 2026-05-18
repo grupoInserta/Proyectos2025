@@ -15,10 +15,17 @@ public class EstadoPatrulla : EnemyState
     public EstadoPatrulla(EnemyAI enemy, StateMachine stateMachine)
         : base(enemy, stateMachine) { }
 
-    
+
+    public override void Exit()
+    {
+        base.Exit();
+        enemy.PararSoniPasos();
+    }
+
     public override void Enter()
     {
-        Debug.Log("ESTOY EN PATRULLA");
+        enemy.ReproducirSoniPasos();
+
         if (enemy.patrolPoints.Length > 0)
         {   // si queremos que empiece por una posición aleatoria:
             //currentPatrolIndex = Random.Range(0, patrolPoints.Length);

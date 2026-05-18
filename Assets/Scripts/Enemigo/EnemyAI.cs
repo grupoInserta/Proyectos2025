@@ -15,19 +15,24 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
     public Transform[] patrolPoints;
     public Transform[] patrolPointsReinicio;// puntos para reiniciar la patrulla en cada nivel
-   /*
-    public bool ChasingPlayerAI;// significa persiguiendo al jugador
-    public bool IsAttackingAI;
-    public bool IsSearchingAI;
-    public bool IsInPatrol;
-    public bool pierdoVistaJugador;
-   */
+
     public float rotationSpeed = 8f;
     public bool PuedeVerAlJugador = false;
     public EnemyAnimationController enemyAnimationController;
     // para las pausas:
     public int currentPatrolIndex = -1;
     public float pauseDuration = 4f;
+    // sonidos
+    public AudioSource audioSource2;
+    public AudioClip PasosEnemigo;
+ 
+    //
+    [Header("Distancia")]
+    public float maxDistance = 20f;
+
+    [Header("Volumen")]
+    [Range(0f, 1f)]
+    public float maxVolume = 1f;
 
 
     private void Awake()
@@ -43,8 +48,6 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false; // Desactivar rotación automática
         enemyAnimationController = GetComponentInChildren<EnemyAnimationController>();
-        
-
     }
 
     private void Start()
@@ -81,7 +84,9 @@ public class EnemyAI : MonoBehaviour
     // ************** UTILIZAR ChangeState para cualquier estado: StateMachine.ChangeState(EnemyState newState)
     private void Update() // SOLO ANIMACIONES  !!!!!!!!!!!!!!!!
     {
-        StateMachine.Update();       
+        StateMachine.Update();
+        SonidoPasos();
+        Debug.Log("SUENA??????"+audioSource2.isPlaying);
     }
    
 
@@ -107,6 +112,30 @@ public class EnemyAI : MonoBehaviour
             StateMachine.ChangeState(estadoPausa);
         }
 
+    }
+
+    public void PararSoniPasos()
+    {
+        audioSource2.Stop();
+    }
+
+    private void SonidoPasos()
+    {
+        if (player == null || PasosEnemigo == null)
+            return;       
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        // volumen inverso según distancia
+        float volume = 1f - Mathf.Clamp01(distance / maxDistance);
+        audioSource2.volume = volume * maxVolume;
+    }
+
+    public void ReproducirSoniPasos()
+    {
+        audioSource2.clip = PasosEnemigo;
+        audioSource2.loop = true;
+        audioSource2.Play();
+       
     }
 
     public void Buscar()

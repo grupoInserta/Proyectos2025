@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class GameCore : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class GameCore : MonoBehaviour
     //
     public Button botonGuardar;
     public Button botonCargar;
+    private GameObject confirmGuardarPartida;
     //
     private GameObject PanelInicio;
     // controles de ajuste de color pantalla
@@ -40,6 +42,8 @@ public class GameCore : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip ClicSound;
     private  BackgroundMusic BGM;
+    //
+    [SerializeField] private bool activadoBorrarPartida;
 
 
     private void Awake()
@@ -58,10 +62,15 @@ public class GameCore : MonoBehaviour
 
     private void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
+        if (activadoBorrarPartida && escena.name == "MenuPrincipal")
+        {
+            SistemadeGuardado.BorrarPartida();
+        }        
+
         audioSource = transform.GetChild(0).GetComponent<AudioSource>();
         // Si estamos en una escena donde no existen jugador/enemigo, NO fallará
         if (escena.name != "MenuPrincipal" && escena.name != "Derrota" && escena.name != "Victoria")
-        {
+        {  
             BuscarReferencias(escena.name);            
             //
             Button[] botones = Resources.FindObjectsOfTypeAll<Button>();
@@ -78,19 +87,21 @@ public class GameCore : MonoBehaviour
             // Reconectar eventos
             if (botonGuardar != null)
             {
-                if (!SistemadeGuardado.comprobarHayGuardado())
-                {
-                    botonGuardar.gameObject.SetActive(false);
-                }
                 botonGuardar.onClick.RemoveAllListeners();
                 botonGuardar.onClick.AddListener(GuardarPartida);
             }
 
             if (botonCargar != null)
             {
-                botonCargar.onClick.RemoveAllListeners();
-                botonCargar.onClick.AddListener(CargarPartida);
-              
+                if (!SistemadeGuardado.comprobarHayGuardado())
+                {
+                    botonCargar.interactable = false;
+                    botonCargar.onClick.RemoveAllListeners();
+                }
+                else
+                {
+                    botonCargar.onClick.AddListener(CargarPartida);
+                }             
             }
             InitializeCoreSystems();
         }
@@ -135,6 +146,11 @@ public class GameCore : MonoBehaviour
             {
                 PanelInicio = GameObject.FindWithTag("PanelInicio");
             }
+            if(confirmGuardarPartida == null)
+            {
+                confirmGuardarPartida = GameObject.FindWithTag("PartidaGuardada");
+                confirmGuardarPartida.SetActive(false);
+            }
             
             if (gameCoreUI == null)
             {
@@ -164,12 +180,10 @@ public class GameCore : MonoBehaviour
             if (v.gameObject.hideFlags == HideFlags.None)
                 return v; // primer Volume válido encontrado
         }
-
         return null; // no existe en esta escena
     }
-
     
-    private Transform GetPoint(string id)
+    private Transform GetPoint(string id) // OBTENGO PUNTO DE LLEGADA DEL JUGADOR RECIEN ALCANZADO POR ENEMIGO
     {
         if (string.IsNullOrWhiteSpace(id))
             return null;
@@ -326,18 +340,30 @@ public class GameCore : MonoBehaviour
     // ------------------------------------------------------------
     // GUARDADO / CARGA (placeholder)
     // ------------------------------------------------------------
+    
+
+    private IEnumerator desActivarConDelay(float segundos)
+    {        
+        yield return new WaitForSecondsRealtime(segundos);
+        confirmGuardarPartida.SetActive(false);
+    }
     public void GuardarPartida()
     {
         audioSource.PlayOneShot(ClicSound);
+        activadoBorrarPartida = false;
         foreach (string nombre in doorsOpened)
         {
             nombresPuertas += nombre;            
         }
         SistemadeGuardado.GuardarPartida(playerHealth, Enemigo, nombresPuertas);
+
+        confirmGuardarPartida.SetActive(true);
+        StartCoroutine(desActivarConDelay(2f));
     }
 
     public void CargarPartida()
     {
+       
         audioSource.PlayOneShot(ClicSound);
         SistemadeGuardado.CargarPartida(playerHealth, Enemigo);
         PanelInicio.SetActive(false);

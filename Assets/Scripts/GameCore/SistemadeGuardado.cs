@@ -4,7 +4,15 @@ using System.Text;
 using System.Collections.Generic;
 
 public class SistemadeGuardado
-{      
+{
+    public static void BorrarPartida()
+    {
+        string ubicacion = Application.persistentDataPath + "archivoGuardado";
+        if (File.Exists(ubicacion))
+        {
+            File.Delete(ubicacion);
+        }
+    }
     public static bool comprobarHayGuardado()
     {
         string ubicacion = Application.persistentDataPath + "archivoGuardado";

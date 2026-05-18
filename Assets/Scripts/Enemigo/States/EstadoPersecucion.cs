@@ -22,6 +22,6 @@ public class EstadoPersecucion : EnemyState
             enemy.Accion("Atacar");
         }
         */
-        /********************/
+       
     }
 }

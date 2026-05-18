@@ -106,7 +106,7 @@ public class FirstPersonController : MonoBehaviour
     public float jumpPower = 5f;
 
     // Internal Variables
-    private bool isGrounded = false;
+    public bool isGrounded = false;
 
     #endregion
 
@@ -120,6 +120,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     public bool isCrouched = false;
+    public bool isJumping = false;
     private Vector3 originalScale;
 
     #endregion
@@ -140,6 +141,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void Awake()
     {
+        
         Cajas = GameObject.FindWithTag("Cajas");       
         rb = GetComponent<Rigidbody>();
         contactoConPuerta = false;
@@ -174,6 +176,7 @@ public class FirstPersonController : MonoBehaviour
     private void OnEnable()
     {
         controls.Player.Enable();
+        DesactivarCrossHair();
     }
 
     private void OnDisable()
@@ -183,7 +186,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        ActivarCrossHair();
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -197,7 +201,7 @@ public class FirstPersonController : MonoBehaviour
         {
             crosshairObject.gameObject.SetActive(false);
         }
-
+        
         #region Sprint Bar
 
         sprintBarCG = GetComponentInChildren<CanvasGroup>();
@@ -228,6 +232,15 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #endregion
+    }
+
+    public void DesactivarCrossHair()
+    {
+       crosshairObject.gameObject.SetActive(false);        
+    }
+    public void ActivarCrossHair()
+    {
+        crosshairObject.gameObject.SetActive(true);
     }
 
     float camRotation;
@@ -498,6 +511,7 @@ public class FirstPersonController : MonoBehaviour
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             isGrounded = false;
+            isJumping = true;
         }
 
         // When crouched and using toggle system, will uncrouch for a jump
@@ -594,6 +608,7 @@ public class FirstPersonController : MonoBehaviour
     FirstPersonController fpc;
     SerializedObject SerFPC;
 
+
     private void OnEnable()
     {
         fpc = (FirstPersonController)target;
@@ -629,10 +644,11 @@ public class FirstPersonController : MonoBehaviour
         fpc.lockCursor = EditorGUILayout.ToggleLeft(new GUIContent("Lock and Hide Cursor", "Turns off the cursor visibility and locks it to the middle of the screen."), fpc.lockCursor);
 
         fpc.crosshair = EditorGUILayout.ToggleLeft(new GUIContent("Auto Crosshair", "Determines if the basic crosshair will be turned on, and sets is to the center of the screen."), fpc.crosshair);
-
+       
         // Only displays crosshair options if crosshair is enabled
-        if(fpc.crosshair) 
+        if (fpc.crosshair) 
         { 
+           
             EditorGUI.indentLevel++; 
             EditorGUILayout.BeginHorizontal(); 
             EditorGUILayout.PrefixLabel(new GUIContent("Crosshair Image", "Sprite to use as the crosshair.")); 

@@ -64,6 +64,7 @@ public class GameCoreUI : MonoBehaviour
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);
         pararJuego();
+        PlayerScript.DesactivarCrossHair();   
         audioSource.PlayOneShot(ClicSound);
     }
     
@@ -100,8 +101,9 @@ public class GameCoreUI : MonoBehaviour
         Cursor.visible = false;
         JuegoPausado = false;
         Time.timeScale = 1f;  // Reanuda el juego
-        CanvasGameManager.SetActive(false);
+        CanvasGameManager.SetActive(false);        
         PlayerScript.enabled = true;
+        PlayerScript.ActivarCrossHair();
         audioSource.PlayOneShot(ClicSound);
         GameCore.Instance.TogglePause();
     }
@@ -115,14 +117,14 @@ public class GameCoreUI : MonoBehaviour
     }
 
     private void PausarReanudar()
-    {       
+    {
         if (!JuegoPausado)
         {
             pararJuego();            
         }
         else
         {           
-            Reanudar(); Debug.Log("reanudar");
+            Reanudar();
         }
         audioSource.PlayOneShot(ClicSound);       
     }

@@ -16,15 +16,19 @@ public class PlayerHealth : MonoBehaviour
     public event Action<int, int> OnHealthChanged;     // (current, max)
     public event Action OnPlayerDeath;
     public event Action<int> OnPlayerDamaged;
+    [SerializeField] private int amountDamage;
 
     private CambioEscena cambioEscena;
 
     private bool isDead = false;
     // sonidos
     public AudioSource audioSource;
+    public AudioSource audioSource4;
     public AudioClip PasosSound;
+    public AudioClip Aterrizaje;
     public AudioClip SprintSound;
     public AudioClip CrouchSound;
+    public AudioClip DamageSound;
     private AudioClip targetClip;
     private FirstPersonController firstPersonController;
 
@@ -49,6 +53,15 @@ public class PlayerHealth : MonoBehaviour
         Rojo.enabled = false;
     }
 
+    private IEnumerator SonidoConDelay(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        audioSource4.clip = Aterrizaje;
+        audioSource4.Play();
+
+
+    }
+
     private void SetPanelOpacity(float alpha)
     {
         if (Rojo != null)
@@ -70,19 +83,27 @@ public class PlayerHealth : MonoBehaviour
 
 
     // Llamar cuando recibe daño
-    public void TakeDamage(int amount)
+    public void TakeDamage()
     {
-        if (isDead) return;        
-        SetPanelOpacity(0.4f);
-        Rojo.enabled = true;
-        currentHealth -= amount;
+        if (isDead) return;
+        audioSource4.clip = DamageSound;
+        audioSource4.Play();
+        currentHealth -= amountDamage;
         if (currentHealth < 0)
             currentHealth = 0;
-        // Avisar a GameCore o a la UI
-        OnPlayerDamaged?.Invoke(currentHealth);//???
-        miPlayerHUD.UpdateHealthUI(currentHealth, maxHealth);
-        if (currentHealth <= 0)
+        if(currentHealth > 0)
+        { 
+            SetPanelOpacity(0.4f);
+            Rojo.enabled = true;
+            // Avisar a GameCore o a la UI
+            OnPlayerDamaged?.Invoke(currentHealth);//NOTIFICAR  A GAMECORE PARA POSICIONAR NUEVAMENTE O PPERDER PARTIDA
+            miPlayerHUD.UpdateHealthUI(currentHealth, maxHealth);// Para el Canvas Inventario
+        }
+        else
+        {
             Die();
+        }
+            
     }
 
     // Llamar desde objetos de curación del inventario
@@ -112,7 +133,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void Update()
-    {         
+    {   
+        if (firstPersonController.isGrounded == true && firstPersonController.isJumping == true)
+        {
+            firstPersonController.isJumping = false;
+            StartCoroutine(SonidoConDelay(1.1f));
+        }
+        
         if (firstPersonController.isWalking || firstPersonController.isSprinting)
         {
             AudioClip targetClip = null;

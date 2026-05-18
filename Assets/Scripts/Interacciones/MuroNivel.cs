@@ -4,6 +4,7 @@ public class MuroNivel : MonoBehaviour
 {
     private CambioEscena cambioEscena;
     [SerializeField] private bool activarDemo;
+    [SerializeField] private bool activoMuroFinal;
     public AudioSource audioSource;
     public AudioClip PasoNivel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +17,7 @@ public class MuroNivel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (activarDemo)
+            if (activarDemo || activoMuroFinal)
             {
                 cambioEscena.CargaEscena("Victoria");
             }
