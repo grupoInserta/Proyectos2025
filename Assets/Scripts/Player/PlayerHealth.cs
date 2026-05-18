@@ -4,8 +4,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 
+
 public class PlayerHealth : MonoBehaviour
 {
+    
+    //Acceder a las opciones de rendering del proyecto para poder acceder al componente Lens Distortion
+    
+
+
+
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
@@ -28,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip Aterrizaje;
     public AudioClip SprintSound;
     public AudioClip CrouchSound;
+    public AudioClip PreCrouchSound;
     public AudioClip DamageSound;
     private AudioClip targetClip;
     private FirstPersonController firstPersonController;
@@ -151,10 +159,15 @@ public class PlayerHealth : MonoBehaviour
             {
                 targetClip = SprintSound;
             }
-            if(firstPersonController.isCrouched && firstPersonController.isWalking)
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                targetClip = PreCrouchSound;
+            }
+            if (firstPersonController.isCrouched && firstPersonController.isWalking)
             {
                 targetClip = CrouchSound;
             }
+            
            
 
             // Cambiar clip solo si es distinto (evita reinicios constantes)

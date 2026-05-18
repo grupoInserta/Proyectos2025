@@ -31847,6 +31847,7 @@ MonoBehaviour:
   Aterrizaje: {fileID: 8300000, guid: f53281cfd39624a4d9204d399e3c35b1, type: 3}
   SprintSound: {fileID: 8300000, guid: 8b22b7e0d2b0eec4aaf1011b3573d40a, type: 3}
   CrouchSound: {fileID: 8300000, guid: aef8a5ff422f3c747b785e3842c1e284, type: 3}
+  PreCrouchSound: {fileID: 8300000, guid: a2977b0b50c6d464186eb726c9462489, type: 3}
   DamageSound: {fileID: 8300000, guid: efea5d162965df9439fb32ba7985b035, type: 3}
 --- !u!114 &559128953 stripped
 MonoBehaviour:
