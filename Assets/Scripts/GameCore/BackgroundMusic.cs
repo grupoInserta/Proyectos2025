@@ -7,9 +7,9 @@ public class BackgroundMusic : MonoBehaviour
     public AudioClip DerrotaSound;
     public AudioClip VictoriaSound;
     public AudioClip NivelSound;
+    public AudioClip ZonaSegura;
     public AudioClip MenuPrincipalSound;
     [Range(0f, 1f)] public float volume = 0.5f;
-
 
 
 
@@ -30,6 +30,10 @@ public class BackgroundMusic : MonoBehaviour
         else if (nombreEscena == "MenuPrincipal")
         {
             musicClip = MenuPrincipalSound;
+        }
+        else if(nombreEscena == "ZonaSegura")
+        {
+            musicClip = ZonaSegura;
         }
 
         if (audioSource == null)

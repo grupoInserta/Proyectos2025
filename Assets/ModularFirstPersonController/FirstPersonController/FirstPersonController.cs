@@ -75,6 +75,7 @@ public class FirstPersonController : MonoBehaviour
     public bool unlimitedSprint = false;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public float sprintSpeed = 7f;
+    public Vector3 velocity;
     public float sprintDuration = 5f;
     public float sprintCooldown = .5f;
     public float sprintFOV = 80f;
@@ -94,7 +95,8 @@ public class FirstPersonController : MonoBehaviour
     private float sprintRemaining;
     private float sprintBarWidth;
     private float sprintBarHeight;
-    private bool isSprintCooldown = false;
+    public bool isSprintCooldown = false;
+    public  bool lastSprintCooldown;
     private float sprintCooldownReset;
 
     #endregion
@@ -107,6 +109,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     public bool isGrounded = false;
+    public bool wasGrounded;
 
     #endregion
 
@@ -117,10 +120,10 @@ public class FirstPersonController : MonoBehaviour
     public KeyCode crouchKey = KeyCode.LeftControl;
     public float crouchHeight = .75f;
     public float speedReduction = .5f;
+    public bool crouchAudio = false;
 
     // Internal Variables
     public bool isCrouched = false;
-    public bool isJumping = false;
     private Vector3 originalScale;
 
     #endregion
@@ -242,6 +245,8 @@ public class FirstPersonController : MonoBehaviour
     {
         crosshairObject.gameObject.SetActive(true);
     }
+
+
 
     float camRotation;
 
@@ -382,19 +387,22 @@ public class FirstPersonController : MonoBehaviour
 
         if (enableCrouch)
         {
+           
             if(Input.GetKeyDown(crouchKey) && !holdToCrouch)
-            {
-                Crouch();
+            {   
+                Crouch();                
             }
             
             if(Input.GetKeyDown(crouchKey) && holdToCrouch)
             {
                 isCrouched = false;
                 Crouch();
+                crouchAudio = true;
             }
             else if(Input.GetKeyUp(crouchKey) && holdToCrouch)
-            {
+            {                
                 isCrouched = true;
+                crouchAudio = false;
                 Crouch();
             }
         }
@@ -435,7 +443,7 @@ public class FirstPersonController : MonoBehaviour
                 targetVelocity = transform.TransformDirection(targetVelocity) * sprintSpeed;
 
                 // Apply a force that attempts to reach our target velocity
-                Vector3 velocity = rb.linearVelocity;
+                velocity = rb.linearVelocity;
                 Vector3 velocityChange = (targetVelocity - velocity);
                 velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
                 velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
@@ -445,8 +453,7 @@ public class FirstPersonController : MonoBehaviour
                 // Makes sure fov change only happens during movement
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
-                    isSprinting = true;
-                    
+                    isSprinting = true;                    
 
                     if (isCrouched)
                     {
@@ -511,8 +518,8 @@ public class FirstPersonController : MonoBehaviour
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             isGrounded = false;
-            isJumping = true;
         }
+        
 
         // When crouched and using toggle system, will uncrouch for a jump
         if(isCrouched && !holdToCrouch)

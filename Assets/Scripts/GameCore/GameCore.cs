@@ -41,7 +41,7 @@ public class GameCore : MonoBehaviour
     //
     private AudioSource audioSource;
     public AudioClip ClicSound;
-    private  BackgroundMusic BGM;
+    public  BackgroundMusic BGM;
     //
     [SerializeField] private bool activadoBorrarPartida;
 
@@ -334,6 +334,7 @@ public class GameCore : MonoBehaviour
     }
 
     private void mandarZonaSegura() {
+        BGM.Reproducir("ZonaSegura");
         string elNivel = obtenerNivel("jugador");
         Jugador.transform.position = GetPoint(elNivel).position;        
     }

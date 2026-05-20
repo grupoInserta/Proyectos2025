@@ -1284,6 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activarDemo: 0
+  activoMuroFinal: 0
   audioSource: {fileID: 2063195395}
   PasoNivel: {fileID: 8300000, guid: 1b09e608e067d0247b9868111888c2f3, type: 3}
 --- !u!65 &15587658
@@ -12432,6 +12433,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1327633726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &217556513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217556514}
+  - component: {fileID: 217556516}
+  - component: {fileID: 217556515}
+  m_Layer: 0
+  m_Name: zonaSegura3Salida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &217556514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217556513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.35, y: -2.1, z: 20.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667482228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &217556515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217556513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bfc2e96a985a34c96ca9481127dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &217556516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217556513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.76, y: 3.4877415, z: 0.11000013}
+  m_Center: {x: -0.15, y: -0.63, z: 0.81}
 --- !u!1001 &218922967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18807,7 +18874,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -31209,6 +31276,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 465494, guid: 31a01b4eec39eee4a8f9af7cd90c52da, type: 3}
   m_PrefabInstance: {fileID: 672879338}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &556916297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556916298}
+  - component: {fileID: 556916300}
+  - component: {fileID: 556916299}
+  m_Layer: 0
+  m_Name: zonaSegura2Salida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &556916298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556916297}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 39.6, y: 2.9089007, z: -30.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667482228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556916299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556916297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bfc2e96a985a34c96ca9481127dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &556916300
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556916297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.76, y: 3.4877415, z: 0.11000013}
+  m_Center: {x: -0.62, y: -0.63, z: 6.93}
 --- !u!4 &557103555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447612, guid: 844d555ff5b93b246b2e27f48bc4732f, type: 3}
@@ -31847,8 +31980,9 @@ MonoBehaviour:
   Aterrizaje: {fileID: 8300000, guid: f53281cfd39624a4d9204d399e3c35b1, type: 3}
   SprintSound: {fileID: 8300000, guid: 8b22b7e0d2b0eec4aaf1011b3573d40a, type: 3}
   CrouchSound: {fileID: 8300000, guid: aef8a5ff422f3c747b785e3842c1e284, type: 3}
-  PreCrouchSound: {fileID: 8300000, guid: a2977b0b50c6d464186eb726c9462489, type: 3}
   DamageSound: {fileID: 8300000, guid: efea5d162965df9439fb32ba7985b035, type: 3}
+  audioAgotado: {fileID: 8300000, guid: 6a4b8943ca21dda40bbb0df9bd75792a, type: 3}
+  CrouchAudio: {fileID: 8300000, guid: a2977b0b50c6d464186eb726c9462489, type: 3}
 --- !u!114 &559128953 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -32654,7 +32788,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -36398,7 +36532,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -37061,8 +37195,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 281542762}
+  - {fileID: 1646606066}
   - {fileID: 2091082550}
+  - {fileID: 556916298}
   - {fileID: 1179969627}
+  - {fileID: 217556514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &668531777 stripped
@@ -66876,7 +67013,7 @@ MonoBehaviour:
   audioSource2: {fileID: 575834490}
   PasosEnemigo: {fileID: 8300000, guid: 836a82073891e4547a230a588a5ba7d2, type: 3}
   maxDistance: 20
-  maxVolume: 1
+  maxVolume: 0.881
 --- !u!195 &1215092320
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -66917,7 +67054,7 @@ MonoBehaviour:
   visionAngle: 250
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   playerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -77370,6 +77507,7 @@ MonoBehaviour:
   HUDPlayer: {fileID: 708525065}
   PlayerScript: {fileID: 559128953}
   ClicSound: {fileID: 8300000, guid: 65c77c4447e2e52448397c7fd62b8b1b, type: 3}
+  InicioPlayerSound: {fileID: 8300000, guid: 78e728ab38c6bff40950ee8d1009a011, type: 3}
 --- !u!4 &1411307991
 Transform:
   m_ObjectHideFlags: 0
@@ -83976,6 +84114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activarDemo: 0
+  activoMuroFinal: 0
   audioSource: {fileID: 2063195395}
   PasoNivel: {fileID: 8300000, guid: 1b09e608e067d0247b9868111888c2f3, type: 3}
 --- !u!65 &1530247892
@@ -86769,9 +86908,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1563067468412737184, guid: bd0324de7cbd7eb4c8158f01d27572fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1585144212}
-    - targetCorrespondingSourceObject: {fileID: 1563067468412737184, guid: bd0324de7cbd7eb4c8158f01d27572fe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1585144213}
   m_SourcePrefab: {fileID: 100100000, guid: bd0324de7cbd7eb4c8158f01d27572fe, type: 3}
 --- !u!1 &1585144207 stripped
 GameObject:
@@ -86804,21 +86940,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.533849
   m_Center: {x: 0, y: 0, z: 0.00000033517404}
---- !u!114 &1585144213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585144207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171f8c259418548489cf39bf66268032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyName: final
-  Seleccionada: {fileID: 8300000, guid: 712616ccd6efbf14b83004013a1f6e11, type: 3}
-  audioSource: {fileID: 762661666}
 --- !u!4 &1587044931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 494626, guid: 812c9b36537fa8146bed44183a36cf7a, type: 3}
@@ -89567,6 +89688,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b12109de90b0e74ca16680ae843457f, type: 3}
+--- !u!1 &1646606065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646606066}
+  - component: {fileID: 1646606068}
+  - component: {fileID: 1646606067}
+  m_Layer: 0
+  m_Name: zonaSegura1Salida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1646606066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646606065}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2, y: 8.77, z: -6.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667482228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1646606067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646606065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bfc2e96a985a34c96ca9481127dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1646606068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646606065}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6599998, y: 3.4877415, z: 0.11000013}
+  m_Center: {x: 2.28, y: -1.0020733, z: 3.92}
 --- !u!1001 &1647689908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90564,6 +90751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activarDemo: 0
+  activoMuroFinal: 1
   audioSource: {fileID: 2063195395}
   PasoNivel: {fileID: 8300000, guid: 1b09e608e067d0247b9868111888c2f3, type: 3}
 --- !u!65 &1660571459
@@ -116582,7 +116770,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.9
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0

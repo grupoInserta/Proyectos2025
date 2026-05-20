@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class GameCoreUI : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameCoreUI : MonoBehaviour
     [SerializeField]
     private Button botonInicio;
     [SerializeField]
-    private Canvas PanelInicio;
+    private Canvas PanelInicio;// panel que se ve por defecto al iniciar un juego y da a elegir entre jugar nuevo o anterior
 
     [SerializeField]
     private Canvas PanelCanvasGamesCore;
@@ -29,6 +30,8 @@ public class GameCoreUI : MonoBehaviour
     private FirstPersonController PlayerScript;
     private AudioSource audioSource;
     public AudioClip ClicSound;
+    public AudioClip InicioPlayerSound;
+    private bool JuegoIniciado = false;
 
     void OnEnable()
     {
@@ -46,7 +49,14 @@ public class GameCoreUI : MonoBehaviour
         audioSource = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
-    public void CerrarPanelInicio()
+    private IEnumerator SonidoPlayerConDelay(float segundos)
+    {
+        yield return null; // esperar 1 frame
+        audioSource.clip = InicioPlayerSound;
+        audioSource.Play();
+    }
+
+        public void CerrarPanelInicio()
     {
         Reanudar();
         JuegoPausado = false;
@@ -55,6 +65,10 @@ public class GameCoreUI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         audioSource.PlayOneShot(ClicSound);
+        if (!JuegoIniciado) {
+            StartCoroutine(SonidoPlayerConDelay(1f));
+            JuegoIniciado = true;
+        }        
     }
 
     private void MostrarPanel()

@@ -2354,6 +2354,7 @@ MonoBehaviour:
   valorSaturacion: 0
   valorContraste: 0
   ClicSound: {fileID: 8300000, guid: 65c77c4447e2e52448397c7fd62b8b1b, type: 3}
+  BGM: {fileID: 0}
   activadoBorrarPartida: 0
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
   playerHealth: {fileID: 0}
@@ -2388,6 +2389,7 @@ MonoBehaviour:
   DerrotaSound: {fileID: 8300000, guid: 9c4b24e20c71b174eae9b9ed8928c600, type: 3}
   VictoriaSound: {fileID: 8300000, guid: 8d99540cc84341844b4418ee7cb4c362, type: 3}
   NivelSound: {fileID: 8300000, guid: c9e2b3bf908bd654aa295ed7785ec4c2, type: 3}
+  ZonaSegura: {fileID: 8300000, guid: c2e5b4cd93208ea4e8fff42da2b5898b, type: 3}
   MenuPrincipalSound: {fileID: 8300000, guid: 7fff332b677e69740847cd2ad8764bd0, type: 3}
   volume: 0.5
 --- !u!1 &1788960099

@@ -4,20 +4,16 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-
 public class PlayerHealth : MonoBehaviour
 {
-    
-    //Acceder a las opciones de rendering del proyecto para poder acceder al componente Lens Distortion
-    
-
-
-
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
     public PlayerHUD miPlayerHUD;
     public Image Rojo;
+    //
+    private float lastY;
+    private float verticalSpeed;
 
     // Eventos para comunicar cambios a UI, inventario, GameCore...
     public event Action<int, int> OnHealthChanged;     // (current, max)
@@ -35,10 +31,12 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip Aterrizaje;
     public AudioClip SprintSound;
     public AudioClip CrouchSound;
-    public AudioClip PreCrouchSound;
     public AudioClip DamageSound;
+    public AudioClip audioAgotado;
+    public AudioClip CrouchAudio;
     private AudioClip targetClip;
     private FirstPersonController firstPersonController;
+    private Vector3 playerVelocity;
 
     private void Awake()
     {
@@ -61,14 +59,6 @@ public class PlayerHealth : MonoBehaviour
         Rojo.enabled = false;
     }
 
-    private IEnumerator SonidoConDelay(float segundos)
-    {
-        yield return new WaitForSeconds(segundos);
-        audioSource4.clip = Aterrizaje;
-        audioSource4.Play();
-
-
-    }
 
     private void SetPanelOpacity(float alpha)
     {
@@ -141,13 +131,32 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void Update()
-    {   
-        if (firstPersonController.isGrounded == true && firstPersonController.isJumping == true)
+    {
+        // audio CROUCH
+        if (firstPersonController.crouchAudio )
         {
-            firstPersonController.isJumping = false;
-            StartCoroutine(SonidoConDelay(1.1f));
+            audioSource4.clip = CrouchAudio;
+            audioSource4.Play();
+            firstPersonController.crouchAudio = false;           
         }
-        
+        // ver velocidad en Y:       
+        verticalSpeed =  (transform.position.y - lastY) / Time.deltaTime;
+        lastY = transform.position.y;
+        //
+        if (!firstPersonController.wasGrounded && firstPersonController.isGrounded && verticalSpeed < -3f)
+        {// SONIDO SALTO
+            audioSource4.clip = Aterrizaje;
+            audioSource4.Play();
+        }
+        firstPersonController.wasGrounded = firstPersonController.isGrounded;
+
+        if (!firstPersonController.lastSprintCooldown && firstPersonController.isSprintCooldown)
+        { // SONIDO CANSANCIO
+            audioSource4.clip = audioAgotado;
+            audioSource4.Play();
+        }
+        firstPersonController.lastSprintCooldown = firstPersonController.isSprintCooldown;
+
         if (firstPersonController.isWalking || firstPersonController.isSprinting)
         {
             AudioClip targetClip = null;
@@ -159,15 +168,10 @@ public class PlayerHealth : MonoBehaviour
             {
                 targetClip = SprintSound;
             }
-            if (Input.GetKeyDown(KeyCode.LeftControl))
-            {
-                targetClip = PreCrouchSound;
-            }
-            if (firstPersonController.isCrouched && firstPersonController.isWalking)
+            if(firstPersonController.isCrouched && firstPersonController.isWalking)
             {
                 targetClip = CrouchSound;
             }
-            
            
 
             // Cambiar clip solo si es distinto (evita reinicios constantes)
