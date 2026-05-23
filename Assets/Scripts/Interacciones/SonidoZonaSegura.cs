@@ -13,7 +13,6 @@ public class SonidoZonaSegura : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("VOLVER A SONIDO NIVEL");
             GameCore.Instance.BGM.Reproducir("Nivel");
         }
     }

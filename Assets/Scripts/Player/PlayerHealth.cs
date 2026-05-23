@@ -143,10 +143,11 @@ public class PlayerHealth : MonoBehaviour
         verticalSpeed =  (transform.position.y - lastY) / Time.deltaTime;
         lastY = transform.position.y;
         //
+
         if (!firstPersonController.wasGrounded && firstPersonController.isGrounded && verticalSpeed < -3f)
         {// SONIDO SALTO
             audioSource4.clip = Aterrizaje;
-            audioSource4.Play();
+            audioSource4.Play();            
         }
         firstPersonController.wasGrounded = firstPersonController.isGrounded;
 

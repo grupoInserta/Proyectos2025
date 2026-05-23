@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
@@ -359,16 +360,22 @@ public class GameCore : MonoBehaviour
         SistemadeGuardado.GuardarPartida(playerHealth, Enemigo, nombresPuertas);
 
         confirmGuardarPartida.SetActive(true);
+        TextMeshProUGUI Texto = confirmGuardarPartida.transform.GetComponentInChildren<TextMeshProUGUI>();
+        Texto.text = "Partida Guardada!!";
         StartCoroutine(desActivarConDelay(2f));
     }
 
     public void CargarPartida()
-    {
-       
+    {       
         audioSource.PlayOneShot(ClicSound);
         SistemadeGuardado.CargarPartida(playerHealth, Enemigo);
         PanelInicio.SetActive(false);
         gameCoreUI.CerrarPanelInicio();
+        //
+        confirmGuardarPartida.SetActive(true);
+        TextMeshProUGUI Texto = confirmGuardarPartida.transform.GetComponentInChildren<TextMeshProUGUI>();
+        Texto.text = "Partida Cargada!!";
+        StartCoroutine(desActivarConDelay(2f));
     }
 
 
@@ -401,7 +408,6 @@ public class GameCore : MonoBehaviour
     // ------------------------------------------------------------
     public void TogglePause()
     {
-        Debug.Log("BLOPS " + CurrentState);
         if (CurrentState == GameState.Gameplay)
         {
             SetGameState(GameState.Paused);

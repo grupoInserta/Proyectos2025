@@ -73,7 +73,9 @@ public class GameCoreUI : MonoBehaviour
 
     private void MostrarPanel()
     {
+        Debug.Log("MOSTRAR PANELLL1");
         if (PanelInicio.enabled == true) return;
+        Debug.Log("MOSTRAR PANELLL2");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);
