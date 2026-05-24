@@ -14,9 +14,9 @@ public class KeyUIManager : MonoBehaviour
     [SerializeField] private Image fondo;
     private float iconSize = 60f;
 
-    private float posTotXIconIni = 0.15f;
+    private float posTotXIconIni = 0;
     private float posTotXIcon;
-    private float incrPosXIcon = 0.02f;
+    private float incrPosXIcon = 0.12f;
     private float posTotYIconIni = 0.25f;
     private float posTotYIncr = 0.18f;
     private float posTotYIcon;
@@ -29,6 +29,11 @@ public class KeyUIManager : MonoBehaviour
     public void MostrarAviso(string textoAviso)
     {
         Aviso.text = textoAviso;
+    }
+
+    private void Awake()
+    {
+        posTotXIcon = 0f;
     }
 
     private void PosicionarSprite(GameObject _nuevoIcono, float posX, float posY)
@@ -96,7 +101,7 @@ public class KeyUIManager : MonoBehaviour
         int posicionColor = filasColores.IndexOf(_elColor);
         //posTotYIcon = posTotYIconIni - posTotYIncr * posicionColor;
         posTotYIcon = posTotYIconIni;
-        posTotXIcon = posTotXIconIni + posTotXIcon + incrPosXIcon;
+        posTotXIcon +=  incrPosXIcon;
         // posicionamiento:
         PosicionarSprite(nuevoIcono, posTotXIcon, posTotYIcon);
     }
@@ -114,8 +119,7 @@ public class KeyUIManager : MonoBehaviour
             // Destruirlo en la escena
             if (ultimo != null)
                 Destroy(ultimo); 
-            //+++++ AQUI HAY QUE ELIMINAR TODOS LOS ICONOS Y VOLVERLOS A DIBUJAR
-            // Si la lista quedó vacía, remover la clave
+             // Si la lista quedó vacía, remover la clave
             if (lista.Count == 0)
             {
                 llavesInventario.Remove(_elColor);
@@ -131,11 +135,28 @@ public class KeyUIManager : MonoBehaviour
     }
     
 
+    public void EliminarSoloIconos()
+    {
+        posTotXIcon = 0;
+        foreach (List<GameObject> listaIconos in llavesInventario.Values)
+        {
+            foreach (GameObject icono in listaIconos)
+            {
+                if (icono != null)
+                {
+                    Destroy(icono);
+                }
+            }
+        }
+        llavesInventario.Clear();
+    }
+
+
     public void EliminarTodosLosIconos()
     {
         // Copia para evitar modificar el diccionario mientras lo recorres
         var claves = new List<string>(llavesInventario.Keys);
-
+        posTotXIcon = posTotXIconIni;
         foreach (var color in claves)
         {
             // Mientras existan iconos en esa lista, elimínalos

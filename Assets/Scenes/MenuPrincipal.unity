@@ -2355,7 +2355,7 @@ MonoBehaviour:
   valorContraste: 0
   ClicSound: {fileID: 8300000, guid: 65c77c4447e2e52448397c7fd62b8b1b, type: 3}
   BGM: {fileID: 0}
-  activadoBorrarPartida: 0
+  activadoBorrarPartida: 1
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
   playerHealth: {fileID: 0}
 --- !u!4 &1632577731

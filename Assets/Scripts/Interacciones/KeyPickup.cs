@@ -12,7 +12,7 @@ public class KeyPickup : MonoBehaviour
         var inventory = other.GetComponent<KeyInventory>();
         if (inventory)
         {
-            inventory.AddKey(keyName);
+            inventory.AddKey(keyName, false);
             audioSource.PlayOneShot(Seleccionada);
             Destroy(gameObject); // Desaparece al recogerla
         }

@@ -14,10 +14,10 @@ public class KeyInventory : MonoBehaviour
         Llaves = GameObject.FindGameObjectsWithTag("Key");
     }
     // no comprueba si existe la llave antes de añadirla pues al inicio del proyecto no sabia si una llave se podia repetir y ser desechable o no..
-    public bool AddKey(string _keyName) //AÑADIR UNA LLAVE AL INVENTARIO
+    public bool AddKey(string _keyName, bool esRecarga) //AÑADIR UNA LLAVE AL INVENTARIO
     {
-        if (keys.Contains(_keyName))
-            return false;
+        if (keys.Contains(_keyName) && !esRecarga)
+            return false;      
         keys.Add(_keyName);
         Debug.Log("Llave añadida: " + _keyName);
         // elimino todas lasllaves de ese color que esten en la escena:
@@ -34,10 +34,25 @@ public class KeyInventory : MonoBehaviour
         return true;      
     }
 
-    public void vaciarInventario()
+   
+    public void vaciarInventario(bool soloImagenes)
+    {        
+        if (!soloImagenes)
+        {
+            uiManager.EliminarTodosLosIconos();
+            keys.Clear();
+        }  else
+        {
+            uiManager.EliminarSoloIconos();
+        }     
+    }
+
+    public void RecargarInventario()
     {
-        uiManager.EliminarTodosLosIconos();
-        keys.Clear();
+        foreach (string llave in keys)
+        {
+            AddKey(llave, true);
+        }            
     }
 
     public void RemoveKey(string keyName)

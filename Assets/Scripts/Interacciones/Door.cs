@@ -127,11 +127,14 @@ public class Door : MonoBehaviour
             {
                 tieneLaLlave = true;
                 // por ahora no quitamos la llave
+                // NUEVO
                 if(requiredKey == "Martillo")
                 {
                     inventory.RemoveKey(requiredKey);
+                    inventory.vaciarInventario(true);
+                    inventory.RecargarInventario();                    
                 }
-                // 
+                // FIN NUEVO
                 if (!puertaAbierta && currentAngle < 0.1f && requiredKey != "Martillo")                  
                 {                   
                    inventory.MostrarAviso("Pulsa E para abrir");                    

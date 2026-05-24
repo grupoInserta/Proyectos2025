@@ -9,9 +9,9 @@ public class CambioEscena : MonoBehaviour
     {
         if(audioSource != null)
         {
-            audioSource.PlayOneShot(ClicSound);
-            SceneManager.LoadScene(nombreEscenaCarga);
-        }        
+            audioSource.PlayOneShot(ClicSound);           
+        }
+        SceneManager.LoadScene(nombreEscenaCarga);
     }
     
 }

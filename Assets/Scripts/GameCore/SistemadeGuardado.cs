@@ -114,10 +114,10 @@ public class SistemadeGuardado
             string[] nombresArray = cadena.Split('#');
 
             // borrar las llaves previas:
-            Inventariollaves.vaciarInventario();
+            Inventariollaves.vaciarInventario(false);
             foreach (string nombre in nombresArray)
             {
-                Inventariollaves.AddKey(nombre);               
+                Inventariollaves.AddKey(nombre, false);               
             }
             //
             archivo.Close();

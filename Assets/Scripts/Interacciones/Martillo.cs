@@ -12,7 +12,7 @@ public class Martillo : MonoBehaviour
         if (inventory)
         {
             audioSource.PlayOneShot(Seleccionado);
-            inventory.AddKey("Martillo");
+            inventory.AddKey("Martillo", false);
             Destroy(gameObject); // Desaparece al recogerla
         }
     }

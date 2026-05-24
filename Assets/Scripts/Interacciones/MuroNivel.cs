@@ -23,7 +23,7 @@ public class MuroNivel : MonoBehaviour
             }
             else
             {
-                if (audioSource != null && PasoNivel != null)
+                if(audioSource != null && PasoNivel != null)
                     audioSource.PlayOneShot(PasoNivel);
             }
         }
