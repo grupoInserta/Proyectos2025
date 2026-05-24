@@ -114,7 +114,7 @@ public class KeyUIManager : MonoBehaviour
             // Destruirlo en la escena
             if (ultimo != null)
                 Destroy(ultimo); 
-
+            //+++++ AQUI HAY QUE ELIMINAR TODOS LOS ICONOS Y VOLVERLOS A DIBUJAR
             // Si la lista quedó vacía, remover la clave
             if (lista.Count == 0)
             {
