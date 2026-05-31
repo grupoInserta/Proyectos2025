@@ -7,12 +7,22 @@ public class MuroNivel : MonoBehaviour
     [SerializeField] private bool activoMuroFinal;
     public AudioSource audioSource;
     public AudioClip PasoNivel;
+    private bool nivelPasado = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cambioEscena = GetComponent<CambioEscena>();
     }
 
+  
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            nivelPasado = false;
+        }
+    }
+ 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,8 +33,12 @@ public class MuroNivel : MonoBehaviour
             }
             else
             {
-                if(audioSource != null && PasoNivel != null)
+                if(audioSource != null && PasoNivel != null && nivelPasado == false)
+                {
                     audioSource.PlayOneShot(PasoNivel);
+                    nivelPasado = true;
+                }
+                   
             }
         }
     }

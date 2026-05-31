@@ -56,9 +56,9 @@ public class GameCoreUI : MonoBehaviour
         audioSource.Play();
     }
 
-        public void CerrarPanelInicio()
+    public void CerrarPanelInicio()
     {
-        Reanudar();
+        Reanudar();       
         JuegoPausado = false;
         PanelInicio.enabled = false;
         HUDPlayer.enabled = true;
@@ -73,9 +73,7 @@ public class GameCoreUI : MonoBehaviour
 
     private void MostrarPanel()
     {
-        Debug.Log("MOSTRAR PANELLL1");
         if (PanelInicio.enabled == true) return;
-        Debug.Log("MOSTRAR PANELLL2");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);
@@ -84,14 +82,26 @@ public class GameCoreUI : MonoBehaviour
         audioSource.PlayOneShot(ClicSound);
     }
     
-    public void MostrarPanelAjustes()
+    public void TogglePanelAjustes()
     {
-        if (PanelCanvasGamesCore.enabled == true) return;
-        CanvasAjustesManager.SetActive(true);
+        if(CanvasAjustesManager.activeSelf == false)
+        {
+            MostrarPanelAjustes();
+        }
+        else
+        {
+            CerrarPanelAjustes();
+        }
+        
+    }
+    private void MostrarPanelAjustes()
+    {
+       // if (PanelCanvasGamesCore.enabled == true) return;
+        CanvasAjustesManager.SetActive(true);        
         audioSource.PlayOneShot(ClicSound);
     }
 
-    public void CerrarPanelAjustes()
+    private void CerrarPanelAjustes()
     {
         PanelCanvasGamesCore.enabled = true;
         CanvasAjustesManager.SetActive(false);
@@ -112,7 +122,8 @@ public class GameCoreUI : MonoBehaviour
     }
 
     private void Reanudar()
-    {   
+    {
+        CerrarPanelAjustes();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         JuegoPausado = false;

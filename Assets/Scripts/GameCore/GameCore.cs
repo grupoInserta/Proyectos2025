@@ -37,6 +37,7 @@ public class GameCore : MonoBehaviour
     private ColorAdjustments colorAdjustments;
     public float valorSaturacion = 0;
     public float valorContraste = 0;
+    public float valorBrillo = 0;
     private ControladorNivel controladorNivel;
     private GameCoreUI gameCoreUI;
     //
@@ -114,6 +115,7 @@ public class GameCore : MonoBehaviour
                     globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
                     colorAdjustments.saturation.value = valorSaturacion;
                     colorAdjustments.contrast.value = valorContraste;
+                    colorAdjustments.postExposure.value = valorBrillo;
             }
             if (escena.name == "Derrota" || escena.name == "Victoria")
             {
@@ -361,7 +363,7 @@ public class GameCore : MonoBehaviour
 
         confirmGuardarPartida.SetActive(true);
         TextMeshProUGUI Texto = confirmGuardarPartida.transform.GetComponentInChildren<TextMeshProUGUI>();
-        Texto.text = "Partida Guardada!!";
+        Texto.text = "¡PARTIDA GUARDADA!";
         StartCoroutine(desActivarConDelay(2f));
     }
 
@@ -417,8 +419,7 @@ public class GameCore : MonoBehaviour
         {
             SetGameState(GameState.Gameplay);
             AudioListener.pause = false;
-        }
-            
+        }   
         
     }
 

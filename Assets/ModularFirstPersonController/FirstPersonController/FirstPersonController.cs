@@ -143,8 +143,7 @@ public class FirstPersonController : MonoBehaviour
     #endregion
 
     private void Awake()
-    {
-        
+    {        
         Cajas = GameObject.FindWithTag("Cajas");       
         rb = GetComponent<Rigidbody>();
         contactoConPuerta = false;
@@ -163,17 +162,16 @@ public class FirstPersonController : MonoBehaviour
         // para abrir puertas:
         controls = new PlayerControls();
         // Suscribimos el evento de interacción
-        controls.Player.Interact.performed += ctx => IntentarAbrirPuerta();
+        controls.Player.Interact.performed += ctx => IntentarAbrirPuerta(); // TECLA E
         pulsadoAbrir = false;
     }
 
     private void IntentarAbrirPuerta()
     {
-        if (contactoConPuerta)
+          if (contactoConPuerta)
         {
             pulsadoAbrir = true;
-        }
-        
+        }        
     }
 
     private void OnEnable()
@@ -249,6 +247,26 @@ public class FirstPersonController : MonoBehaviour
 
 
     float camRotation;
+
+    private IEnumerator Levantar()
+    {
+        playerCanMove = false;
+        Vector3 v = rb.linearVelocity;
+
+        v.x *= 0.5f;
+        v.z *= 0.5f;
+
+        rb.linearVelocity = v;
+
+        yield return new WaitForFixedUpdate();
+
+        Crouch();
+
+        yield return new WaitForSeconds(0.05f);
+
+        playerCanMove = true;
+    }
+
 
     private void Update()
     {
@@ -400,10 +418,13 @@ public class FirstPersonController : MonoBehaviour
                 crouchAudio = true;
             }
             else if(Input.GetKeyUp(crouchKey) && holdToCrouch)
-            {                
+            {
+                StartCoroutine(Levantar());
+                /*
                 isCrouched = true;
                 crouchAudio = false;
                 Crouch();
+                */
             }
         }
 
@@ -423,6 +444,7 @@ public class FirstPersonController : MonoBehaviour
 
         if (playerCanMove)
         {
+           
             // Calculate how fast we should be moving
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 

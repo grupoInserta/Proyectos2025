@@ -10,6 +10,8 @@ public class AjustesPantalla : MonoBehaviour
    // public PostProcessVolume volume;
     public Slider sliderContraste;
     public Slider sliderSaturacion;
+    public Slider sliderBrillo;
+    public Slider sliderVolumenSonido;
     // private ColorGrading colorGrading;
     public Volume volumen;
     public GameObject PanelOpciones;  
@@ -17,6 +19,8 @@ public class AjustesPantalla : MonoBehaviour
     //
     public AudioClip ClicSound;
     public AudioSource audioSource;
+    // ajustes volumen sonido
+ 
 
     void Start()
     {
@@ -47,6 +51,30 @@ public class AjustesPantalla : MonoBehaviour
             sliderSaturacion.onValueChanged.AddListener(CambiarSaturacion);
             sliderSaturacion.onValueChanged.Invoke(GameCore.Instance.valorSaturacion);
         }
+        if (sliderBrillo != null)
+        {
+            sliderBrillo.minValue = -2f;
+            sliderBrillo.maxValue = 2f;
+            sliderBrillo.value = GameCore.Instance.valorBrillo;
+
+            //sliderSaturacion.value = colorAdjustments.contrast.value;
+            // Suscribirse al cambio de valor
+            sliderBrillo.onValueChanged.AddListener(CambiarBrillo);
+            sliderBrillo.onValueChanged.Invoke(GameCore.Instance.valorBrillo);
+        }
+        // SONIDO, VOLUMEN
+        float volume = PlayerPrefs.GetFloat("MasterVolume", 1f);
+        sliderVolumenSonido.value = volume;
+        AudioListener.volume = volume;
+        // escuchar cambios
+        sliderVolumenSonido.onValueChanged.AddListener(ChangeVolume);
+    }
+
+    private void ChangeVolume(float value)
+    {
+        AudioListener.volume = value;
+        PlayerPrefs.SetFloat("MasterVolume", value);
+        PlayerPrefs.Save();
     }
 
     public void TogglePanelOpciones()
@@ -69,6 +97,15 @@ public class AjustesPantalla : MonoBehaviour
         {
             colorAdjustments.saturation.value = valor;
             GameCore.Instance.valorSaturacion = valor;
+        }
+    }
+
+    public void CambiarBrillo(float valor)
+    {
+        if (colorAdjustments != null)
+        {
+            colorAdjustments.postExposure.value = valor;
+            GameCore.Instance.valorBrillo = valor;
         }
     }
 

@@ -22,6 +22,7 @@ public class Door : MonoBehaviour
     public int numPosicionesDentro;
     private BoxCollider[] boxes;
     public Collider myCollider;
+    private Collider Other;
     //
     public AudioSource audioSource;
     public AudioSource audioSource3;
@@ -56,16 +57,22 @@ public class Door : MonoBehaviour
         transform.Rotate(0,openAngle,0);
     }
 
+    private IEnumerator terminarPuertaAbierta(float segundos)
+    {
+        yield return new WaitForSecondsRealtime(segundos);
+        PlayerScript = Other.GetComponent<FirstPersonController>();
+        PlayerScript.contactoConPuerta = false;
+        PlayerScript.pulsadoAbrir = false;
+        playerCercano = false;
+        inventory.MostrarAviso("");
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            PlayerScript = other.GetComponent<FirstPersonController>();
-            PlayerScript.contactoConPuerta = false;
-            PlayerScript.pulsadoAbrir = false;
-            playerCercano = false;
-            inventory.MostrarAviso("");
-            
+                     
         }
     }
 
@@ -78,12 +85,12 @@ public class Door : MonoBehaviour
     }
         
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other) // PARA ABRIR
     {
         if (other.CompareTag("Player"))
         {
             PlayerScript = other.GetComponent<FirstPersonController>();
-            PlayerScript.contactoConPuerta = true;
+            PlayerScript.contactoConPuerta = true; // Poner en ontriggerenter??
             if (requiredKey == "Martillo" )
             {
                 if (tieneLaLlave)
@@ -110,8 +117,11 @@ public class Door : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {   if (puertaAbierta) return;   
+    private void OnTriggerEnter(Collider other) // PARA MOSTRAR AVISOS
+    {
+        
+        Other = other;
+        if (puertaAbierta) return;   
         if (other.CompareTag("Player"))
         {
             if (requiredKey == null || requiredKey =="")
@@ -172,7 +182,9 @@ public class Door : MonoBehaviour
             myCollider.enabled = false;
             if (!yaDesactivado)
             {// DESACTIVAMOS AQUI PARA MEJOR RENDIMIENTO DE LA APLICACIÓN
+                StartCoroutine(terminarPuertaAbierta(2f));
                 StartCoroutine(DesactivarTrasRetraso(1.0f));
+                StartCoroutine(terminarPuertaAbierta(2f));
                 yaDesactivado = true;
             }            
         }
