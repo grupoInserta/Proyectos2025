@@ -58,33 +58,34 @@ public class GameCoreUI : MonoBehaviour
 
     public void CerrarPanelInicio()
     {
-        Reanudar();       
+        Reanudar();
         JuegoPausado = false;
         PanelInicio.enabled = false;
         HUDPlayer.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         audioSource.PlayOneShot(ClicSound);
-        if (!JuegoIniciado) {
+        if (!JuegoIniciado)
+        {
             StartCoroutine(SonidoPlayerConDelay(1f));
             JuegoIniciado = true;
-        }        
+        }
     }
 
-    private void MostrarPanel()
+    private void MostrarPanel() // TECLA E
     {
-        if (PanelInicio.enabled == true) return;
+        if (PanelInicio.enabled == true || CanvasGameManager.activeSelf == true) return;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         CanvasGameManager.SetActive(true);
         pararJuego();
-        PlayerScript.DesactivarCrossHair();   
+        PlayerScript.DesactivarCrossHair();
         audioSource.PlayOneShot(ClicSound);
     }
-    
+
     public void TogglePanelAjustes()
     {
-        if(CanvasAjustesManager.activeSelf == false)
+        if (CanvasAjustesManager.activeSelf == false)
         {
             MostrarPanelAjustes();
         }
@@ -92,12 +93,12 @@ public class GameCoreUI : MonoBehaviour
         {
             CerrarPanelAjustes();
         }
-        
+
     }
     private void MostrarPanelAjustes()
     {
-       // if (PanelCanvasGamesCore.enabled == true) return;
-        CanvasAjustesManager.SetActive(true);        
+        // if (PanelCanvasGamesCore.enabled == true) return;
+        CanvasAjustesManager.SetActive(true);
         audioSource.PlayOneShot(ClicSound);
     }
 
@@ -124,11 +125,12 @@ public class GameCoreUI : MonoBehaviour
     private void Reanudar()
     {
         CerrarPanelAjustes();
+        HUDPlayer.enabled = true; ;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         JuegoPausado = false;
         Time.timeScale = 1f;  // Reanuda el juego
-        CanvasGameManager.SetActive(false);        
+        CanvasGameManager.SetActive(false);
         PlayerScript.enabled = true;
         PlayerScript.ActivarCrossHair();
         audioSource.PlayOneShot(ClicSound);
@@ -140,20 +142,23 @@ public class GameCoreUI : MonoBehaviour
         Time.timeScale = 0f;// Pausa todo el juego
         PlayerScript.enabled = false;
         JuegoPausado = true;
+        HUDPlayer.enabled = false;
         GameCore.Instance.TogglePause();
     }
 
     private void PausarReanudar()
     {
+
         if (!JuegoPausado)
         {
-            pararJuego();            
+            pararJuego();
+
         }
         else
-        {           
+        {
             Reanudar();
         }
-        audioSource.PlayOneShot(ClicSound);       
+        audioSource.PlayOneShot(ClicSound);
     }
 
 }

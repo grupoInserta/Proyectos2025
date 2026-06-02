@@ -64,13 +64,15 @@ public class EstadoPatrulla : EnemyState
             {
                 currentPatrolIndex = (currentPatrolIndex + 1) % enemy.patrolPoints.Length;// lo ultimo es para el bucle
                 enemy.agent.SetDestination(enemy.patrolPoints[currentPatrolIndex].position);
+                Debug.Log("DESTINO PROX: " + enemy.patrolPoints[currentPatrolIndex].position);
             }
             yield return new WaitForSeconds(updateRate);
         }
     }
 
     public void actPosicPatrulla(int numPtsEliminar) //para cuando se topa con puerta ceraada
-    {       
+    {
+        Debug.Log("SALTARSE PUERTA, currentPatrolIndex: " + currentPatrolIndex);
         currentPatrolIndex += numPtsEliminar;
         // currentPatrolIndex %= patrolPoints.Length;
         //Debug.Log("currentPatrolIndex: " + currentPatrolIndex);

@@ -38,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
     private FirstPersonController firstPersonController;
     private Vector3 playerVelocity;
 
+
     private void Awake()
     {
         Rojo.enabled = false;
@@ -89,8 +90,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amountDamage;
         if (currentHealth < 0)
             currentHealth = 0;
-        if(currentHealth > 0)
-        { 
+        if (currentHealth > 0)
+        {
             SetPanelOpacity(0.4f);
             Rojo.enabled = true;
             // Avisar a GameCore o a la UI
@@ -101,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
-            
+
     }
 
     // Llamar desde objetos de curación del inventario
@@ -133,24 +134,41 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         // audio CROUCH
-        if (firstPersonController.crouchAudio )
+        if (firstPersonController.crouchAudio)
         {
             audioSource4.clip = CrouchAudio;
             audioSource4.Play();
-            firstPersonController.crouchAudio = false;           
+            firstPersonController.crouchAudio = false;
         }
         // ver velocidad en Y:       
-        verticalSpeed =  (transform.position.y - lastY) / Time.deltaTime;
+        verticalSpeed = (transform.position.y - lastY) / Time.deltaTime;
         lastY = transform.position.y;
         //
-
+        /*
         if (!firstPersonController.wasGrounded && firstPersonController.isGrounded && verticalSpeed < -3f)
         {// SONIDO SALTO
             audioSource4.clip = Aterrizaje;
             audioSource4.Play();            
         }
         firstPersonController.wasGrounded = firstPersonController.isGrounded;
+        */
+        //
 
+        if (!firstPersonController.isGrounded)
+        {
+            firstPersonController.wasInAir = true;
+        }
+
+        if (firstPersonController.wasInAir &&
+            firstPersonController.isGrounded)
+        {
+            audioSource4.clip = Aterrizaje;
+            audioSource4.Play();
+
+            firstPersonController.wasInAir = false;
+        }
+
+        //
         if (!firstPersonController.lastSprintCooldown && firstPersonController.isSprintCooldown)
         { // SONIDO CANSANCIO
             audioSource4.clip = audioAgotado;
@@ -165,15 +183,15 @@ public class PlayerHealth : MonoBehaviour
             {
                 targetClip = PasosSound;
             }
-            if(firstPersonController.isSprinting)
+            if (firstPersonController.isSprinting)
             {
                 targetClip = SprintSound;
             }
-            if(firstPersonController.isCrouched && firstPersonController.isWalking)
+            if (firstPersonController.isCrouched && firstPersonController.isWalking)
             {
                 targetClip = CrouchSound;
             }
-           
+
 
             // Cambiar clip solo si es distinto (evita reinicios constantes)
             if (audioSource.clip != targetClip)
@@ -190,8 +208,7 @@ public class PlayerHealth : MonoBehaviour
             if (audioSource.isPlaying)
                 audioSource.Stop();
         }
-       
-    }
 
+    }
 
 }

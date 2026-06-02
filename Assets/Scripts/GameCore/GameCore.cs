@@ -337,7 +337,7 @@ public class GameCore : MonoBehaviour
     }
 
     private void mandarZonaSegura() {
-        BGM.Reproducir("ZonaSegura");
+        //BGM.Reproducir("ZonaSegura");
         string elNivel = obtenerNivel("jugador");
         Jugador.transform.position = GetPoint(elNivel).position;        
     }

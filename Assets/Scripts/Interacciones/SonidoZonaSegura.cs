@@ -16,4 +16,12 @@ public class SonidoZonaSegura : MonoBehaviour
             GameCore.Instance.BGM.Reproducir("Nivel");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameCore.Instance.BGM.Reproducir("ZonaSegura");
+        }
+    }
 }

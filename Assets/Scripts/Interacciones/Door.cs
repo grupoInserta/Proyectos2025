@@ -72,7 +72,11 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-                     
+            PlayerScript = Other.GetComponent<FirstPersonController>();
+            PlayerScript.contactoConPuerta = false;
+            PlayerScript.pulsadoAbrir = false;
+            playerCercano = false;
+            inventory.MostrarAviso("");
         }
     }
 
@@ -118,8 +122,7 @@ public class Door : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) // PARA MOSTRAR AVISOS
-    {
-        
+    {        
         Other = other;
         if (puertaAbierta) return;   
         if (other.CompareTag("Player"))
@@ -189,6 +192,7 @@ public class Door : MonoBehaviour
             }            
         }
         if (PlayerScript == null) return;
+        Debug.Log("tiene la llave: " + tieneLaLlave + " ||PlayerScript.pulsadoAbrir: " + PlayerScript.pulsadoAbrir + " playerCercano: " + playerCercano);
         if (!tieneLaLlave && PlayerScript.pulsadoAbrir && playerCercano)
         {
             inventory.MostrarAviso("Necesitas la llave: " + requiredKey);

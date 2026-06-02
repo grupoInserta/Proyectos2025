@@ -63,6 +63,7 @@ public class EnemyAI : MonoBehaviour
     public void ReiniciarNivel(int numPtosDentro)
     {
         estadoPatrulla.ReiniciarNivel(numPtosDentro);
+        Debug.Log("REINICIAR NIVEL");
     }
 
     public void Actualizar()
