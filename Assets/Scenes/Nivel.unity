@@ -540,13 +540,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1305,7 +1329,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.72606987, y: 0.83376503, z: 0.06754573}
+  m_Size: {x: 1, y: 0.83376503, z: 0.06754573}
   m_Center: {x: 0.17963052, y: -0.049976476, z: -0.46622843}
 --- !u!23 &15587659
 MeshRenderer:
@@ -1369,7 +1393,7 @@ Transform:
   m_GameObject: {fileID: 15587655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.25, y: 8.29, z: 31.14}
+  m_LocalPosition: {x: -4.268, y: 8.219, z: 29.343}
   m_LocalScale: {x: 2.82975, y: 4.347152, z: 0.48}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4316,13 +4340,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5128,13 +5176,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5268,7 +5340,7 @@ GameObject:
   - component: {fileID: 99757920}
   - component: {fileID: 99757919}
   - component: {fileID: 99757918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5697,13 +5769,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5908,13 +6004,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7565,7 +7685,7 @@ GameObject:
   - component: {fileID: 132132243}
   - component: {fileID: 132132242}
   - component: {fileID: 132132241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11361,7 +11481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193545083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiasNivel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13179,13 +13299,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14038,13 +14182,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14439,13 +14607,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14597,7 +14789,7 @@ Transform:
   m_GameObject: {fileID: 261864166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.87, y: -6.22, z: 45.5}
+  m_LocalPosition: {x: -30.87, y: -6.22, z: 45.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17055,7 +17247,7 @@ GameObject:
   - component: {fileID: 302990795}
   - component: {fileID: 302990794}
   - component: {fileID: 302990793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17281,7 +17473,7 @@ Transform:
   m_GameObject: {fileID: 303745391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.5, y: -6.22, z: 38.1}
+  m_LocalPosition: {x: -11.3, y: -6.22, z: 43.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19099,7 +19291,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19509,7 +19701,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19916,13 +20108,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20795,13 +21011,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21691,13 +21931,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23006,13 +23270,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: XWooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25811,13 +26099,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27342,13 +27654,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30485,13 +30821,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31380,13 +31740,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33503,7 +33887,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -35253,13 +35637,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35340,13 +35748,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35757,7 +36189,7 @@ GameObject:
   - component: {fileID: 617802500}
   - component: {fileID: 617802499}
   - component: {fileID: 617802498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37247,7 +37679,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -38110,13 +38542,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38267,7 +38723,7 @@ GameObject:
   - component: {fileID: 680339893}
   - component: {fileID: 680339892}
   - component: {fileID: 680339891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40074,7 +40530,7 @@ GameObject:
   - component: {fileID: 706339863}
   - component: {fileID: 706339862}
   - component: {fileID: 706339861}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44964,13 +45420,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46189,13 +46669,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46756,13 +47260,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47018,13 +47546,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47484,13 +48036,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47720,7 +48296,7 @@ GameObject:
   - component: {fileID: 827445933}
   - component: {fileID: 827445932}
   - component: {fileID: 827445931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48256,13 +48832,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50227,13 +50827,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50605,13 +51229,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50753,13 +51401,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51491,13 +52163,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52825,7 +53521,7 @@ GameObject:
   - component: {fileID: 929394672}
   - component: {fileID: 929394671}
   - component: {fileID: 929394670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53962,13 +54658,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55852,13 +56572,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56352,13 +57096,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59134,7 +59902,7 @@ GameObject:
   - component: {fileID: 1029490290}
   - component: {fileID: 1029490289}
   - component: {fileID: 1029490288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61184,13 +61952,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -61718,7 +62510,7 @@ GameObject:
   - component: {fileID: 1084677887}
   - component: {fileID: 1084677886}
   - component: {fileID: 1084677885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62148,13 +62940,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62472,13 +63288,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62686,13 +63526,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62773,13 +63637,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68750,13 +69638,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69208,7 +70120,7 @@ MonoBehaviour:
   visionAngle: 250
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   playerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -69661,7 +70573,7 @@ GameObject:
   - component: {fileID: 1222257835}
   - component: {fileID: 1222257834}
   - component: {fileID: 1222257833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72084,13 +72996,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73135,13 +74071,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73217,13 +74177,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73736,13 +74720,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74082,13 +75090,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75555,7 +76587,7 @@ GameObject:
   - component: {fileID: 1326336476}
   - component: {fileID: 1326336475}
   - component: {fileID: 1326336474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79195,13 +80227,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -79585,8 +80641,8 @@ GameObject:
   - component: {fileID: 1398965740}
   - component: {fileID: 1398965739}
   - component: {fileID: 1398965742}
-  m_Layer: 0
-  m_Name: TapiaNivel2SalaP (8)
+  m_Layer: 7
+  m_Name: TapiaNivel2Martillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81550,13 +82606,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81797,7 +82877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6000056
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_LocalPosition.y
@@ -81805,7 +82885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.030000366
+      value: -0.018
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81839,13 +82919,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82825,13 +83929,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -83698,13 +84826,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -83785,7 +84937,7 @@ GameObject:
   - component: {fileID: 1484475720}
   - component: {fileID: 1484475719}
   - component: {fileID: 1484475723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83807,7 +84959,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -85002,13 +86154,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -85309,6 +86485,18 @@ PrefabInstance:
     - target: {fileID: 446898, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513208, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513208, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: m_Center.x
+      value: -0.79661405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513208, guid: 1ba84d4b2929a2b4eb599316f738c0f6, type: 3}
+      propertyPath: m_Center.z
+      value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -86732,7 +87920,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.16, y: 0.85150677, z: 0.09458249}
+  m_Size: {x: 0.86, y: 0.85150677, z: 0.09458249}
   m_Center: {x: 0.1, y: 0.011796233, z: -0.45271015}
 --- !u!23 &1530247893
 MeshRenderer:
@@ -86796,7 +87984,7 @@ Transform:
   m_GameObject: {fileID: 1530247889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.06, y: 13.08, z: 29.62}
+  m_LocalPosition: {x: -3.96, y: 13.08, z: 29.5}
   m_LocalScale: {x: 2.82975, y: 4.347152, z: 0.48}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88023,13 +89211,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -88708,13 +89920,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89174,13 +90410,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89956,13 +91216,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102591,13 +103875,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102780,13 +104088,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -104025,7 +105357,7 @@ Transform:
   m_GameObject: {fileID: 1821383836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.34, y: -6.22, z: 47.64}
+  m_LocalPosition: {x: -30.08, y: -6.22, z: 45.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105239,13 +106571,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -107766,7 +109122,7 @@ GameObject:
   - component: {fileID: 1880862257}
   - component: {fileID: 1880862256}
   - component: {fileID: 1880862255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114308,13 +115664,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -119461,13 +120841,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120036,13 +121440,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120089,7 +121517,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -122473,13 +123901,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -122555,13 +124007,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2468690900366918660, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1240352129360318626, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9be362c224682e34da53c4b1ff5fc10d, type: 2}
+    - target: {fileID: -796366548695763801, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
       propertyPath: m_Name
       value: Wooden_Planks_OBJ (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088794667796983, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241124615109231762, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887376918254963829, guid: 9bb4434874c1fed40a289136725ea466, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -125092,7 +126568,7 @@ GameObject:
   - component: {fileID: 2147382719}
   - component: {fileID: 2147382718}
   - component: {fileID: 2147382717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TapiaNivel2SalaP (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

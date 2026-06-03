@@ -107,6 +107,7 @@ public class EnemyVision : MonoBehaviour
             Door puerta = other.GetComponent<Door>();           
             if (puerta == null) return;
             int numPosicionesDentro = puerta.numPosicionesDentro;
+            Debug.Log("numPosicionesDentro" + numPosicionesDentro);
             if (puerta.TOC == false) 
             {
                 puerta.TOC = true;

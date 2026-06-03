@@ -14,13 +14,16 @@ public class MuroDemo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && activarDemo)
+        if (other.CompareTag("Player"))
         {
-            cambioEscena.CargaEscena("Victoria");
-        }
-        else
-        {
-            audioSource.PlayOneShot(PasoNivel);
+            if (activarDemo)
+            {
+                cambioEscena.CargaEscena("Victoria");
+            }
+            else
+            {
+                audioSource.PlayOneShot(PasoNivel);
+            }
         }
     }
 }

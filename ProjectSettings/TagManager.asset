@@ -13,11 +13,12 @@ TagManager:
   - Puerta
   - Cajas
   - SueloEnemigo
+  - PartidaGuardada
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Paso
   - Water
   - UI
   - 
