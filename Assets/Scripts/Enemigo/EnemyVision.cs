@@ -100,6 +100,17 @@ public class EnemyVision : MonoBehaviour
             miEnemyAI.Actualizar();        
     }
 
+    /*
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Puerta"))
+        {
+            Door puerta = other.GetComponent<Door>();
+            puerta.TOC = false;
+        }
+    }
+    */
+
     private void OnTriggerEnter(Collider other)
     {       
         if (other.CompareTag("Puerta") )
@@ -111,7 +122,6 @@ public class EnemyVision : MonoBehaviour
             if (puerta.TOC == false) 
             {
                 puerta.TOC = true;
-                Debug.Log("TOC, nivel: " + GameCore.Instance.obtenerNivel("enemigo"));
                 string nivel = GameCore.Instance.obtenerNivel("enemigo");
                 if (numPosicionesDentro == 1000 && nivel == "1") // 1000 cuando es una puerta de paso de nivel
                 {
@@ -202,7 +212,6 @@ public class EnemyVision : MonoBehaviour
 
             if (hit.transform.root == player)
             {
-                Debug.Log("LO VEO");
                 return true; //  jugador visible
             }
             else

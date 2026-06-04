@@ -108,8 +108,8 @@ public class GameCore : MonoBehaviour
             InitializeCoreSystems();
         }
 
-       if (escena.name != "MenuPrincipal")
-       {            
+        if (escena.name != "MenuPrincipal")
+          {            
             if (globalVolume != null)
             {
                     globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
@@ -122,7 +122,8 @@ public class GameCore : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-       }
+        }
+        
         BGM.Reproducir(escena.name);
     }
 
@@ -158,8 +159,10 @@ public class GameCore : MonoBehaviour
             if (gameCoreUI == null)
             {
                 gameCoreUI = GameObject.FindWithTag("HUDGame").GetComponent<GameCoreUI>();
+               
             }
-            
+            GameCore.Instance.TogglePause();//*************************??????????????
+
         }
         
         globalVolume = BuscarGlobalVolume();

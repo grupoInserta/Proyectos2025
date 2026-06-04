@@ -1329,7 +1329,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.83376503, z: 0.06754573}
+  m_Size: {x: 1.85, y: 0.83376503, z: 0.06754573}
   m_Center: {x: 0.17963052, y: -0.049976476, z: -0.46622843}
 --- !u!23 &15587659
 MeshRenderer:
@@ -1393,7 +1393,7 @@ Transform:
   m_GameObject: {fileID: 15587655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.268, y: 8.219, z: 29.343}
+  m_LocalPosition: {x: -4.864, y: 8.234, z: 29.22}
   m_LocalScale: {x: 2.82975, y: 4.347152, z: 0.48}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3618,6 +3618,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -5319,6 +5320,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -5467,7 +5469,7 @@ Transform:
   m_GameObject: {fileID: 104125784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.9, y: -6.22, z: 26.5}
+  m_LocalPosition: {x: -44.9, y: -5.286, z: 26.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6147,6 +6149,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -8186,7 +8189,7 @@ Transform:
   m_GameObject: {fileID: 137733147}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.9, y: -6.22, z: 31.1}
+  m_LocalPosition: {x: -42.9, y: -5.286, z: 31.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8393,7 +8396,7 @@ Transform:
   m_GameObject: {fileID: 143100480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.83, y: -6.22, z: 40.21}
+  m_LocalPosition: {x: -38.83, y: -5.286, z: 40.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9029,6 +9032,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -10218,6 +10222,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -10742,7 +10747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource5: {fileID: 336196946}
-  GrabacionNivel1: {fileID: 8300000, guid: d7050ca4f5daa37438c337303aa45f03, type: 3}
+  GrabacionNivel1: {fileID: 8300000, guid: 7c991978245b94a428dc709207ef8145, type: 3}
 --- !u!135 &177421352
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11273,6 +11278,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -11523,6 +11529,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 435038, guid: 27c15c3480e146944b29c1661765cc65, type: 3}
   m_PrefabInstance: {fileID: 1161017279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &195277927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195277928}
+  m_Layer: 0
+  m_Name: Punto3_22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &195277928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195277927}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.9, y: -5.286, z: 31.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1327633726}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &196881006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12917,7 +12954,7 @@ Transform:
   m_GameObject: {fileID: 216901939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.2, y: 0.03, z: -4.1}
+  m_LocalPosition: {x: -16.23, y: 0.03, z: -4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12950,7 +12987,7 @@ Transform:
   m_GameObject: {fileID: 217556513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.35, y: -2.1, z: 20.87}
+  m_LocalPosition: {x: 1.35, y: -1.82, z: 20.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12987,8 +13024,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.468092, y: 0.83, z: 8.5}
-  m_Center: {x: -0.14208698, y: -3.7, z: -3.97}
+  m_Size: {x: 8.79, y: 4.09, z: 11.349001}
+  m_Center: {x: -0.14208698, y: -1.36, z: -5.5654993}
 --- !u!1001 &218922967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14789,7 +14826,7 @@ Transform:
   m_GameObject: {fileID: 261864166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.87, y: -6.22, z: 45.3}
+  m_LocalPosition: {x: -30.87, y: -5.286, z: 45.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15341,6 +15378,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -17473,7 +17511,7 @@ Transform:
   m_GameObject: {fileID: 303745391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.3, y: -6.22, z: 43.7}
+  m_LocalPosition: {x: -11.3, y: -5.286, z: 43.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18369,7 +18407,7 @@ Transform:
   m_GameObject: {fileID: 320125360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.4, y: -6.22, z: 50.8}
+  m_LocalPosition: {x: -32.4, y: -5.286, z: 50.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22183,6 +22221,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -23977,7 +24016,7 @@ Transform:
   m_GameObject: {fileID: 425101629}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.52, y: -6.22, z: 30.5}
+  m_LocalPosition: {x: -15.52, y: -5.286, z: 30.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25543,6 +25582,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -29712,7 +29752,7 @@ Transform:
   m_GameObject: {fileID: 507776943}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.97, y: -6.22, z: 30.82}
+  m_LocalPosition: {x: -17.97, y: -5.286, z: 30.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32327,7 +32367,7 @@ Transform:
   m_GameObject: {fileID: 556916297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.6, y: 2.9089007, z: -30.8}
+  m_LocalPosition: {x: 42.21, y: 2.9089007, z: -32.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32364,8 +32404,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 16.850952, y: 0.682065, z: 7.7334156}
-  m_Center: {x: 0.7479534, y: -2.0328383, z: 11.230772}
+  m_Size: {x: 21.83, y: 6.03, z: 14.31}
+  m_Center: {x: -1, y: 0.89, z: 3}
 --- !u!4 &557103555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447612, guid: 844d555ff5b93b246b2e27f48bc4732f, type: 3}
@@ -34207,7 +34247,7 @@ Transform:
   m_GameObject: {fileID: 585634611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.73, y: -6.22, z: 29.87}
+  m_LocalPosition: {x: -18.73, y: -5.286, z: 29.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36373,7 +36413,7 @@ Transform:
   m_GameObject: {fileID: 622781913}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.73, y: -6.22, z: 31.37}
+  m_LocalPosition: {x: -32.73, y: -5.286, z: 31.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36951,7 +36991,7 @@ Transform:
   m_GameObject: {fileID: 632754094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.1, y: 0.03, z: 12.1}
+  m_LocalPosition: {x: -14.8, y: 0.03, z: 12.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38243,7 +38283,7 @@ Transform:
   m_GameObject: {fileID: 663338894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.4, y: -6.22, z: 30.3}
+  m_LocalPosition: {x: -45.4, y: -5.286, z: 30.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39248,6 +39288,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -51036,7 +51077,7 @@ Transform:
   m_GameObject: {fileID: 883359129}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.2, y: -6.22, z: 26.13}
+  m_LocalPosition: {x: -18.2, y: -5.286, z: 26.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54584,6 +54625,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -56236,6 +56278,7 @@ Transform:
   - {fileID: 652739814}
   - {fileID: 343419508}
   - {fileID: 336196947}
+  - {fileID: 1464210342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &965293669
@@ -57547,7 +57590,7 @@ Transform:
   m_GameObject: {fileID: 989040737}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.74, y: -6.22, z: 42.82}
+  m_LocalPosition: {x: -3.74, y: -5.286, z: 42.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58576,6 +58619,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -59710,6 +59754,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -59804,7 +59849,7 @@ Transform:
   m_GameObject: {fileID: 1023439290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.5, y: -6.22, z: 30}
+  m_LocalPosition: {x: -45.5, y: -5.286, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66175,6 +66220,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -69785,6 +69831,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -70066,6 +70113,7 @@ MonoBehaviour:
   - {fileID: 1533922669}
   - {fileID: 303745392}
   - {fileID: 137733148}
+  - {fileID: 195277928}
   - {fileID: 1340005189}
   patrolPointsReinicio:
   - {fileID: 1617895409}
@@ -71066,7 +71114,7 @@ Transform:
   m_GameObject: {fileID: 1227835883}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50.26, y: -6.22, z: 42.29}
+  m_LocalPosition: {x: -50.26, y: -5.286, z: 42.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71660,6 +71708,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -71771,6 +71820,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -72444,7 +72494,7 @@ Canvas:
   m_GameObject: {fileID: 1257213417}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 559128932}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -75162,7 +75212,7 @@ Transform:
   m_GameObject: {fileID: 1300840862}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.6, y: 0.03, z: -19.2}
+  m_LocalPosition: {x: -47.23, y: 0.03, z: 12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76797,6 +76847,7 @@ Transform:
   - {fileID: 1533922669}
   - {fileID: 303745392}
   - {fileID: 137733148}
+  - {fileID: 195277928}
   - {fileID: 1340005189}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76947,7 +76998,7 @@ Transform:
   m_GameObject: {fileID: 1333877563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.14, y: -6.22, z: 29.7}
+  m_LocalPosition: {x: -19.14, y: -5.286, z: 29.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77296,7 +77347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1340005189}
   m_Layer: 0
-  m_Name: Punto3_22
+  m_Name: Punto3_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77311,7 +77362,7 @@ Transform:
   m_GameObject: {fileID: 1340005188}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.5, y: 4.56, z: 30.1}
+  m_LocalPosition: {x: -12.5, y: 5, z: 30.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80750,13 +80801,14 @@ MonoBehaviour:
   openAngle: 0
   numPosicionesDentro: 0
   myCollider: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 2063195395}
   audioSource3: {fileID: 0}
+  audioSource6: {fileID: 1464210343}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 0}
   noMartilloSound: {fileID: 0}
-  MartilloSound: {fileID: 0}
+  MartilloSound: {fileID: 8300000, guid: 6ee0db80248831741a15d5404f5fb1e9, type: 3}
 --- !u!4 &1399145823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
@@ -81610,7 +81662,7 @@ Transform:
   m_GameObject: {fileID: 1418062641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.4, y: -6.22, z: 30.05}
+  m_LocalPosition: {x: -36.35, y: -5.286, z: 30.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81764,7 +81816,7 @@ Transform:
   m_GameObject: {fileID: 1423458318}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.81, y: -6.22, z: 25.66}
+  m_LocalPosition: {x: -30.737, y: -5.286, z: 30.105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82849,7 +82901,7 @@ Transform:
   m_GameObject: {fileID: 1434057137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.62, y: 0.03, z: 8.4}
+  m_LocalPosition: {x: -27.785, y: 0.03, z: 8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84337,6 +84389,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 812c9b36537fa8146bed44183a36cf7a, type: 3}
+--- !u!1 &1464210341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464210342}
+  - component: {fileID: 1464210343}
+  m_Layer: 0
+  m_Name: Audio Source6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464210342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464210341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 45.621357, y: -9.211901, z: 14.83766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 964384377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1464210343
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464210341}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.10277778
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1467193336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85057,6 +85238,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 2063195395}
   audioSource3: {fileID: 0}
+  audioSource6: {fileID: 1464210343}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 0}
@@ -86531,6 +86713,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -86737,7 +86920,7 @@ Transform:
   m_GameObject: {fileID: 1514250984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.48, y: 0.03, z: 21.63}
+  m_LocalPosition: {x: -15.48, y: 0.03, z: 18.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87532,6 +87715,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -87920,7 +88104,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.86, y: 0.85150677, z: 0.09458249}
+  m_Size: {x: 1.16, y: 0.85150677, z: 0.09458249}
   m_Center: {x: 0.1, y: 0.011796233, z: -0.45271015}
 --- !u!23 &1530247893
 MeshRenderer:
@@ -87984,7 +88168,7 @@ Transform:
   m_GameObject: {fileID: 1530247889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96, y: 13.08, z: 29.5}
+  m_LocalPosition: {x: -4.06, y: 13.08, z: 29.62}
   m_LocalScale: {x: 2.82975, y: 4.347152, z: 0.48}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88271,7 +88455,7 @@ Transform:
   m_GameObject: {fileID: 1533922668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.5, y: -6.22, z: 45.4}
+  m_LocalPosition: {x: -25.46, y: -5.286, z: 45.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -89021,7 +89205,7 @@ Transform:
   m_GameObject: {fileID: 1551218772}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -54.07, y: -6.22, z: 50.9}
+  m_LocalPosition: {x: -54.07, y: -5.286, z: 50.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92596,7 +92780,7 @@ Transform:
   m_GameObject: {fileID: 1617895408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70.31, y: 5.47, z: 13.79}
+  m_LocalPosition: {x: -70.31, y: 5, z: 13.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93877,8 +94061,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.758095, y: 0.48382282, z: 8.488586}
-  m_Center: {x: 2.3087215, y: -2.5040326, z: 0.08252239}
+  m_Size: {x: 7.758095, y: 3.9000301, z: 7.75}
+  m_Center: {x: 2.35, y: -0.79592896, z: -0.21999979}
 --- !u!1001 &1647689908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103356,7 +103540,7 @@ Transform:
   m_GameObject: {fileID: 1789618285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.97, y: -0.31, z: 29.48}
+  m_LocalPosition: {x: -12.325, y: -0.31, z: 30.066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103942,7 +104126,7 @@ Transform:
   m_GameObject: {fileID: 1799281491}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.8, y: 0.03, z: 12.9}
+  m_LocalPosition: {x: -53.96, y: 0.03, z: 15.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105357,7 +105541,7 @@ Transform:
   m_GameObject: {fileID: 1821383836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.08, y: -6.22, z: 45.03}
+  m_LocalPosition: {x: -30.08, y: -5.286, z: 45.257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105469,6 +105653,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -111464,7 +111649,7 @@ Transform:
   m_GameObject: {fileID: 1911503910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.23, y: 0.03, z: 21.73}
+  m_LocalPosition: {x: -15.41, y: 0.03, z: 21.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119020,6 +119205,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -122188,6 +122374,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 0}
   PuertaBloqueada: {fileID: 8300000, guid: b1ca87635003867448c0e080217f0c4c, type: 3}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}
@@ -123603,6 +123790,7 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   audioSource: {fileID: 1655672555}
   audioSource3: {fileID: 652739813}
+  audioSource6: {fileID: 0}
   CerraduraUsoLLave: {fileID: 8300000, guid: cadb302a096bd2e4097d180773fc5284, type: 3}
   PuertaBloqueada: {fileID: 0}
   openSound: {fileID: 8300000, guid: af2eac63d5e1547448766cefd423577f, type: 3}

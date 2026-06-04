@@ -10,18 +10,7 @@ public class EstadoPersecucion : EnemyState
     }
     public override void Update()
     {
-        /*
-        /* cambiar por persecucion al player..
-        enemy.MoveTowardsPlayer();
-        if (!enemy.PuedeVerAlJugador)
-        {
-            stateMachine.ChangeState(enemy.estadoBusqueda);
-        }
-        else if (enemy.IsInAttackRange())
-        {
-            enemy.Accion("Atacar");
-        }
-        */
+       
        
     }
 }

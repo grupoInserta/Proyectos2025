@@ -29,7 +29,7 @@ public class MuroNivel : MonoBehaviour
         {
             if (activarDemo || activoMuroFinal)
             {
-                cambioEscena.CargaEscena("Victoria");
+                cambioEscena.CargaEscena("Victoria");                
             }
             else
             {

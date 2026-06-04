@@ -11,6 +11,7 @@ public class CambioEscena : MonoBehaviour
         {
             audioSource.PlayOneShot(ClicSound);           
         }
+        
         SceneManager.LoadScene(nombreEscenaCarga);
     }
     

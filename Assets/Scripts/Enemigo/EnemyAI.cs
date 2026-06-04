@@ -151,28 +151,5 @@ public class EnemyAI : MonoBehaviour
         enemyAnimationController.Parar();
     }
 
-    public void StopMovement()
-    {
 
-    }
-
-    public void PlayAttackAnimation()
-    {
-
-    }
-
-    public void LookAtPlayer()
-    {
-
-    }
-    public void DoDamage()
-    {
-
-    }
-
-
-    // --- Métodos que usarán los estados ---
- 
-    public bool IsInAttackRange() { return false; }
-    public void MoveTowardsPlayer() { }
 }

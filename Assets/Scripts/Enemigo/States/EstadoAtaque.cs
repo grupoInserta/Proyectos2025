@@ -12,45 +12,7 @@ public class EstadoAtaque : EnemyState
     {
         enemy.enemyAnimationController.Atacar();
         /**** enemyAnimationController.PlayAttack();***/
-        /*
-        lastAttackTime = Time.time;
-
-        // Opcional: detener movimiento
-        enemy.StopMovement();
-
-        // Opcional: activar animación
-        enemy.PlayAttackAnimation();
-        */
+       
     }
-    /*
-    public override void Update()
-    {
-        /*
-        // Mirar al jugador constantemente
-        enemy.LookAtPlayer();
-
-        // Si el jugador se aleja → perseguir
-        if (!enemy.IsInAttackRange())
-        {
-            stateMachine.ChangeState(enemy.estadoPersecucion);
-            return;
-        }
-
-        // Atacar con cooldown
-        if (Time.time >= lastAttackTime + attackCooldown)
-        {
-            Attack();
-            lastAttackTime = Time.time;
-        }
-    }
-
-    private void Attack()
-    {
-        // Lógica de daño
-        enemy.DoDamage();
-
-        // Animación
-        enemy.PlayAttackAnimation();
-    }
-        */
+    
 }

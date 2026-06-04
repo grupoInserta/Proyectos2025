@@ -26,6 +26,7 @@ public class Door : MonoBehaviour
     //
     public AudioSource audioSource;
     public AudioSource audioSource3;
+    public AudioSource audioSource6;
     public AudioClip CerraduraUsoLLave;
     public AudioClip PuertaBloqueada;
     public AudioClip openSound;
@@ -100,12 +101,12 @@ public class Door : MonoBehaviour
                 if (tieneLaLlave)
                 {
                     transform.Translate(0f, 1000f, 0f);                    
-                    audioSource.PlayOneShot(MartilloSound);
+                    audioSource6.PlayOneShot(MartilloSound);
                     //Destroy(gameObject);
                 } else
                 {
                     inventory.MostrarAviso("Necesitas el martillo!!!");
-                    audioSource.PlayOneShot(noMartilloSound); 
+                    audioSource6.PlayOneShot(noMartilloSound); 
                 }                
                 return; 
             } 

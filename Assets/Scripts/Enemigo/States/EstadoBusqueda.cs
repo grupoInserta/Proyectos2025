@@ -19,7 +19,7 @@ public class EstadoBusqueda : EnemyState
         timer = searchDuration;
         directionTimer = changeDirectionTime;
         // Detener movimiento mientras busca
-        enemy.StopMovement();
+       // enemy.StopMovement();
     }
 
 

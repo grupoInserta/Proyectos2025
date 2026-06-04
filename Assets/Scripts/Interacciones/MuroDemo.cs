@@ -6,15 +6,28 @@ public class MuroDemo : MonoBehaviour
     [SerializeField] private bool activarDemo;
     public AudioSource audioSource;
     public AudioClip PasoNivel;
+    private bool puedeSonar = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cambioEscena = GetComponent<CambioEscena>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
+            puedeSonar = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+       
+        if (!puedeSonar)
+            return;
+         if (other.CompareTag("Player"))
         {
             if (activarDemo)
             {
@@ -23,7 +36,8 @@ public class MuroDemo : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(PasoNivel);
-            }
+                puedeSonar = false;
+            }      
         }
     }
 }
