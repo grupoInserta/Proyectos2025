@@ -16,7 +16,7 @@ public class KeyUIManager : MonoBehaviour
 
     private float posTotXIconIni = 0;
     private float posTotXIcon;
-    private float incrPosXIcon = 0.15f;
+    private float incrPosXIcon = 0.14f;
     private float posTotYIconIni = 0.25f;
     private float posTotYIncr = 0.18f;
     private float posTotYIcon;

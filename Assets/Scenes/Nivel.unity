@@ -45108,12 +45108,16 @@ PrefabInstance:
       value: 403
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2754
+      objectReference: {fileID: 0}
+    - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.58206
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.43103
+      value: -13.56
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53812,12 +53816,16 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2754
+      objectReference: {fileID: 0}
+    - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.582062
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.43103
+      value: -13.56
       objectReference: {fileID: 0}
     - target: {fileID: 492412, guid: b5c6f1e15b5541a4990e2f0b2715e6be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70175,7 +70183,7 @@ MonoBehaviour:
   ataqueSound: {fileID: 8300000, guid: 8ebab86689581704f819d82302f0fdc9, type: 3}
   sonidoAvistado: {fileID: 8300000, guid: 0d5ec71a39c14d04482fbc1501fdb1c6, type: 3}
   audioSource: {fileID: 2005463292}
-  distanciaAtaque: 4
+  distanciaAtaque: 4.5
 --- !u!54 &1215092322
 Rigidbody:
   m_ObjectHideFlags: 0

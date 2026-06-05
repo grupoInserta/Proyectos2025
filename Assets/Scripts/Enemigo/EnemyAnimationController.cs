@@ -43,6 +43,7 @@ public class EnemyAnimationController : MonoBehaviour
     public void Parar()
     {
         animator.SetFloat("Speed", 0);
+        Debug.Log("PPPPPPPPPPPPPPAAAAAAAAAAAAAAAARRRRRRRRRRRAAAAAAARRRRRRRRRRRR");
     }
 
     public void Perseguir(bool value)

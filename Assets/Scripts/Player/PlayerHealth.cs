@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     //
     private float lastY;
     private float verticalSpeed;
+    private bool tocadoPorEnemigo = false;
 
     // Eventos para comunicar cambios a UI, inventario, GameCore...
     public event Action<int, int> OnHealthChanged;     // (current, max)
@@ -80,11 +81,21 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(ActivarConDelay(1f));
     }
 
+    private IEnumerator desactivarTocadoPorEnemigoConDelay(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        tocadoPorEnemigo = false;
+    }
+    
 
     // Llamar cuando recibe daño
     public void TakeDamage()
     {
         if (isDead) return;
+        if (tocadoPorEnemigo) return;
+        tocadoPorEnemigo = true;
+
+        StartCoroutine(desactivarTocadoPorEnemigoConDelay(2f));
         audioSource4.clip = DamageSound;
         audioSource4.Play();
         currentHealth -= amountDamage;
@@ -144,15 +155,8 @@ public class PlayerHealth : MonoBehaviour
         verticalSpeed = (transform.position.y - lastY) / Time.deltaTime;
         lastY = transform.position.y;
         //
-        /*
-        if (!firstPersonController.wasGrounded && firstPersonController.isGrounded && verticalSpeed < -3f)
-        {// SONIDO SALTO
-            audioSource4.clip = Aterrizaje;
-            audioSource4.Play();            
-        }
-        firstPersonController.wasGrounded = firstPersonController.isGrounded;
-        */
-        //
+     
+
 
         if (!firstPersonController.isGrounded)
         {
